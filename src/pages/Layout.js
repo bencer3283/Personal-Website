@@ -10,11 +10,11 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-    SlideFade
 } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Layout = () => {
     const [isAccordionOn, setAccordion] = useBoolean();
@@ -44,7 +44,13 @@ const Layout = () => {
                     Menu
                 </Button>
             </Flex>
-            <SlideFade in={isAccordionOn} reverse={true} offsetX={20} offsetY={0} unmountOnExit={false}>
+            <AnimatePresence>
+            {isAccordionOn && <motion.div 
+                key='mobile_nav'
+                transition={{ type: "tween", ease: "easeOut", delay: 0.2, duration: 0.3 }}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x:0 }}
+                exit={{ opacity: 0, x: 20 }} >
                 <Accordion defaultIndex={[0]} allowMultiple hideFrom='md'>
                     <AccordionItem>
                         <h2>
@@ -112,8 +118,14 @@ const Layout = () => {
                         </AccordionPanel>
                     </AccordionItem>
                 </Accordion>
-            </SlideFade>
-
+            </motion.div>}
+            </AnimatePresence>
+            <motion.div layout transition={{ layout: { duration: 0.2, ease: "easeOut", type: "tween" }}}>
+                <h1>
+                    Content Placeholder
+                </h1>
+            </motion.div>
+            
         </Box>
 
     )
