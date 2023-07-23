@@ -6,25 +6,32 @@ module.exports = {
     title: `personal-site`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
       "path": "./src/images/"
     },
     __key: "images"
-  }, {
+  },
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      "name": "posts",
+      "path": "./src/posts/"
     },
-    __key: "pages"
+    __key: "experiences"
   },{
     resolve: '@chakra-ui/gatsby-plugin',
     options: {
       resetCSS: true,
       portalZIndex: undefined
     }
-  }]
+  },
+{
+  resolve: "gatsby-plugin-mdx",
+  options: {
+    extensions: [`.mdx`, `.md`]
+  }
+}]
 };
