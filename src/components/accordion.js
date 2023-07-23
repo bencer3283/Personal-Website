@@ -9,8 +9,8 @@ import {
 } from '@chakra-ui/react';
 
 function MobileAccordionNav() {
-    return <Accordion defaultIndex={[0]} allowMultiple hideFrom='md'>
-        <AccordionItem>
+    return <Accordion defaultIndex={[0]} allowMultiple hideFrom='md' bgColor='#9EC972'>
+        <AccordionItem border='none'>
             <h2>
                 <AccordionButton p={6}>
                     <Box as="span" flex='1' textAlign='left'>
@@ -27,7 +27,7 @@ function MobileAccordionNav() {
             </AccordionPanel>
         </AccordionItem>
 
-        <AccordionItem>
+        <AccordionItem border='none'>
             <h2>
                 <AccordionButton p={6}>
                     <Box as="span" flex='1' textAlign='left'>
@@ -43,7 +43,7 @@ function MobileAccordionNav() {
                 commodo consequat.
             </AccordionPanel>
         </AccordionItem>
-        <AccordionItem>
+        <AccordionItem border='none'>
             <h2>
                 <AccordionButton p={6}>
                     <Box as="span" flex='1' textAlign='left'>
@@ -59,7 +59,7 @@ function MobileAccordionNav() {
                 commodo consequat.
             </AccordionPanel>
         </AccordionItem>
-        <AccordionItem>
+        <AccordionItem border='none'>
             <h2>
                 <AccordionButton p={6}>
                     <Box as="span" flex='1' textAlign='left'>
