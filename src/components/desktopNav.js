@@ -30,12 +30,12 @@ function DesktopNav({ directory }) {
         }
       }
     `);
-    return <HStack maxH='sm' bg='#9EC972' overflowX='auto' hideBelow='md'>
+    return <HStack maxH='sm' bg='#9EC972' overflowX='auto'>
         {
             data.allMarkdownRemark.nodes.map((md) => {
                 if(md.parent.relativeDirectory === directory) {
                     return(
-                        <Card w='sm' direction='row' m='4' flexShrink='0'>
+                        <Card w={{base: '40%', md: 'sm'}} direction='row' m='4' flexShrink='0'>
                             <Stack>
                                 <CardBody>
                                     <Heading size='md'>

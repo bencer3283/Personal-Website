@@ -10,7 +10,7 @@ import {
 import DesktopNav from './desktopNav';
 
 function MobileAccordionNav() {
-    return <Accordion defaultIndex={[0]} allowToggle hideFrom='md' bgColor='#9EC972'>
+    return <Accordion defaultIndex={[]} allowToggle hideFrom='md' bgColor='#9EC972'>
         <AccordionItem border='none'>
             <h2>
                 <AccordionButton p={6}>
@@ -21,9 +21,7 @@ function MobileAccordionNav() {
                 </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-                <Box>
-                    <DesktopNav directory='education'/>
-                </Box>
+                <DesktopNav directory='education'/>
             </AccordionPanel>
         </AccordionItem>
 
@@ -37,10 +35,7 @@ function MobileAccordionNav() {
                 </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                <DesktopNav directory='experiences'/>
             </AccordionPanel>
         </AccordionItem>
         <AccordionItem border='none'>
@@ -53,10 +48,7 @@ function MobileAccordionNav() {
                 </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                <DesktopNav directory='organization'/>
             </AccordionPanel>
         </AccordionItem>
         <AccordionItem border='none'>
@@ -69,10 +61,7 @@ function MobileAccordionNav() {
                 </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                
             </AccordionPanel>
         </AccordionItem>
     </Accordion>;

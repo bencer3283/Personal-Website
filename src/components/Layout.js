@@ -81,9 +81,12 @@ const Layout = ({ children }) => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -50 }} >
-                        {isNavEdu && <DesktopNav directory='education'/>}
-                        {isNavExp && <DesktopNav directory='experiences'/>}
-                        {isNavOrg && <DesktopNav directory='organization'/>}
+                        <Box hideBelow='md' >
+                            {isNavEdu && <DesktopNav directory='education' />}
+                            {isNavExp && <DesktopNav directory='experiences' />}
+                            {isNavOrg && <DesktopNav directory='organization' />}
+                        </Box>
+                        
                     </motion.div>}
                 </AnimatePresence>
             </Box>
