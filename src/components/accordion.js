@@ -7,9 +7,10 @@ import {
     AccordionPanel,
     AccordionIcon,
 } from '@chakra-ui/react';
+import DesktopNav from './desktopNav';
 
 function MobileAccordionNav() {
-    return <Accordion defaultIndex={[0]} allowMultiple hideFrom='md' bgColor='#9EC972'>
+    return <Accordion defaultIndex={[0]} allowToggle hideFrom='md' bgColor='#9EC972'>
         <AccordionItem border='none'>
             <h2>
                 <AccordionButton p={6}>
@@ -20,10 +21,9 @@ function MobileAccordionNav() {
                 </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                <Box>
+                    <DesktopNav directory='education'/>
+                </Box>
             </AccordionPanel>
         </AccordionItem>
 

@@ -7,10 +7,8 @@ const IndexPage = () => {
     <Layout>
       <Box p='4' overflowY='scroll' pt='50'>
         <Heading p='10' size='2xl'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+          Implement keywords, automatic navigation generation.
+          Fix card height, post sequence.
         </Heading>
         <Heading p='10' size='2xl'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

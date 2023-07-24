@@ -16,6 +16,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Layout = ({ children }) => {
     const [isAccordionOn, setAccordion] = useBoolean();
     const [isDesktopNavOn, setDesktopNav] = useBoolean();
+    const [isNavEdu, setNavEdu] = useBoolean();
+    const [isNavExp, setNavExp] = useBoolean();
+    const [isNavOrg, setNavOrg] = useBoolean();
+
     return (
         <Box>
             <Box as='header' position='fixed' w='100%'>
@@ -26,15 +30,30 @@ const Layout = ({ children }) => {
                         </Link>
                     </Box>
                     <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onClick={setDesktopNav.toggle}>
+                    <Button variant='link' hideBelow='md' onClick={() => {
+                        setNavExp.off();
+                        setNavOrg.off();
+                        setNavEdu.on();
+                        setDesktopNav.toggle();
+                    }}>
                         Education
                     </Button>
                     <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md'>
+                    <Button variant='link' hideBelow='md' onClick={() => {
+                        setNavExp.on();
+                        setNavOrg.off();
+                        setNavEdu.off();
+                        setDesktopNav.toggle();
+                    }}>
                         Experiences
                     </Button>
                     <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md'>
+                    <Button variant='link' hideBelow='md' onClick={() => {
+                        setNavExp.off();
+                        setNavOrg.on();
+                        setNavEdu.off();
+                        setDesktopNav.toggle();
+                    }}>
                         Origanization
                     </Button>
                     <Spacer />
@@ -62,7 +81,9 @@ const Layout = ({ children }) => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -50 }} >
-                        <DesktopNav />
+                        {isNavEdu && <DesktopNav directory='education'/>}
+                        {isNavExp && <DesktopNav directory='experiences'/>}
+                        {isNavOrg && <DesktopNav directory='organization'/>}
                     </motion.div>}
                 </AnimatePresence>
             </Box>
