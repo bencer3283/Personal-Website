@@ -7,18 +7,15 @@ exports.createPages = ({ graphql, actions }) => {
   // You can query for whatever data you want to create pages for e.g.
   // products, portfolio items, landing pages, etc.
   // Variables can be added as the second function parameter
-  return graphql(`query mdx {
-    allMdx {
+  return graphql(`query remark {
+    allMarkdownRemark {
       nodes {
+        id
         parent {
           ... on File {
             name
             relativeDirectory
           }
-        }
-        id
-        internal {
-            contentFilePath
         }
       }
     }
@@ -28,11 +25,11 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog post pages.
-    result.data.allMdx.nodes.forEach(node => {
+    result.data.allMarkdownRemark.nodes.forEach(node => {
       createPage({
         // Path for this page — required
         path: `/${node.parent.relativeDirectory}/${node.parent.name}`,
-        component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
+        component: postTemplate,
         context: {
           // Add optional context data to be inserted
           // as props into the page component.

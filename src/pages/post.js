@@ -1,15 +1,32 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import { Box, Heading } from "@chakra-ui/react"
-import { MDXProvider } from "@mdx-js/react"
+import { Box, Heading, Container } from "@chakra-ui/react"
 
-const PostPage = ({ data, children }) => {
+const PostPage = ({ data }) => {
   return (
     <Layout>
       <Box p='4' overflowY='auto' pt='150'>
-        <Heading>{data.mdx.frontmatter.title}</Heading>
-        <MDXProvider>{ children }</MDXProvider>
+        <Heading pb={6}>{data.markdownRemark.frontmatter.title}</Heading>
+        <Container maxW='lg' sx={{
+          'h2': {
+            fontSize: 'x-large',
+            fontWeight: 'bold',
+            lineHeight: 1.3,
+            pb: 2,
+            pt: 8
+          },
+          'h3': {
+            fontSize: 'large',
+            fontWeight: 'bold',
+            lineHeight: 1.6
+          },
+          'ul': {
+            paddingStart: '48px'
+          }
+        }}
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        />
         
       </Box>
     </Layout>
@@ -18,7 +35,8 @@ const PostPage = ({ data, children }) => {
 
 export const query = graphql`
 query ($id: String) {
-  mdx(id: {eq: $id}) {
+  markdownRemark(id: {eq: $id}) {
+    html
     frontmatter {
       title
     }

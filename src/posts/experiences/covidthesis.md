@@ -14,7 +14,7 @@ meta_image: https://imgur.com/d9X9VsS.jpg
 ## Championship
 `2021 National Thesis Competition for College Students, FEB 2021 - APR 2021`
 
-{/* <div class="row">
+<div class="row">
   <div class="large-4 columns">
       <ul class="disc">
          <li><a href="/docs/paper.pdf">Full thesis</a></li>
@@ -24,7 +24,7 @@ meta_image: https://imgur.com/d9X9VsS.jpg
   <div class="large-8 columns">
      <img src="https://imgur.com/9vjiGe0.jpg">
   </div>
-</div> */}
+</div>
 
 ---
 
@@ -70,4 +70,4 @@ Me sharing our results on the final contest.(📷 by SU, PIN-LUN)
 - Logistic regression
 - Latex 
 
-{/* <meta property="og image" content="https://imgur.com/DGAPMGo.jpg"> */}
+<meta property="og image" content="https://imgur.com/DGAPMGo.jpg">

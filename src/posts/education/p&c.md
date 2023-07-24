@@ -7,12 +7,12 @@ title: Academic project and courses
 breadcrumb: true
 ---
 ---
-{/* <div class="panel radius" markdown="1">
+<div class="panel radius" markdown="1">
 **Table of Contents**
 {: #toc }
 *  TOC
 {:toc}
-</div> */}
+</div>
 
 ## Measuring the Social Return of Higher Education
 ### Course

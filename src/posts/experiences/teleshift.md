@@ -23,9 +23,9 @@ Current workflow on co-editing and simultaneous presentation of 3-D shapes is co
 
 ## Videos
 
-{/* <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/749458064?h=e53bbfeec2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TeleSHift: Telexisting TUI for Physical Collaboration and Interaction"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/749458064?h=e53bbfeec2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TeleSHift: Telexisting TUI for Physical Collaboration and Interaction"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/749456595?h=03ad9067a9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Short Demo of TeleSHift: Telexisting TUI for Physical Collaboration &amp;amp; Interaction"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> */}
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/749456595?h=03ad9067a9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Short Demo of TeleSHift: Telexisting TUI for Physical Collaboration &amp;amp; Interaction"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ## Contributions
 - I laid out the system architecture of the presented prototype in this work with ESP32 microcontroller, potentiometers, DC motors, etc.
