@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
 
     return (
         <Box>
-            <Box as='header' position='fixed' w='100%'>
+            <Box as='header' position='fixed' w='100%' zIndex={1}>
                 <Flex w='100%' p='4' pr={{ base: 10, md: 20 }} bgColor='white'>
                     <Box p='2'>
                         <Link to='/'>

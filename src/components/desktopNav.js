@@ -28,6 +28,11 @@ function DesktopNav({ directory }) {
       }
     `);
     return <HStack bg='#9EC972' overflowX='auto'>
+        <Link to={`/${directory}`}>
+            <Button size='lg' m='4'>
+                Learn more
+            </Button>
+        </Link>
         {
             data.allFile.nodes.map((file) => {
                 if(file.relativeDirectory === directory) {

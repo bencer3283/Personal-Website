@@ -3,6 +3,7 @@ const path = require(`path`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const postTemplate = path.resolve(`src/pages/post.js`)
+  const directoryPageTemplate = path.resolve(`src/pages/directoryPage.js`)
   // Query for markdown nodes to use in creating pages.
   // You can query for whatever data you want to create pages for e.g.
   // products, portfolio items, landing pages, etc.
@@ -17,6 +18,12 @@ exports.createPages = ({ graphql, actions }) => {
             relativeDirectory
           }
         }
+      }
+      
+    }
+    allDirectory(filter: {sourceInstanceName: {eq: "posts"}}) {
+      nodes {
+        name
       }
     }
   }`).then(result => {
@@ -41,6 +48,16 @@ exports.createPages = ({ graphql, actions }) => {
           // argument.
           id: node.id
         },
+      })
+    })
+
+    result.data.allDirectory.nodes.forEach(directory => {
+      createPage({
+        path: `/${directory.name}`,
+        component: directoryPageTemplate,
+        context: {
+          name: directory.name
+        }
       })
     })
   })

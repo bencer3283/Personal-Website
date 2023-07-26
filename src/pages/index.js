@@ -7,8 +7,8 @@ const IndexPage = () => {
     <Layout>
       <Box p='4' overflowY='scroll' pt='50'>
         <Heading p='10' size='2xl'>
-          Implement keywords, automatic navigation generation.
-          Fix card height, post sequence.
+          Implement keywords, sub-title, automatic navigation generation.
+          Fix allFile query filter: extension .md or .mdx
         </Heading>
         <Heading p='10' size='2xl'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
