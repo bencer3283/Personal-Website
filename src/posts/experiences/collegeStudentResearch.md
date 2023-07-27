@@ -4,6 +4,8 @@ header:
     image: "logo.png"
     background-color: "#fabb00"
 title: College Student Researcher
+subtitle: Photonic Workshop, CCMS, National Taiwan University
+keywords: sw dev, spectral imaging
 breadcrumb: true
 meta_description: Development of a novel line-scan hyperspectral imaging system with LabVIEW. Recieved a Excellance Awards (NT20,000) at 2021 CCMS Innovative Techniques Competition.
 ---

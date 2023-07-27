@@ -3,9 +3,11 @@ layout: page
 header:
     image: "logo.png"
     background-color: "#fabb00"
-title: Chairman
+title: Chair
+subtitle: committe for school yearbook editing, CKSH
 breadcrumb: true
 meta_description: 70th committe for school yearbook editing.
+keywords: leadership, publishing, design
 ---
 
 `70th committe for school yearbook editing, CKSH, 2017-2018`

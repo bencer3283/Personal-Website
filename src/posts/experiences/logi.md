@@ -3,7 +3,9 @@ layout: page
 header:
     image: "logo.png"
     background-color: "#fabb00"
-title: Electromechanical Intern
+title: Electro-Mechanical Intern
+subtitle: Logitech inc.
+keywords: user research, mechanics design
 breadcrumb: true
 meta_description: A eletromechanical intern in the keyboard innovation team at Logitech to research and develope novel technology for future keyboards.
 ---
@@ -20,6 +22,7 @@ Another part of the intership is devoted to a UX research to find out the terget
 
 ## Relevent skill
 - Mechanical engineering
+- Microcontroller circuits
 - Electromagnet engineering
 - Creo
 - R for quantitative UX research

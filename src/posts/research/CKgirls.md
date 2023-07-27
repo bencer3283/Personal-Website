@@ -3,8 +3,11 @@ layout: page
 header:
     image: "logo.png"
     background-color: "#fabb00"
-title: Host, Opinion Investigation on "Should CKSH recruit girls ?"
+title: Research Program Host
+subtitle: Opinion Investigation on "Should CKSH admits girl students?"
+keywords: census, econometric research
 breadcrumb: true
+meta_description: We conducted a census in the campus of CKSH to understand students' and parents' attitudes toward the issue. Results are analyzed with Logistics regression.
 ---
 
 `2016 - 2017 by CKPC, cheng po sheng, kuo ui jei, tang fu yo`

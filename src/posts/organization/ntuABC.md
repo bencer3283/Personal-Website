@@ -4,10 +4,11 @@ header:
     image: "logo.png"
     background-color: "#ed5891"
 title: Manager of Academic Activity
+subtitle: Student Association of College of Bio-Resources and Argiculture
 breadcrumb: true
 ---
 
-`team on Intern-season activities, Student Association of College of Bio-Resources and Argiculture, FEB 2020 - JUN 2021`
+`team on Intern-season activities, Student Association of College of Bio-Resources and Argiculture, NTU, FEB 2020 - JUN 2021`
 
 ---
 

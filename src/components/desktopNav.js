@@ -19,6 +19,8 @@ function DesktopNav({ directory }) {
               frontmatter {
                 title
                 meta_description
+                keywords
+                subtitle
               }
             }
             name
@@ -29,7 +31,7 @@ function DesktopNav({ directory }) {
     `);
     return <HStack bg='#9EC972' overflowX='auto'>
         <Link to={`/${directory}`}>
-            <Button size='lg' m='4'>
+            <Button size='sm' m='4'>
                 Learn more
             </Button>
         </Link>
@@ -37,18 +39,20 @@ function DesktopNav({ directory }) {
             data.allFile.nodes.map((file) => {
                 if(file.relativeDirectory === directory) {
                     return(
-                        <Card w={{ base: '40vw', md: '30vw' }} h={{base: '25em', md: '20em'}} direction='column' m='3' flexShrink='0'>
+                        <Card w={{ base: '30vw', md: '20vw' }} h={{base: '25em', md: '20em'}} direction='column' m='3' flexShrink='0'>
                             
                             <CardHeader>
-                                <Heading size='md' noOfLines={{base: 3, md: 2}}>
+                                <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={{base: 3, md: 2}}>
+                                    { file.childrenMarkdownRemark[0].frontmatter.keywords }
+                                </Text>
+                                <Heading size='md' noOfLines={{base: 4, md: 3}}>
                                     {file.childrenMarkdownRemark[0].frontmatter.title}
                                 </Heading>
                             </CardHeader>
                             
                             <CardBody>
-
-                                <Text noOfLines={4}>
-                                    {file.childrenMarkdownRemark[0].frontmatter.meta_description}
+                                <Text noOfLines={{base: 3, md: 2}}>
+                                    {file.childrenMarkdownRemark[0].frontmatter.subtitle}
                                 </Text>
                             </CardBody>
                             

@@ -29,6 +29,20 @@ function MobileAccordionNav() {
             <h2>
                 <AccordionButton p={6}>
                     <Box as="span" flex='1' textAlign='left'>
+                        Research
+                    </Box>
+                    <AccordionIcon />
+                </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+                <DesktopNav directory='research'/>
+            </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem border='none'>
+            <h2>
+                <AccordionButton p={6}>
+                    <Box as="span" flex='1' textAlign='left'>
                         Experiences
                     </Box>
                     <AccordionIcon />

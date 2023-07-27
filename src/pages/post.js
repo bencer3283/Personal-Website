@@ -8,7 +8,8 @@ const PostPage = ({ data }) => {
     <Layout>
       <Box p='4' overflowY='auto' pt='150'>
         <Heading pb={6}>{data.markdownRemark.frontmatter.title}</Heading>
-        <Container maxW='lg' sx={{
+        <Heading size={'md'}>{data.markdownRemark.frontmatter.subtitle}</Heading>
+        <Container maxW={{base: 'lg', md: '60vw'}} sx={{
           'h2': {
             fontSize: 'x-large',
             fontWeight: 'bold',
@@ -39,6 +40,7 @@ query ($id: String) {
     html
     frontmatter {
       title
+      subtitle
     }
   }
 }`

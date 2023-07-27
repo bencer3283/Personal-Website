@@ -3,7 +3,9 @@ layout: page
 header:
     image: "logo.png"
     background-color: "#fabb00"
-title: "TeleSHift: Telexisting TUI for Physical Collaboration & Interaction"
+title: "Ubicomp 2022 conference paper: TeleSHift"
+subtitle: Telexisting TUI for Physical Collaboration & Interaction
+keywords: human computer interaction
 breadcrumb: true
 meta_description: we create TeleSHift, a 3-D tangible user interface (TUI) with a telexisting communication framework for group-based collaboration and demonstration.
 ---

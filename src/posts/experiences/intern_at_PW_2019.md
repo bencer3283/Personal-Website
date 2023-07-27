@@ -3,8 +3,11 @@ layout: page
 header:
     image: "logo.png"
     background-color: "#fabb00"
-title: Intern, 2019
+title: Research Intern, NTU
+subtitle: Photonic Workshop, Center for Condensed Matter Science
 breadcrumb: true
+keywords: SW dev, confocal microscope
+meta_description: developing a confocal optics microscope that utilizes 2 inches optics elements for the whole system
 ---
 
 `Photonic Workshop, CCMS, National Taiwan University, JUL 2019 - AUG 2019`

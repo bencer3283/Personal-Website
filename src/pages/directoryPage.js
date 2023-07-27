@@ -24,12 +24,18 @@ const DirectoryPage = ({ data }) => {
                     data.allFile.nodes.map((file) => {
                         return (
                             <WrapItem>
-                                <Card w='sm' h={{ base: '25em', md: '20em' }} direction='column' m='3' flexShrink='0'>
+                                <Card w='sm' direction='column' m='3' flexShrink='0'>
 
                                     <CardHeader>
-                                        <Heading size='md' noOfLines={{ base: 3, md: 2 }}>
-                                            {file.childrenMarkdownRemark[0].frontmatter.title}
+                                        <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={1}>
+                                            { file.childrenMarkdownRemark[0].frontmatter.keywords }
+                                        </Text>
+                                        <Heading size='md' noOfLines={2}>
+                                            { file.childrenMarkdownRemark[0].frontmatter.title }
                                         </Heading>
+                                        <Text textTransform={'capitalize'} noOfLines={4}>
+                                            { file.childrenMarkdownRemark[0].frontmatter.subtitle }
+                                        </Text>
                                     </CardHeader>
 
                                     <CardBody>
@@ -66,7 +72,9 @@ export const query = graphql`query ($name: String) {
         childrenMarkdownRemark {
           frontmatter {
             title
+            subtitle
             meta_description
+            keywords
           }
         }
         name

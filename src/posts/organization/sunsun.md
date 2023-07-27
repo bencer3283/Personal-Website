@@ -4,6 +4,7 @@ header:
     image: "logo.png"
     background-color: "#ed5891"
 title: Host
+subtitle: NTU Sunshiner summer camp
 breadcrumb: true   
 ---
 

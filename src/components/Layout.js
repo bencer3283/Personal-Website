@@ -19,6 +19,7 @@ const Layout = ({ children }) => {
     const [isNavEdu, setNavEdu] = useBoolean();
     const [isNavExp, setNavExp] = useBoolean();
     const [isNavOrg, setNavOrg] = useBoolean();
+    const [isNavRes, setNavRes] = useBoolean();
 
     return (
         <Box>
@@ -34,15 +35,27 @@ const Layout = ({ children }) => {
                         setNavExp.off();
                         setNavOrg.off();
                         setNavEdu.on();
+                        setNavRes.off();
                         setDesktopNav.toggle();
                     }}>
                         Education
                     </Button>
                     <Spacer hideBelow='md' />
                     <Button variant='link' hideBelow='md' onClick={() => {
+                        setNavExp.off();
+                        setNavOrg.off();
+                        setNavEdu.off();
+                        setNavRes.on();
+                        setDesktopNav.toggle();
+                    }}>
+                        Research
+                    </Button>
+                    <Spacer hideBelow='md' />
+                    <Button variant='link' hideBelow='md' onClick={() => {
                         setNavExp.on();
                         setNavOrg.off();
                         setNavEdu.off();
+                        setNavRes.off();
                         setDesktopNav.toggle();
                     }}>
                         Experiences
@@ -52,9 +65,10 @@ const Layout = ({ children }) => {
                         setNavExp.off();
                         setNavOrg.on();
                         setNavEdu.off();
+                        setNavRes.off();
                         setDesktopNav.toggle();
                     }}>
-                        Origanization
+                        Organization
                     </Button>
                     <Spacer />
                     <Button variant='link' hideBelow='md'>
@@ -85,6 +99,7 @@ const Layout = ({ children }) => {
                             {isNavEdu && <DesktopNav directory='education' />}
                             {isNavExp && <DesktopNav directory='experiences' />}
                             {isNavOrg && <DesktopNav directory='organization' />}
+                            {isNavRes && <DesktopNav directory='research' />}
                         </Box>
                         
                     </motion.div>}

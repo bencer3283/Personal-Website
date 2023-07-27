@@ -4,6 +4,7 @@ header:
     image: "logo.png"
     background-color: "#ed5891"
 title: President   
+subtitle: CKSH Photography
 breadcrumb: true
 meta_description: 43rd President of Chien Kuo Senior High Photography Club. During my time, CKPC is way beyond just a high school club. Our club had grown to be something like a photography agency.
 meta_image: https://i.imgur.com/XC468FN.jpg

@@ -3,7 +3,9 @@ layout: page
 header:
     image: "logo.png"
     background-color: "#fabb00"
-title: Intern
+title: Intern at Bio-Electromegnetics Labratory
+subtitle: Bio-Electromegnetics Labratory, National Taiwan University
+keywords: PCB design, IoT device, mechatronics
 breadcrumb: true
 meta_description: a internet of things network comprised of a self-designed intergrated device with temperature, humidity and illumination sensors as the node, and a Raspberry Pi based coordinator to upload informations to a SQL database.
 meta_image: https://imgur.com/3pGto7b.jpg
