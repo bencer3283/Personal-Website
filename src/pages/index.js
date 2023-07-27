@@ -7,7 +7,7 @@ const IndexPage = () => {
     <Layout>
       <Box p='4' overflowY='scroll' pt='50'>
         <Heading p='10' size='2xl'>
-          Implement breadcrumbs, keywords, sub-title, automatic navigation generation.
+          Implement breadcrumbs, seo keywords, sub-title, automatic navigation generation.
           Fix allFile query filter: extension .md or .mdx
         </Heading>
         <Heading p='10' size='2xl'>

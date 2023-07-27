@@ -9,14 +9,26 @@ import {
     CardHeader,
     Heading,
     Text,
-    Button
+    Button,
+    Breadcrumb, BreadcrumbItem, BreadcrumbLink,
 } from '@chakra-ui/react';
+import { ChevronRightIcon } from "@chakra-ui/icons"
 import { graphql, Link } from 'gatsby';
 
 const DirectoryPage = ({ data }) => {
     return (
         <Layout>
-            <Heading size='2xl' textTransform='capitalize' p='4' pt='4em'>
+            <Breadcrumb separator={<ChevronRightIcon color='gray.500' />} p={'4'} pt={'150'}>
+                <BreadcrumbItem>
+                    <BreadcrumbLink as={Link} to='/'>Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbItem>
+                    <BreadcrumbLink isCurrentPage as={Link} to={`/${data.allFile.nodes[0].relativeDirectory}`}>
+                        <Text textTransform='capitalize'> {data.allFile.nodes[0].relativeDirectory} </Text>
+                    </BreadcrumbLink>
+                </BreadcrumbItem>
+            </Breadcrumb>
+            <Heading size='2xl' textTransform='capitalize' p='4' pt='8'>
                 {data.allFile.nodes[0].relativeDirectory}
             </Heading>
             <Wrap p='10' zIndex={0}>
