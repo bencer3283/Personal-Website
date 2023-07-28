@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
-import { Box, Heading, Container, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Text } from "@chakra-ui/react"
+import { Box, Heading, Container, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Text, Card, CardHeader, CardBody } from "@chakra-ui/react"
 import { ChevronRightIcon } from "@chakra-ui/icons"
 
 const PostPage = ({ data }) => {
@@ -21,8 +21,16 @@ const PostPage = ({ data }) => {
             <BreadcrumbLink as={Link} to='./' isCurrentPage>{data.markdownRemark.frontmatter.title}, {data.markdownRemark.frontmatter.subtitle}</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
-        <Heading pb={6}>{data.markdownRemark.frontmatter.title}</Heading>
-        <Heading size={'md'}>{data.markdownRemark.frontmatter.subtitle}</Heading>
+        <Card m='2rem'>
+          <CardHeader>
+            <Heading >{data.markdownRemark.frontmatter.title}</Heading>
+          </CardHeader>
+          <CardBody>
+            <Heading size={'md'}>{data.markdownRemark.frontmatter.subtitle}</Heading>
+          </CardBody>
+        </Card>
+        
+        
         <Container maxW={{base: 'lg', md: '60vw'}} sx={{
           'h2': {
             fontSize: 'x-large',
@@ -38,6 +46,14 @@ const PostPage = ({ data }) => {
           },
           'ul': {
             paddingStart: '48px'
+          },
+          'a': {
+            textDecoration: 'underline'
+          },
+          'code': {
+            fontSize: '8pt',
+            lineHeight: 1,
+            padding: '3em'
           }
         }}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}

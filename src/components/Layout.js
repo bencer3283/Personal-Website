@@ -7,11 +7,13 @@ import {
     Box,
     Button,
     useBoolean,
+    ChakraProvider,
 } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { motion, AnimatePresence } from 'framer-motion';
+import theme from '../theme';
 
 const Layout = ({ children }) => {
     const [isAccordionOn, setAccordion] = useBoolean();
@@ -22,6 +24,7 @@ const Layout = ({ children }) => {
     const [isNavRes, setNavRes] = useBoolean();
 
     return (
+        <ChakraProvider theme={theme}>
         <Box>
             <Box as='header' position='fixed' w='100%' zIndex={1}>
                 <Flex w='100%' p='4' pr={{ base: 10, md: 20 }} bgColor='white'>
@@ -109,6 +112,7 @@ const Layout = ({ children }) => {
                 {children}
             </motion.div>
         </Box>
+        </ChakraProvider>
     )
 }
 
