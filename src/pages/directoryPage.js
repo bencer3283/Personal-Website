@@ -18,7 +18,7 @@ import { graphql, Link } from 'gatsby';
 const DirectoryPage = ({ data }) => {
     return (
         <Layout>
-            <Breadcrumb separator={<ChevronRightIcon color='gray.500' />} p={'4'} pt={'150'}>
+            <Breadcrumb separator={<ChevronRightIcon color='gray.500' />}>
                 <BreadcrumbItem>
                     <BreadcrumbLink as={Link} to='/'>Home</BreadcrumbLink>
                 </BreadcrumbItem>
@@ -28,7 +28,7 @@ const DirectoryPage = ({ data }) => {
                     </BreadcrumbLink>
                 </BreadcrumbItem>
             </Breadcrumb>
-            <Heading size='2xl' textTransform='capitalize' p='4' pt='8'>
+            <Heading size='2xl' textTransform='capitalize' pt='8'>
                 {data.allFile.nodes[0].relativeDirectory}
             </Heading>
             <Wrap p='10' zIndex={0}>

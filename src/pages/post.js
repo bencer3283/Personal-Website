@@ -7,7 +7,7 @@ import { ChevronRightIcon } from "@chakra-ui/icons"
 const PostPage = ({ data }) => {
   return (
     <Layout>
-      <Box p='4' overflowY='auto' pt='150'>
+      <Box overflowY='auto'>
         <Breadcrumb separator={<ChevronRightIcon color='gray.500'/>}>
           <BreadcrumbItem>
             <BreadcrumbLink as={Link} to='/'>Home</BreadcrumbLink>

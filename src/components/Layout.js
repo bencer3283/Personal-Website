@@ -109,7 +109,9 @@ const Layout = ({ children }) => {
                 </AnimatePresence>
             </Box>
             <motion.div layout transition={{ layout: { duration: 0.2, ease: "easeIn", type: "tween" } }}>
-                {children}
+                <Box p='3rem' pt='8rem'>
+                    {children}
+                </Box>
             </motion.div>
         </Box>
         </ChakraProvider>
