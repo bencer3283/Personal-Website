@@ -8,6 +8,7 @@ import {
     Button,
     useBoolean,
     ChakraProvider,
+    Text,
 } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
@@ -18,61 +19,54 @@ import theme from '../theme';
 const Layout = ({ children }) => {
     const [isAccordionOn, setAccordion] = useBoolean();
     const [isDesktopNavOn, setDesktopNav] = useBoolean();
-    const [isNavEdu, setNavEdu] = useBoolean();
-    const [isNavExp, setNavExp] = useBoolean();
-    const [isNavOrg, setNavOrg] = useBoolean();
-    const [isNavRes, setNavRes] = useBoolean();
+
+    const directories = [
+        {
+            name: 'education',
+            boolean: useBoolean()
+        },
+        {
+            name: 'research',
+            boolean: useBoolean()
+        },
+        {
+            name: 'experiences',
+            boolean: useBoolean()
+        },
+        {
+            name: 'organization',
+            boolean: useBoolean()
+        }
+    ]
 
     return (
         <ChakraProvider theme={theme}>
         <Box>
             <Box as='header' position='fixed' w='100%' zIndex={1}>
-                <Flex w='100%' p='4' pr={{ base: 10, md: 20 }} bgColor='white'>
+                <Flex w='100vw' p='4' pr={{ base: 10, md: 20 }} bgColor='white'>
                     <Box p='2'>
                         <Link to='/'>
                             <StaticImage src='../images/%%.png' alt='Po Sheng Cheng' width='40' />
                         </Link>
                     </Box>
-                    <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onMouseEnter={() => {
-                        setNavExp.off();
-                        setNavOrg.off();
-                        setNavEdu.on();
-                        setNavRes.off();
-                        setDesktopNav.on();
-                    }}>
-                        <Link to='/education'>Education</Link>
-                    </Button>
-                    <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onMouseEnter={() => {
-                        setNavExp.off();
-                        setNavOrg.off();
-                        setNavEdu.off();
-                        setNavRes.on();
-                        setDesktopNav.on();
-                    }}>
-                        <Link to='/research'>Research</Link>
-                    </Button>
-                    <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onMouseEnter={() => {
-                        setNavExp.on();
-                        setNavOrg.off();
-                        setNavEdu.off();
-                        setNavRes.off();
-                        setDesktopNav.on();
-                    }}>
-                        <Link to='/experiences'>Experiences</Link>
-                    </Button>
-                    <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onMouseEnter={() => {
-                        setNavExp.off();
-                        setNavOrg.on();
-                        setNavEdu.off();
-                        setNavRes.off();
-                        setDesktopNav.on();
-                    }}>
-                        <Link to='/organization'>Organization</Link>
-                    </Button>
+                    {
+                        directories.map((theDirectory, index, directoryArray) => {
+                            return (
+                                [<Spacer hideBelow='md' key={index}/>, <Button key={theDirectory} variant='link' hideBelow='md' onMouseEnter={() => {
+                                    directoryArray.forEach((directory) => {
+                                        if (directory.name !== theDirectory.name) {directory.boolean[1].off()}
+                                        else {directory.boolean[1].on()}
+                                    })
+                                    setDesktopNav.on();
+                                }}>
+                                    <Link to={`/${theDirectory.name}`}>
+                                        <Text textTransform='capitalize' >{theDirectory.name}</Text>
+                                    </Link>
+                                </Button>]
+                            )
+                        })
+                    }
+                    
                     <Spacer />
                     <Button variant='link' hideBelow='md'>
                         Art Creation
@@ -98,14 +92,19 @@ const Layout = ({ children }) => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -50 }} >
-                        <Box hideBelow='md' onMouseLeave={() => {
-                        setDesktopNav.off();
-                    }}>
-                            {isNavEdu && <DesktopNav directory='education' />}
-                            {isNavExp && <DesktopNav directory='experiences' />}
-                            {isNavOrg && <DesktopNav directory='organization' />}
-                            {isNavRes && <DesktopNav directory='research' />}
-                        </Box>
+                            <Box hideBelow='md' onMouseLeave={() => {
+                                setDesktopNav.off();
+                            }}>
+                                {
+                                    directories.map((directory, index, array) => {
+                                        if(directory.boolean[0]) return (
+                                            <DesktopNav directory={directory.name} key={directory.name}/>
+                                        )
+                                        else return null
+                                    })
+                                }
+                                
+                            </Box>
                         
                     </motion.div>}
                 </AnimatePresence>
