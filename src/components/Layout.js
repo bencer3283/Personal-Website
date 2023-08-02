@@ -34,44 +34,44 @@ const Layout = ({ children }) => {
                         </Link>
                     </Box>
                     <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onClick={() => {
+                    <Button variant='link' hideBelow='md' onMouseEnter={() => {
                         setNavExp.off();
                         setNavOrg.off();
                         setNavEdu.on();
                         setNavRes.off();
-                        setDesktopNav.toggle();
+                        setDesktopNav.on();
                     }}>
-                        Education
+                        <Link to='/education'>Education</Link>
                     </Button>
                     <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onClick={() => {
+                    <Button variant='link' hideBelow='md' onMouseEnter={() => {
                         setNavExp.off();
                         setNavOrg.off();
                         setNavEdu.off();
                         setNavRes.on();
-                        setDesktopNav.toggle();
+                        setDesktopNav.on();
                     }}>
-                        Research
+                        <Link to='/research'>Research</Link>
                     </Button>
                     <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onClick={() => {
+                    <Button variant='link' hideBelow='md' onMouseEnter={() => {
                         setNavExp.on();
                         setNavOrg.off();
                         setNavEdu.off();
                         setNavRes.off();
-                        setDesktopNav.toggle();
+                        setDesktopNav.on();
                     }}>
-                        Experiences
+                        <Link to='/experiences'>Experiences</Link>
                     </Button>
                     <Spacer hideBelow='md' />
-                    <Button variant='link' hideBelow='md' onClick={() => {
+                    <Button variant='link' hideBelow='md' onMouseEnter={() => {
                         setNavExp.off();
                         setNavOrg.on();
                         setNavEdu.off();
                         setNavRes.off();
-                        setDesktopNav.toggle();
+                        setDesktopNav.on();
                     }}>
-                        Organization
+                        <Link to='/organization'>Organization</Link>
                     </Button>
                     <Spacer />
                     <Button variant='link' hideBelow='md'>
@@ -98,7 +98,9 @@ const Layout = ({ children }) => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -50 }} >
-                        <Box hideBelow='md' >
+                        <Box hideBelow='md' onMouseLeave={() => {
+                        setDesktopNav.off();
+                    }}>
                             {isNavEdu && <DesktopNav directory='education' />}
                             {isNavExp && <DesktopNav directory='experiences' />}
                             {isNavOrg && <DesktopNav directory='organization' />}
