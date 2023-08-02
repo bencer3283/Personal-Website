@@ -6,65 +6,39 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
+    Text
 } from '@chakra-ui/react';
 import DesktopNav from './desktopNav';
 
+const directoriesArray = [
+    'education',
+    'research',
+    'experiences',
+    'organization'
+]
+
 function MobileAccordionNav() {
     return <Accordion defaultIndex={[]} allowToggle hideFrom='md' bgColor='#9EC972'>
-        <AccordionItem border='none'>
-            <h2>
-                <AccordionButton p={6}>
-                    <Box as="span" flex='1' textAlign='left'>
-                        Education
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-                <DesktopNav directory='education'/>
-            </AccordionPanel>
-        </AccordionItem>
+        {
+            directoriesArray.map((item) => {
+                return (
+                    <AccordionItem border='none'>
+                        <h2>
+                            <AccordionButton p={6}>
+                                <Box as="span" flex='1' textAlign='left'>
+                                    <Text textTransform='capitalize'>{item}</Text>
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                        </h2>
+                        <AccordionPanel pb={4}>
+                            <DesktopNav directory={item} />
+                        </AccordionPanel>
+                    </AccordionItem>
 
-        <AccordionItem border='none'>
-            <h2>
-                <AccordionButton p={6}>
-                    <Box as="span" flex='1' textAlign='left'>
-                        Research
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-                <DesktopNav directory='research'/>
-            </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem border='none'>
-            <h2>
-                <AccordionButton p={6}>
-                    <Box as="span" flex='1' textAlign='left'>
-                        Experiences
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-                <DesktopNav directory='experiences'/>
-            </AccordionPanel>
-        </AccordionItem>
-        <AccordionItem border='none'>
-            <h2>
-                <AccordionButton p={6}>
-                    <Box as="span" flex='1' textAlign='left'>
-                        Origanization
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-                <DesktopNav directory='organization'/>
-            </AccordionPanel>
-        </AccordionItem>
+                )
+            })
+        }
         <AccordionItem border='none'>
             <h2>
                 <AccordionButton p={6}>
@@ -75,7 +49,7 @@ function MobileAccordionNav() {
                 </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-                
+
             </AccordionPanel>
         </AccordionItem>
     </Accordion>;
