@@ -1,9 +1,9 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
-import Layout from "../components/Layout"
+import Layout from "./Layout"
 import { Box, Heading, Container, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Text, Card, CardHeader, CardBody } from "@chakra-ui/react"
 import { ChevronRightIcon } from "@chakra-ui/icons"
-import { SEO } from "../components/seo"
+import { SEO } from "./seo"
 import { useSiteMetadata } from "../hooks/site-meta"
 
 const PostPage = ({ data }) => {

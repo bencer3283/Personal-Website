@@ -17,7 +17,7 @@ const IndexPage = () => {
           Proudly made in Taiwan.
         </Text>
         <Text pt='10' fontSize='2xl'>
-          To-Do: Implement breadcrumbs, seo keywords, sub-title, automatic navigation generation.
+          To-Do: Implement footer, local images, breadcrumbs, seo keywords, sub-title, automatic navigation generation.
           Fix allFile query filter: extension .md or .mdx
         </Text>
       </Box>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Layout from '../components/Layout';
+import Layout from './Layout';
 import {
     Wrap,
     WrapItem,
@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { graphql, Link } from 'gatsby';
-import { SEO } from '../components/seo';
+import { SEO } from './seo';
 import { useSiteMetadata } from '../hooks/site-meta';
 
 const DirectoryPage = ({ data }) => {
