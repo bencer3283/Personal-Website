@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import { Box, Heading, Text } from "@chakra-ui/react"
+import { SEO } from "../components/seo"
 
 const IndexPage = () => {
   return (
@@ -16,30 +17,16 @@ const IndexPage = () => {
           Proudly made in Taiwan.
         </Text>
         <Text pt='10' fontSize='2xl'>
-          Implement breadcrumbs, seo keywords, sub-title, automatic navigation generation.
+          To-Do: Implement breadcrumbs, seo keywords, sub-title, automatic navigation generation.
           Fix allFile query filter: extension .md or .mdx
         </Text>
-        <Heading p='10' size='2xl'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </Heading>
-        <Heading p='10' size='2xl'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </Heading>
-        <Heading p='10' size='2xl'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </Heading>
       </Box>
     </Layout>
   )
 }
 
 export default IndexPage;
+
+export const Head = () => (
+  <SEO />
+)

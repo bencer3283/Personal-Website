@@ -3,8 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `personal-site`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Po Sheng Cheng`,
+    siteUrl: `https://bencer3283.github.io`,
+    description: `Po Sheng Cheng's personal website showcasing a wide range of skills and interests.`,
+    image: `/%%.png`
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',

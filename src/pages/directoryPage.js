@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Layout from './Layout';
+import Layout from '../components/Layout';
 import {
     Wrap,
     WrapItem,
@@ -14,6 +14,8 @@ import {
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { graphql, Link } from 'gatsby';
+import { SEO } from '../components/seo';
+import { useSiteMetadata } from '../hooks/site-meta';
 
 const DirectoryPage = ({ data }) => {
     return (
@@ -98,3 +100,10 @@ export const query = graphql`query ($name: String) {
 `
 
 export default DirectoryPage;
+
+export const Head = ({ location, params, data, pageContext }) => (
+    <SEO 
+      title={pageContext.name + ' | ' + useSiteMetadata().title}
+      description={pageContext.name}
+      ></SEO>
+  )

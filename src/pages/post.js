@@ -1,8 +1,10 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
-import Layout from "./Layout"
+import Layout from "../components/Layout"
 import { Box, Heading, Container, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Text, Card, CardHeader, CardBody } from "@chakra-ui/react"
 import { ChevronRightIcon } from "@chakra-ui/icons"
+import { SEO } from "../components/seo"
+import { useSiteMetadata } from "../hooks/site-meta"
 
 const PostPage = ({ data }) => {
   return (
@@ -75,6 +77,7 @@ query ($id: String) {
     frontmatter {
       title
       subtitle
+      meta_description
     }
     parent {
       ... on File {
@@ -85,3 +88,10 @@ query ($id: String) {
 }`
 
 export default PostPage;
+
+export const Head = ({ location, params, data, pageContext }) => (
+  <SEO 
+    title={data.markdownRemark.frontmatter.title + ' | ' + useSiteMetadata().title} 
+    description={data.markdownRemark.frontmatter.meta_description}
+    ></SEO>
+)
