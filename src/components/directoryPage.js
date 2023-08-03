@@ -35,7 +35,7 @@ const DirectoryPage = ({ data }) => {
                 {
                     data.allFile.nodes.map((file) => {
                         return (
-                            <WrapItem>
+                            <WrapItem key={file.id}>
                                 <Card w={{md: 'sm'}} direction='column' m='3' flexShrink={{md: '0'}}>
 
                                     <CardHeader>
@@ -91,6 +91,7 @@ export const query = graphql`query ($name: String) {
         }
         name
         relativeDirectory
+        id
       }
     }
   }

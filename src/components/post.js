@@ -52,8 +52,12 @@ const PostPage = ({ data }) => {
           },
           'code': {
             fontSize: '8pt',
-            lineHeight: 1,
-            padding: '3em'
+            lineHeight: '8pt',
+            paddingBlock: '3em'
+          },
+          'hr': {
+            padding: '8pt',
+            paddingBlock: '8pt'
           }
         }}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}

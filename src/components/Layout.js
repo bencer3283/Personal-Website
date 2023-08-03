@@ -52,7 +52,8 @@ const Layout = ({ children }) => {
                     {
                         directories.map((theDirectory, index, directoryArray) => {
                             return (
-                                [<Spacer hideBelow='md' key={index}/>, <Button key={theDirectory} variant='link' hideBelow='md' onMouseEnter={() => {
+                                [<Spacer hideBelow='md' key={index}/>, 
+                                <Button key={theDirectory} variant='link' hideBelow='md' onMouseEnter={() => {
                                     directoryArray.forEach((directory) => {
                                         if (directory.name !== theDirectory.name) {directory.boolean[1].off()}
                                         else {directory.boolean[1].on()}
@@ -75,16 +76,7 @@ const Layout = ({ children }) => {
                         Menu
                     </Button>
                 </Flex>
-                <AnimatePresence>
-                    {isAccordionOn && <motion.div
-                        key='mobile_nav'
-                        transition={{ type: "tween", ease: "easeIn", duration: 0.3 }}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: 20 }} >
-                        <MobileAccordionNav />
-                    </motion.div>}
-                </AnimatePresence>
+                
                 <AnimatePresence>
                     {isDesktopNavOn && <motion.div
                         key='deskop-navi'
@@ -108,9 +100,20 @@ const Layout = ({ children }) => {
                         
                     </motion.div>}
                 </AnimatePresence>
+                <AnimatePresence>
+                {isAccordionOn && <motion.div
+                    key='mobile_nav'
+                    transition={{ type: "tween", ease: "easeIn", duration: 0.3 }}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 20 }} >
+                    <MobileAccordionNav />
+                </motion.div>}
+            </AnimatePresence>
             </Box>
+            
             <motion.div layout transition={{ layout: { duration: 0.2, ease: "easeIn", type: "tween" } }}>
-                <Box p={{base: '1.5rem', md: '3rem'}} pt={{base: '8rem', md: '8rem'}}>
+                <Box p={{base: '1.5rem', md: '3rem'}} pt={{base: '8rem', md: '8rem'}} >
                     {children}
                 </Box>
             </motion.div>

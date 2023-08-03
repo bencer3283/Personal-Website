@@ -25,13 +25,14 @@ function DesktopNav({ directory }) {
             }
             name
             relativeDirectory
+            id
           }
         }
       }
     `);
     return <Stack direction={{base: 'column', md: 'row'}} bg='#9EC972' overflow={'auto'}>
         <Link to={`/${directory}`}>
-            <Button size='sm' m='4'>
+            <Button size={{base: 'xs', md: 'sm'}} m={{base: '1', md: '3'}}>
                 Learn more
             </Button>
         </Link>
@@ -39,7 +40,7 @@ function DesktopNav({ directory }) {
             data.allFile.nodes.map((file) => {
                 if(file.relativeDirectory === directory) {
                     return(
-                        <Card w={{ base: '', md: '20vw' }} h={{base: '10em', md: '20em'}} direction='column' m='3' flexShrink='0'>
+                        <Card key={file.id} w={{ base: '', md: '20vw' }} h={{base: '', md: '22em'}} direction='column' m={{base: '1', md: '3'}} flexShrink='0'>
                             
                             <CardHeader>
                                 <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={{base: 3, md: 2}}>
@@ -51,14 +52,14 @@ function DesktopNav({ directory }) {
                             </CardHeader>
                             
                             <CardBody hideBelow={'md'}>
-                                <Text noOfLines={{base: 3, md: 2}}>
+                                <Text noOfLines={'3'}>
                                     {file.childrenMarkdownRemark[0].frontmatter.subtitle}
                                 </Text>
                             </CardBody>
                             
                             <CardFooter>
                                 <Link to={`/${file.relativeDirectory}/${file.name}`}>
-                                    <Button variant='outline'>
+                                    <Button variant='outline' size={{base: 'xs', md: 'sm'}}>
                                         Learn more
                                     </Button>
                                 </Link>
