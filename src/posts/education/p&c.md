@@ -19,21 +19,21 @@ breadcrumb: true
 - (2nd Semester 2021/2022) Introductory Econometrics with Recitation
 
 This work aims to measure the spillover effects of government-backed higher education in Taiwan.
-- [Paper](../../docs/econometric_paper.pdf)
-- [Presentation](../../docs/econometric_beamer.pdf)
+- [Paper](/docs/econometric_paper.pdf)
+- [Presentation](/docs/econometric_beamer.pdf)
 - [Source code and data](https://github.com/bencer3283/Social-Return-of-Higher-Education) 
 
 ## Liberalism and Education
 ### Course
 - (1st Semester 2022/2023) Liberalism, **A-**
 
-This [essay](../../docs/liberalism.pdf) explores the issue of national education from the perspective of Mill's liberalism.
+This [essay](/docs/liberalism.pdf) explores the issue of national education from the perspective of Mill's liberalism.
 
 ## Mechatronics: Line tracker and Maze runner
 ### Course
 - (2nd Semester 2018/2019) Principles and Applications of Microcontrollers-Mechatronics (1), **A+**
 
-[see final report](https://bencer3283.github.io/docs/MachetronicsFinalReport.pdf)
+[see final report](/docs/MachetronicsFinalReport.pdf)
 ### Involved skill
 - microcontroller(ATmega 328p)
 - embaded C++
@@ -58,7 +58,7 @@ This [essay](../../docs/liberalism.pdf) explores the issue of national education
 - 3D printing (and slicing)
 - Laser cutting
 
-This project actually earned the 3rd position in the class competition. [See brief report](https://bencer3283.github.io/docs/mechanicsReport.pdf)
+This project actually earned the 3rd position in the class competition. [See brief report](/docs/mechanicsReport.pdf)
 
 ---
 
@@ -69,7 +69,7 @@ This project actually earned the 3rd position in the class competition. [See bri
 ### Skill
 - Solidworks Flow Simulation
 
-The project simulate the heat transfer of a microcontroller when being soldered using different method. [See report](/../../docs/heattransfer.pdf) 
+The project simulate the heat transfer of a microcontroller when being soldered using different method. [See report](/docs/heattransfer.pdf) 
 
 ---
 
@@ -77,7 +77,7 @@ The project simulate the heat transfer of a microcontroller when being soldered 
 ### Course
 - (2nd Semester 2020/2021) Design of Machine Elements **C+**
 
-This [essay](/../../docs/dme.pdf) summarizes the different kinds of gearbox clutch vibration model.
+This [essay](/docs/dme.pdf) summarizes the different kinds of gearbox clutch vibration model.
 
 ---
 
@@ -85,7 +85,7 @@ This [essay](/../../docs/dme.pdf) summarizes the different kinds of gearbox clut
 ### Course
 - (2nd Semester 2020/2021) Bio-industrial Engineering Practice **A**
 
-This [presentation](/../../docs/carindustry.pdf) summarizes the past and future of Taiwan’s car industry.
+This [presentation](/docs/carindustry.pdf) summarizes the past and future of Taiwan’s car industry.
 
 ---
 

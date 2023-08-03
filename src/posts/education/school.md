@@ -15,7 +15,7 @@ breadcrumb: true
 
 ### Grades
 GPA, grades point average, full score `4.3`.
-[Complete transcrip of record.](../../docs/complete_transcript005.pdf)
+[Complete transcrip of record.](/docs/complete_transcript005.pdf)
 - 2022/2023
     - 1st Semester: `3.94`
 - 2021/2022

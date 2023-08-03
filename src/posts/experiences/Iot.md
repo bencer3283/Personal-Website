@@ -7,7 +7,7 @@ title: Intern at Bio-Electromegnetics Labratory
 subtitle: Bio-Electromegnetics Labratory, National Taiwan University
 keywords: PCB design, IoT device, mechatronics
 breadcrumb: true
-meta_description: a internet of things network comprised of a self-designed intergrated device with temperature, humidity and illumination sensors as the node, and a Raspberry Pi based coordinator to upload informations to a SQL database.
+meta_description: An internet of things network comprised of a self-designed intergrated device with temperature, humidity and illumination sensors as the node, and a Raspberry Pi based coordinator to upload informations to a SQL database.
 meta_image: https://imgur.com/3pGto7b.jpg
 ---
 
@@ -30,7 +30,7 @@ Check out the project on [Github](https://github.com/bencer3283/IoT-Lab).
     - with Altium Designer
 - Microcontroller programming
     - with Atmega 328p and Arduino bootloader
-    - checkout this [project](/../education/p&c/#mechatronics-line-tracker-and-maze-runner) with embeded C programmed system.
+    - checkout this [project](/education/p&c/#mechatronics-line-tracker-and-maze-runner) with embeded C programmed system.
 - IoT application
     - with Digi Xbee
 - Raspberry Pi

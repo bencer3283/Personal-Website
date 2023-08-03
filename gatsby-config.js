@@ -6,7 +6,7 @@ module.exports = {
     title: `personal-site`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-transformer-remark", {
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -45,6 +45,18 @@ module.exports = {
         {
           name: 'IBM Plex Sans',
           file: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
+        }
+      ]
+    }
+  },{
+    resolve: "gatsby-transformer-remark",
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            
+          }
         }
       ]
     }

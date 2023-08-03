@@ -16,8 +16,8 @@ meta_description: We conducted a census in the campus of CKSH to understand stud
 
 This investigation came from the news that CKSH is considering recruiting girls, which has never happended for the history of CK senior high. We conducted the investigation via printed survey, and for the investigation on students we actully conducted a census.
 
-- investigation on CKSH [students](https://bencer3283.github.io/docs/student.pdf)
-- investigation on CKSH [parents](https://bencer3283.github.io/docs/parents.pdf)
+- investigation on CKSH [students](/docs/student.pdf)
+- investigation on CKSH [parents](/docs/parents.pdf)
 
 ## Relevent skill:
 - SPSS

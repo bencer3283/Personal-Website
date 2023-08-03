@@ -7,7 +7,7 @@ title: "Ubicomp 2022 conference paper: TeleSHift"
 subtitle: Telexisting TUI for Physical Collaboration & Interaction
 keywords: human computer interaction
 breadcrumb: true
-meta_description: we create TeleSHift, a 3-D tangible user interface (TUI) with a telexisting communication framework for group-based collaboration and demonstration.
+meta_description: We created TeleSHift, a 3-D tangible user interface (TUI) with a telexisting communication framework for group-based collaboration and demonstration.
 ---
 
 `SEP 2022`
@@ -16,8 +16,8 @@ meta_description: we create TeleSHift, a 3-D tangible user interface (TUI) with 
 
 `Andrew Chen, Tzu-Ling Yang, Shu-Yan Cheng, Po-Sheng Cheng, Tzu-Han Lin, and Kaiyuan Lin. 2023. TeleSHift: Telexisting TUI for Physical Collaboration & Interaction. In Adjunct Proceedings of the 2022 ACM International Joint Conference on Pervasive and Ubiquitous Computing and the 2022 ACM International Symposium on Wearable Computers (UbiComp/ISWC '22 Adjunct). Association for Computing Machinery, New York, NY, USA, 16–17. https://doi.org/10.1145/3544793.3560323`
 
-- [Demo paper](../../docs/teleshift_acm.pdf)
-- This work was awarded [Best Demo](../../docs/Ubicomp_ISWC 2022 -- Teleshift Best Demo.pdf) at Ubicomp 2022.
+- [Demo paper](/docs/teleshift_acm.pdf)
+- This work was awarded [Best Demo](/docs/Ubicomp_ISWC-2022-Teleshift-Best-Demo.pdf) at Ubicomp 2022.
 
 ## Abstract
 

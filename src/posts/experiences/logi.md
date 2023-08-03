@@ -7,7 +7,7 @@ title: Electro-Mechanical Intern
 subtitle: Logitech inc.
 keywords: user research, mechanics design
 breadcrumb: true
-meta_description: An eletromechanical intern in the keyboard innovation team at Logitech to research and develope novel technology for future keyboards.
+meta_description: An eletromechanical internship in the keyboard innovation team at Logitech to research and develope novel technology for future keyboards.
 ---
 
 `Logitech, FEB 2022 - JUN 2022`
