@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
 
     return (
         <ChakraProvider theme={theme}>
-        <Box>
+        
             <Box as='header' position='fixed' w='100%' zIndex={1}>
                 <Flex w='100vw' p='4' pr={{ base: 10, md: 20 }} bgColor='white'>
                     <Box p='2'>
@@ -110,11 +110,11 @@ const Layout = ({ children }) => {
                 </AnimatePresence>
             </Box>
             <motion.div layout transition={{ layout: { duration: 0.2, ease: "easeIn", type: "tween" } }}>
-                <Box p='3rem' pt='8rem'>
+                <Box p={{base: '1.5rem', md: '3rem'}} pt={{base: '8rem', md: '8rem'}}>
                     {children}
                 </Box>
             </motion.div>
-        </Box>
+        
         </ChakraProvider>
     )
 }

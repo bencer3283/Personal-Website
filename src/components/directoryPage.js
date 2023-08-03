@@ -31,12 +31,12 @@ const DirectoryPage = ({ data }) => {
             <Heading size='2xl' textTransform='capitalize' pt='8'>
                 {data.allFile.nodes[0].relativeDirectory}
             </Heading>
-            <Wrap p='10' zIndex={0}>
+            <Wrap p={{base: '0', md: '10'}} pt='10' zIndex={0}>
                 {
                     data.allFile.nodes.map((file) => {
                         return (
                             <WrapItem>
-                                <Card w='sm' direction='column' m='3' flexShrink='0'>
+                                <Card w={{md: 'sm'}} direction='column' m='3' flexShrink={{md: '0'}}>
 
                                     <CardHeader>
                                         <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={1}>

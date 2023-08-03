@@ -18,7 +18,7 @@ const PostPage = ({ data }) => {
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <BreadcrumbLink as={Link} to='./' isCurrentPage>{data.markdownRemark.frontmatter.title}, {data.markdownRemark.frontmatter.subtitle}</BreadcrumbLink>
+            <BreadcrumbLink as={Link} to='./' isCurrentPage noOfLines={2}>{data.markdownRemark.frontmatter.title}, {data.markdownRemark.frontmatter.subtitle}</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
         <Card m='2rem'>
