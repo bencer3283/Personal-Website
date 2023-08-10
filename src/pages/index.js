@@ -16,10 +16,10 @@ const IndexPage = () => {
           This is Po Sheng Cheng's personal website, where you can find all the works this interdisciplinary student have ever done.
           Proudly made in Taiwan.
         </Text>
-        <a href="/docs/CV.pdf">
+        
         <Text pt='10' textDecoration={'underline'}>
-          Download my CV
-        </Text></a>
+          <a href="/docs/CV.pdf">Download my CV</a>
+        </Text>
       </Box>
     </Layout>
   )

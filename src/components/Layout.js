@@ -10,6 +10,7 @@ import {
     ChakraProvider,
     Text,
     AbsoluteCenter,
+    Stack,
 } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
@@ -122,10 +123,27 @@ const Layout = ({ children }) => {
             </Box>
             
             <Box bg={'#9EC972'} width={'100vw'} h={'5rem'} position={'absolute'} bottom={'0'}>
-                <AbsoluteCenter>
-                    <Text>
-                        © Po Sheng Cheng 2023
-                    </Text>
+                <AbsoluteCenter axis='vertical'>
+                        <Flex w={'100vw'} pr={'2rem'} pl={'2rem'}>
+
+                            <Stack direction={'row'} spacing={'0.5rem'}>
+                            <a href='https://github.com/bencer3283'>GitHub</a>
+                            
+                            <a href='https://www.linkedin.com/in/posheng'>LinkedIn</a>
+                            
+                            <a href='https://www.instagram.com/bencer3283/'>Instagram</a>
+                            
+                            <a href='https://www.facebook.com/bencercheng/'>Facebook</a>
+                            
+                            <a href='https://twitter.com/ben3283'>Twitter</a>
+                            </Stack>
+                            <Spacer />
+                            <Text fontSize={'8pt'}>
+                                © Po Sheng Cheng 2023
+                            </Text>
+
+                        </Flex>
+                    
                     
                 </AbsoluteCenter>
                 
