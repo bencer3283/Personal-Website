@@ -124,7 +124,7 @@ const Layout = ({ children }) => {
             
             <Box bg={'#9EC972'} width={'100vw'} h={'5rem'} position={'absolute'} bottom={'0'}>
                 <AbsoluteCenter axis='vertical'>
-                        <Flex w={'100vw'} pr={'2rem'} pl={'2rem'}>
+                        <Flex w={'100vw'} pr={'2rem'} pl={'2rem'} direction={{base: 'column', md: 'row'}}>
 
                             <Stack direction={'row'} spacing={'0.5rem'}>
                             <a href='https://github.com/bencer3283'>GitHub</a>
