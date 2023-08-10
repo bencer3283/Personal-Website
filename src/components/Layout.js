@@ -42,8 +42,8 @@ const Layout = ({ children }) => {
 
     return (
         <ChakraProvider theme={theme}>
-        
-            <Box as='header' position='fixed' w='100%' zIndex={1}>
+            
+            <Box as='header' position='fixed' w='100%' zIndex={100} top={'0'}>
                 <Flex w='100vw' p='4' pr={{ base: 10, md: 20 }} bgColor='white'>
                     <Box p='2'>
                         <Link to='/'>
@@ -115,13 +115,13 @@ const Layout = ({ children }) => {
                     </motion.div>}
                 </AnimatePresence>
             </Box>
+
+            <Box minH={'100vh'} pb={'5rem'}>
+            <Box p={{ base: '1.5rem', md: '3rem' }} pt={{ base: '8rem', md: '8rem' }}>
+                {children}
+            </Box>
             
-            <motion.div layout transition={{ layout: { duration: 0.2, ease: "easeIn", type: "tween" } }}>
-                <Box p={{base: '1.5rem', md: '3rem'}} pt={{base: '8rem', md: '8rem'}} >
-                    {children}
-                </Box>
-            </motion.div>
-            <Box bg={'#9EC972'} width={'100vw'} h={'5rem'} position={'relative'}>
+            <Box bg={'#9EC972'} width={'100vw'} h={'5rem'} position={'absolute'} bottom={'0'}>
                 <AbsoluteCenter>
                     <Text>
                         © Po Sheng Cheng 2023
@@ -130,7 +130,7 @@ const Layout = ({ children }) => {
                 </AbsoluteCenter>
                 
             </Box>
-        
+            </Box>
         </ChakraProvider>
     )
 }
