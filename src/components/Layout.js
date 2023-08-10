@@ -127,15 +127,22 @@ const Layout = ({ children }) => {
                         <Flex w={'100vw'} pr={'2rem'} pl={'2rem'} direction={{base: 'column', md: 'row'}}>
 
                             <Stack direction={'row'} spacing={'0.5rem'}>
-                            <a href='https://github.com/bencer3283'>GitHub</a>
+                                <Text fontSize={'10pt'}><a href='mailto: bencer@outlook.com'>Email</a></Text>
+                                <Text fontSize={'10pt'}><a href='https://github.com/bencer3283'>GitHub</a></Text>
+                                <Text fontSize={'10pt'}><a href='https://www.linkedin.com/in/posheng'>LinkedIn</a></Text>
+                                <Text fontSize={'10pt'}><a href='https://www.instagram.com/bencer3283/'>Instagram</a></Text>
+                                <Text fontSize={'10pt'}><a href='https://www.facebook.com/bencercheng/'>Facebook</a></Text>
+                                <Text fontSize={'10pt'}><a href='https://twitter.com/ben3283'>Twitter</a></Text>
                             
-                            <a href='https://www.linkedin.com/in/posheng'>LinkedIn</a>
                             
-                            <a href='https://www.instagram.com/bencer3283/'>Instagram</a>
                             
-                            <a href='https://www.facebook.com/bencercheng/'>Facebook</a>
                             
-                            <a href='https://twitter.com/ben3283'>Twitter</a>
+                            
+                            
+                            
+                            
+                            
+                            
                             </Stack>
                             <Spacer />
                             <Text fontSize={'8pt'}>
