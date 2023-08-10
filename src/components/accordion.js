@@ -6,7 +6,8 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-    Text
+    Text,
+    Button
 } from '@chakra-ui/react';
 import DesktopNav from './desktopNav';
 
@@ -50,7 +51,16 @@ function MobileAccordionNav() {
                     </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-
+                    <a href='https://photographic-gallery-of-posheng.netlify.app/'>
+                        <Button m={'1rem'}>
+                            Online Photographic Gallery
+                        </Button>
+                    </a>
+                    <a href='/docs/portfolio.pdf'>
+                        <Button m={'1rem'}>
+                            Art Portfolio
+                        </Button>
+                    </a>
                 </AccordionPanel>
             </AccordionItem>
         </Accordion></Box>;

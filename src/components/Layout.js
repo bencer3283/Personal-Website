@@ -9,6 +9,7 @@ import {
     useBoolean,
     ChakraProvider,
     Text,
+    AbsoluteCenter,
 } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
@@ -70,7 +71,10 @@ const Layout = ({ children }) => {
                     
                     <Spacer />
                     <Button variant='link' hideBelow='md'>
-                        Art Creation
+                        <Link to={'/art'}>
+                            Art Creation
+                        </Link>
+                        
                     </Button>
                     <Button variant='link' rightIcon={<HamburgerIcon boxSize={6} />} hideFrom='md' onClick={setAccordion.toggle}>
                         Menu
@@ -101,15 +105,15 @@ const Layout = ({ children }) => {
                     </motion.div>}
                 </AnimatePresence>
                 <AnimatePresence>
-                {isAccordionOn && <motion.div
-                    key='mobile_nav'
-                    transition={{ type: "tween", ease: "easeIn", duration: 0.3 }}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }} >
-                    <MobileAccordionNav />
-                </motion.div>}
-            </AnimatePresence>
+                    {isAccordionOn && <motion.div
+                        key='mobile_nav'
+                        transition={{ type: "tween", ease: "easeIn", duration: 0.3 }}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }} >
+                        <MobileAccordionNav />
+                    </motion.div>}
+                </AnimatePresence>
             </Box>
             
             <motion.div layout transition={{ layout: { duration: 0.2, ease: "easeIn", type: "tween" } }}>
@@ -117,6 +121,15 @@ const Layout = ({ children }) => {
                     {children}
                 </Box>
             </motion.div>
+            <Box bg={'#9EC972'} width={'100vw'} h={'5rem'} position={'relative'}>
+                <AbsoluteCenter>
+                    <Text>
+                        © Po Sheng Cheng 2023
+                    </Text>
+                    
+                </AbsoluteCenter>
+                
+            </Box>
         
         </ChakraProvider>
     )
