@@ -16,6 +16,11 @@ const ArtPage = () => {
                     Art Portfolio
                 </Text>
             </a>
+            <a href='/portfolio'>
+            <Text fontSize={'2xl'} textDecoration={'underline'}>
+                    Interactive Design Engineering Portfolio
+                </Text>
+            </a>
         </Layout>
     )
 }

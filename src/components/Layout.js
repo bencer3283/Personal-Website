@@ -133,16 +133,6 @@ const Layout = ({ children }) => {
                                 <Text fontSize={'10pt'}><a href='https://www.instagram.com/bencer3283/'>Instagram</a></Text>
                                 <Text fontSize={'10pt'}><a href='https://www.facebook.com/bencercheng/'>Facebook</a></Text>
                                 <Text fontSize={'10pt'}><a href='https://twitter.com/ben3283'>Twitter</a></Text>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             </Stack>
                             <Spacer />
                             <Text fontSize={'8pt'}>
