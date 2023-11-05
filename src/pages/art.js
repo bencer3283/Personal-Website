@@ -2,6 +2,7 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import { Text } from '@chakra-ui/react';
 import { SEO } from '../components/seo';
+import { Link } from 'gatsby';
 
 const ArtPage = () => {
     return(
@@ -16,11 +17,11 @@ const ArtPage = () => {
                     Art Portfolio
                 </Text>
             </a>
-            <a href='/portfolio'>
+            <Link to='/portfolio'>
             <Text fontSize={'2xl'} textDecoration={'underline'}>
                     Interactive Design Engineering Portfolio
                 </Text>
-            </a>
+            </Link>
         </Layout>
     )
 }
