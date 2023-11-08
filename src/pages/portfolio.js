@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import { SEO } from '../components/seo';
-import { Container, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Avatar, Box, HStack } from '@chakra-ui/react';
+import { Container, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, useControllableState, Box, HStack } from '@chakra-ui/react';
 
 let initArm = Array(12).fill(15);
 
@@ -26,22 +26,21 @@ const PortfolioPage = () => {
     }
 
     const TeleshiftArm = ({armController, direction, isReversed=false, id, length}) => {
+        const [value, setValue] = useState(length[id])
         return <Slider
             orientation={direction}
-            defaultValue={15}
             h={direction === 'vertical' ? '20vh' : ''}
             w={direction === 'horizontal' ? '20vh' : ''}
-            onChangeEnd={(value) => {
-                handleArmInteraction(value, id, length);
+            onChangeEnd={(val) => {
+                handleArmInteraction(val, id, length);
             } }
             onChange={(val) => {
-                handleArmInteraction(val, id, length);
+                setValue(val)
             }}
             min={5}
             max={40}
             isReversed={isReversed}
-            isReadOnly={false}
-            value={length[id]}
+            value={value}
         >
             <SliderTrack>
                 <SliderFilledTrack />
