@@ -25,19 +25,23 @@ const PortfolioPage = () => {
         setArmLength(newLength);
     }
 
-    const TeleshiftArm = ({armController, direction, isReversed=false, id, length, value}) => {
+    const TeleshiftArm = ({armController, direction, isReversed=false, id, length}) => {
         return <Slider
             orientation={direction}
+            defaultValue={15}
             h={direction === 'vertical' ? '20vh' : ''}
             w={direction === 'horizontal' ? '20vh' : ''}
             onChangeEnd={(value) => {
                 handleArmInteraction(value, id, length);
             } }
+            onChange={(val) => {
+                handleArmInteraction(val, id, length);
+            }}
             min={5}
             max={40}
             isReversed={isReversed}
             isReadOnly={false}
-            value={value}
+            value={length[id]}
         >
             <SliderTrack>
                 <SliderFilledTrack />
@@ -55,7 +59,7 @@ const PortfolioPage = () => {
             <HStack m={'20vh'}>
                 <Center p={'2vh'}>
                     <div style={{ transform: `rotate(0deg) translateY(0vh)` }}>
-                        <TeleshiftArm armController={setArmLength} direction={'vertical'} id={0} length={armLength} />
+                        <TeleshiftArm armController={setArmLength} direction={'vertical'} id={0} length={armLength}/>
                     </div>
                     <div style={{ transform: `rotate(60deg) translate3d(8vh, -4vh, 0)` }}>
                         <TeleshiftArm armController={setOneSize} direction={'vertical'} id={1} length={armLength}/>
@@ -78,7 +82,7 @@ const PortfolioPage = () => {
                 </Center>
                 <Center p={'2vh'}>
                     <div style={{ transform: `rotate(0deg) translateY(0vh)` }}>
-                        <TeleshiftArm armController={setOneSize} direction={'vertical'} id={6} length={armLength} value={armLength[6]}/>
+                        <TeleshiftArm armController={setOneSize} direction={'vertical'} id={6} length={armLength}/>
                     </div>
                     <div style={{ transform: `rotate(60deg) translate3d(8vh, -4vh, 0)` }}>
                         <TeleshiftArm armController={setOneSize} direction={'vertical'} id={7} length={armLength}/>
