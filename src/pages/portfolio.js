@@ -2,7 +2,8 @@ import * as React from 'react';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import { SEO } from '../components/seo';
-import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box, HStack, Tab, Tabs, TabList, TabPanel, TabPanels, Button } from '@chakra-ui/react';
+import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box, HStack, Tab, Tabs, TabList, TabPanel, TabPanels, Button, Card, CardBody, Tooltip, Heading } from '@chakra-ui/react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 let initArm = Array(12).fill(16);
 
@@ -40,7 +41,7 @@ const PortfolioPage = () => {
         setArmLength(newLength);
     }
 
-    function memorize() {
+    function restore() {
         const newLength = armLength.map((e, i) => {
             if (i >= 6) {
                 return armLength[i-6]
@@ -79,9 +80,59 @@ const PortfolioPage = () => {
 
     return (
         <Layout>
-            <HStack m={'20vh'}>
+            <Text fontSize={'6xl'}>TeleSHift</Text>
+            <Text fontSize={'4xl'}>Telexisting shape-shifting 3D tangible user interface for physical collaboration and interaction.</Text>
+            <Tabs variant='soft-rounded' colorScheme='blue' align='center'>
+                <TabPanels>
+                    <TabPanel>
+                        <Card w={'5xl'}>
+                            <CardBody>
+                                <StaticImage src='../images/teleshiftconcept.png'></StaticImage>
+                                <Text textAlign={'start'}>
+                                    TeleSHift is shape-transforming device that can be physically joined to form almost any object.
+                                    It also has a Telexisting communication framework that enable people to collaborate on 3D shapes remotely and simoutaneously,
+                                    and allows two separated objects formed by TeleSHift in different physical spaces to sense co-presence via interaction.
+                                    With the Tangile User Interface (TUI) presented by TeleSHift, 3D concepts can be presented and edited on true 3D interface.
+                                </Text>
+                            </CardBody>
+                        </Card>
+                        
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'} direction={'row'}>
+                            <Box m={'2vh'} maxH={'lg'}>
+                                <StaticImage src='../images/teleshiftprototype.jpg' height={500}></StaticImage>
+                            </Box>
+                            
+                            <CardBody>
+                                <Text textAlign={'start'}>
+                                    In order to showcase the TUI concept, we developed this larger-scale prototype. Each prototype has six arms made of motorized potentiometer which has the functionalities
+                                    of detecting its position and moving to a spcified position, enabling the shape-transforming capability of TeleSHift.
+                                    Each TeleSHift prototype use a single ESP32 as its MCU, allowing network-connection and the Telexisting communication framework.
+                                </Text>
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'}>
+                            <CardBody>
+                                <div style={{padding:`56.25% 0 0 0`, position:`relative`}}><iframe src="https://player.vimeo.com/video/749458064?h=e53bbfeec2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style={{position:`absolute`,top:`0`,left:`0`,width:`100%`,height:`100%`}} title="TeleSHift: Telexisting TUI for Physical Collaboration and Interaction"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                </TabPanels>
+                <TabList>
+                    <Tab>Concept</Tab>
+                    <Tab>Prototype</Tab>
+                    <Tab>Video</Tab>
+                </TabList>            
+            </Tabs>
+            <Card variant={'filled'} mt={'6vh'} p={'6'}>
+            <Text fontSize={'4xl'}>Three modes of Telexisting communication</Text>
+            <Text>In this interactive widget, try move the sliders on both TeleSHifts in all three modes.</Text>
+            <HStack m={'20vh'} mt={'5vh'}>
                 <Center p={'2vh'}>
-                    <div style={{ transform: `rotate(0deg) translateY(0vh)` }}>
+                    <div style={{ transform: `rotate(0deg) translateX(-0.8vh)` }}>
                         <TeleshiftArm direction={'vertical'} id={0} length={armLength}/>
                     </div>
                     <div style={{ transform: `rotate(60deg) translate3d(8vh, -4vh, 0)` }}>
@@ -112,7 +163,7 @@ const PortfolioPage = () => {
                         </div></Box>
                 </Center>
                 <Center p={'2vh'}>
-                    <div style={{ transform: `rotate(0deg) translateY(0vh)` }}>
+                    <div style={{ transform: `rotate(0deg) translateX(-0.8vh)` }}>
                         <TeleshiftArm direction={'vertical'} id={6} length={armLength}/>
                     </div>
                     <div style={{ transform: `rotate(60deg) translate3d(8vh, -4vh, 0)` }}>
@@ -146,25 +197,114 @@ const PortfolioPage = () => {
             </HStack>
             <Tabs variant='soft-rounded' colorScheme='blue' onChange={(mode) => {
                 setArmMode(mode);
-            }}>
+            }} align='start'>
 
                 <TabPanels>
                     <TabPanel>
                         <p>Each arm of slave TeleSHift is programmed to follow the position of master TeleSHift, but not vice versa.</p>
+                        <Text>Use case: Dimensional teaching.</Text>
                     </TabPanel>
                     <TabPanel>
                         <p>Each arm of both TeleSHifts is synced with the respective arm on the other TeleSHift.</p>
+                        <Text>Use case: 3D structure co-editing for remote prototyping collaboration.</Text>
                     </TabPanel>
                     <TabPanel>
-                        <Button onClick={memorize} mb={'12px'}>Restore</Button>
+                        <Button variant={'outline'} onClick={restore} mb={'12px'} colorScheme='blue'>Restore</Button>
                         <Text>TeleSHift can be commanded to restore a pre-defined shape in its memory.</Text>
-                        
+                        <Text>Use case: As a prototyping material to reduce material waste. </Text>
                     </TabPanel>
                 </TabPanels>
                 <TabList>
                     <Tab>Master & Slave</Tab>
                     <Tab>Mutual Sync</Tab>
                     <Tab>Shape Memory</Tab>
+                </TabList>            
+            </Tabs>
+            </Card>
+            <Text fontSize={'4xl'} mt={'6vh'}>How I build TeleSHift</Text>
+            <Tabs variant='soft-rounded' colorScheme='blue' align='center'>
+                <TabPanels>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'lg'} direction={'row'}>
+                            <Tooltip placement='right-end' defaultIsOpen label='The unique hexahedron shape was meant to give the perception of a TeleSHift "particle" instead of a box.'>
+                                <Box m={'2vh'}>
+                                    <StaticImage src='../images/teleshiftCAD.png' height={400}></StaticImage>
+                                </Box> 
+                            </Tooltip>
+                            <CardBody>
+                                <Heading textAlign={'start'}>
+                                    Design considerations
+                                </Heading>
+                                <Text textAlign={'start'} mt={4}>
+                                    Hover on the images to learn more. 
+                                </Text>
+                                <Text textAlign={'start'} mt={4}>
+                                    An extensive and detailed design was done in SolidWorks, including analysis of mechanical interference. 
+                                    A wide range of custom-designed components was used to ensure its structural stability and to achieve this 
+                                    unique hexahedron shape.
+                                    Despite this prototype is just a proof-of-concept, there are lots of consideration in its appearance.
+                                </Text>
+                            </CardBody>
+                            <Tooltip placement='left-end' label='The spoon-loop shape of the arms was designed to encourage human interactions and to open other possibilities, 
+                                    for instance connecting to other non-TeleSHift formed objects.'>
+                                <Box m={'2vh'}>
+                                    <StaticImage src='../images/teleshiftarm.png' height={400}></StaticImage>
+                                </Box> 
+                            </Tooltip>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'lg'} direction={'row'} p={'4'}>
+                            <Card variant={'elevated'} m={4}>
+                                <CardBody>
+                                    <StaticImage src='../images/teleshiftanchor.png'></StaticImage>
+                                    <Text textAlign={'start'} mt={4}>
+                                        This small component that anchors the extension rod on the motorized slide potentiometer is surprisingly the most
+                                        difficult one to design.
+                                    </Text>
+                                </CardBody>
+                            </Card>
+                            <Card variant={'elevated'} m={4}>
+                                <CardBody>
+                                    <StaticImage src='../images/teleshiftanchor1.png'></StaticImage>
+                                    <Text textAlign={'start'} mt={4}>
+                                        The original design requires adhesive to assemble, is very unstable and lacks pass-through for touch sensitivity wire.
+                                    </Text>
+                                </CardBody>
+                            </Card>
+                            <Card variant={'elevated'} m={4}>
+                                <CardBody>
+                                    <StaticImage src='../images/teleshiftanchor2.png'></StaticImage>
+                                    <Text textAlign={'start'} mt={4}>
+                                        I tried six prototypes to arrive at this improved "snap" that only takes 3 seconds to assemble and is much more stable.
+                                    </Text>
+                                </CardBody>
+                            </Card>
+                            <Card variant={'elevated'} m={4}>
+                                <CardBody>
+                                    <StaticImage src='../images/teleshiftanchorfinal.png'></StaticImage>
+                                    <Text textAlign={'start'} mt={4}>
+                                        The finalized version adds pass-through for touch sensitivity wire and takes 20% less time to be 3D printed by improving the shape.
+                                    </Text>
+                                </CardBody>
+                            </Card>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'}>
+                            <CardBody>
+                                <StaticImage src='../images/teleshiftcircuit.png' height={400}></StaticImage>
+                                <Text textAlign={'start'} mt={4}>
+                                    In addition to the appearance and mechanical design, I also designed its power supply circuit and laid out the control system architecture.
+                                </Text>
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                </TabPanels>
+                <TabList>
+                    <Tab>CAD</Tab>
+                    <Tab>Mechanical Iterations</Tab>
+                    <Tab>Power and Control Circuit</Tab>
                 </TabList>            
             </Tabs>
         </Layout>
