@@ -222,7 +222,7 @@ const PortfolioPage = () => {
                 </TabList>            
             </Tabs>
             </Card>
-            <Text fontSize={'4xl'} mt={'6vh'}>How I build TeleSHift</Text>
+            <Text fontSize={'4xl'} mt={'6vh'}>How I built TeleSHift</Text>
             <Tabs variant='soft-rounded' colorScheme='blue' align='center'>
                 <TabPanels>
                     <TabPanel>
@@ -298,7 +298,7 @@ const PortfolioPage = () => {
                                 <Text textAlign={'start'} mt={4}>
                                     In addition to the appearance and mechanical design, I also designed its power supply circuit and laid out the control system architecture.
                                 </Text>
-                            </CardBody>
+                                </CardBody>
                         </Card>
                     </TabPanel>
                 </TabPanels>

@@ -1,7 +1,6 @@
-import { Box, Card, CardBody, Center, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
+import { Box, Card, CardBody, Center, HStack, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Tooltip } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
-import { Head } from '../pages/portfolio';
 
 export default function HSIsection() {
     return(
@@ -15,40 +14,135 @@ export default function HSIsection() {
                     </Box>
                     <CardBody>
                         <Text>
-                            Hyperspectral, or spectral mapping, is an imaging process that measures the whole spectrum on each location of a sample. The scanning process of traditional microscopic spectral mapping is complex and the scanning range is often small.  I developed this system and its accompanying software to enable researchers in the field of optoelectronics to work more efficiently by improving scanning speed and range and providing self-contained data analysis features.
+                            Hyperspectral imaging, or spectral mapping, is an imaging process that measures the whole spectrum on each location of a sample. The scanning process of traditional microscopic spectral mapping is complex and the scanning range is often small.  I developed this system and its accompanying software to enable researchers in the field of optoelectronics to work more efficiently by improving scanning speed and range and providing self-contained data analysis features.
                         </Text>
                     </CardBody>
                 </Card>
             </Center>
-            <Text fontSize={'4xl'} mt={6}>Visual Communication</Text>
+            <Text fontSize={'4xl'} mt={6}>Visual communications</Text>
             <Text>
                 The complex concepts involved in this novel spectral imaging system is not easy to understand even for people in the field.
-                That is why I devoted a lot of effort into the visual communication of this product. 
+                That is why I devoted a lot of effort into the visual communication of this product and made the following graph.
             </Text>
             <Tabs variant={'soft-rounded'} align='center' colorScheme='blue'>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} align={'start'}>
-                            <CardBody>
-                                <StaticImage src='../images/hsiconcept.png' height={450}></StaticImage>
-                                <Heading textAlign={'start'}>Scanning and Formation of data</Heading>
+                        <Card w={'5xl'}>
+                            <CardBody textAlign={'start'}>
+                                <Center>
+                                    <StaticImage src='../images/hsi_concept.jpg' height={450}></StaticImage>
+                                </Center>
+                                <Heading mt={6}>From scanning to formation of data</Heading>
+                                <Text mt={4}>
+                                    From A to C:
+                                </Text>
+                                <Box ml={10}>
+                                    <ol type='A'>
+                                    <li>The system takes a photo of a line on the sample through the input slit.</li>
+                                    <li>Every point on the line has its spectrum dispersed simoutaneously by a linear spectrometer.</li>
+                                    <li>These spectra is imaged on a 2D monochrome EMCCD sensor to form the "on sensor image".</li>
+                                </ol>
+                                </Box>
+                                <Text>From ABC to abc: the same procedure is repeated on other lines on the sample to acquire the spectra on every location of the sample. The movement is achieved by a motorized stage.</Text>
                             </CardBody>
                         </Card>
                     </TabPanel>
                     <TabPanel>
                     <Card w={'5xl'}>
-                            <CardBody>
-                                <StaticImage src='../images/hsiraypath.png' height={450}></StaticImage>
-                                <Heading textAlign={'start'}>Ray path and system configuration</Heading>
+                            <CardBody textAlign={'start'}>
+                                <Center>
+                                    <StaticImage src='../images/hsiraypath.png' height={450}></StaticImage>
+                                </Center>
+                                <Heading mt={6}>Ray path and system configuration</Heading>
+                                <Text mt={4}>
+                                    Based on my observations when working alongside researchers in the field, 
+                                    I found that once they fully understand the optical components of HSI,
+                                    they will be able to comprehend the working principle of HSI at the same time.
+                                    Instead of trying to explain the complicated working principle everytime, I found that simply explaining only the system configuration is much easier and more effective.
+                                </Text>
                             </CardBody>
                         </Card>
                     </TabPanel>
                 </TabPanels>
                 <TabList>
-                    <Tab>Concept</Tab>
-                    <Tab>System</Tab>
+                    <Tab>Working Principle</Tab>
+                    <Tab>System Components</Tab>
                 </TabList>
             </Tabs>
+
+            <Text fontSize={'4xl'} mt={6}>Human-centered approach</Text>
+            <Text>
+                In order to find the needs and bottleneck of current spectral mapping workflow, I worked with professional researchers
+                in the institute for a couple of monthes before the development of HSI.
+            </Text>
+            <Text as={'b'}>I identified the following painpoints and developed features accordingly.</Text>
+            <Center>
+                <HStack mt={6}>
+                    <Card variant={'filled'} w={'m'}>
+                        <CardBody textAlign={'start'}>
+                            <Heading>1</Heading>
+                            <Text>Jumping between equipments</Text>
+                        </CardBody>
+                    </Card>
+                    <Card variant={'filled'} w={'m'}>
+                        <CardBody textAlign={'start'}>
+                            <Heading>2</Heading>
+                            <Text>Jumping between softwares</Text>
+                        </CardBody>
+                    </Card>
+                    <Card variant={'filled'} w={'m'}>
+                        <CardBody textAlign={'start'}>
+                            <Heading>3</Heading>
+                            <Text>Lack of suitable file format</Text>
+                        </CardBody>
+                    </Card>
+                </HStack>
+                
+            </Center>
+            <Center mt={3}>
+                <Card variant={'filled'} w={'5xl'}>
+                    <CardBody textAlign={'start'}>
+                        <Heading>HSI</Heading>
+                        <Text mb={6}>An one-stop, integrated solution</Text>
+                        <Tabs variant={'soft-rounded'}>
+                            <TabList>
+                                <Tab>Integrated OM</Tab>
+                                <Tab>Built-in Analysis</Tab>
+                                <Tab>Custom TIFF</Tab>
+                            </TabList>
+                            <TabPanels>
+                                <TabPanel>
+                                    <Text mb={6}>
+                                        A big bottleneck in the workflow of spectral mapping is the need to decide the range of scanning by examining the sample on another equipment beforehand.
+                                        That is why I integrated another Optical Microscope (OM) in HSI hardware so users can set and iterate scanning ranges in the same HSI software without moving the sample to another OM.
+                                    </Text>
+                                    <StaticImage src='../images/hsiom.png' imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                                    <Text mt={4}>The screen on the right shows the live-view image of the sample from the OM in HSI. User can drag the red line to set the scanning range.</Text>
+                                    
+
+                                </TabPanel>
+                                <TabPanel>
+                                    <Text mb={6}>
+                                        Due to the special 3D array data structure of hyperspectral imaging, another issue in spectral mapping workflow is the need to use special software to view and perform analysis on the image.
+                                        So, I developed analysis features in the HSI software that allows users to browse the three dimensional image from different "perspectives" (2D slices), which is not availiable on existing softwares like ImageJ.
+                                        Also, analysis features for specific workflow like backgroud subtraction for reflective spectrum are also built-in, so users no longer have to switch between different softwares.
+                                    </Text>
+                                    <StaticImage src='../images/hsianalysis.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
+                                </TabPanel>
+                                <TabPanel>
+                                    <Text mb={6}>
+                                        While there are existing file formats that are able to store hyperspectral images, their compatibilities are often limited and can not store important scanning settings.
+                                        I developed a custom TIFF file format that is compatible with existing softwares but also carries information unique to HSI to address the issue. 
+                                    </Text>
+                                    <StaticImage src='../images/hsifile.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
+                                    <Text mt={4}>This screeshot was taken while HSI is performing scan, during which scanning setting controls are disabled.</Text>
+                                </TabPanel>
+                            </TabPanels>
+                        </Tabs>
+                    </CardBody>
+                </Card>
+            </Center>
+
         </div>
         
     )
