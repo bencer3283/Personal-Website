@@ -5,6 +5,7 @@ import { SEO } from '../components/seo';
 import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box, HStack, Tab, Tabs, TabList, TabPanel, TabPanels, Button, Card, CardBody, Tooltip, Heading } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import HSIsection from '../portfolio/hsi';
+import PestSection from '../portfolio/pest';
 
 let initArm = Array(12).fill(16);
 
@@ -309,6 +310,7 @@ const PortfolioPage = () => {
                 </TabList>
             </Tabs>
             <HSIsection />
+            <PestSection />
         </Layout>
     )
 }

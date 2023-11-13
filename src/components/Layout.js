@@ -41,6 +41,8 @@ const Layout = ({ children }) => {
         }
     ]
 
+    const year = new Date().getFullYear();
+
     return (
         <ChakraProvider theme={theme}>
             
@@ -136,7 +138,7 @@ const Layout = ({ children }) => {
                             </Stack>
                             <Spacer />
                             <Text fontSize={'8pt'}>
-                                © Po Sheng Cheng 2023
+                                © Po Sheng Cheng {year}
                             </Text>
 
                         </Flex>

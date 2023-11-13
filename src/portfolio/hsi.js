@@ -22,7 +22,7 @@ export default function HSIsection() {
             <Text fontSize={'4xl'} mt={6}>Visual communications</Text>
             <Text>
                 The complex concepts involved in this novel spectral imaging system is not easy to understand even for people in the field.
-                That is why I devoted a lot of effort into the visual communication of this product and made the following graph.
+                That is why I devoted a lot of effort into the visual communication of this product and made the following graphs.
             </Text>
             <Tabs variant={'soft-rounded'} align='center' colorScheme='blue'>
                 <TabPanels>
@@ -57,7 +57,7 @@ export default function HSIsection() {
                                 <Text mt={4}>
                                     Based on my observations when working alongside researchers in the field, 
                                     I found that once they fully understand the optical components of HSI,
-                                    they will be able to comprehend the working principle of HSI at the same time.
+                                    they will also be able to comprehend the working principle of HSI at the same time.
                                     Instead of trying to explain the complicated working principle everytime, I found that simply explaining only the system configuration is much easier and more effective.
                                 </Text>
                             </CardBody>
@@ -116,10 +116,11 @@ export default function HSIsection() {
                                         A big bottleneck in the workflow of spectral mapping is the need to decide the range of scanning by examining the sample on another equipment beforehand.
                                         That is why I integrated another Optical Microscope (OM) in HSI hardware so users can set and iterate scanning ranges in the same HSI software without moving the sample to another OM.
                                     </Text>
-                                    <StaticImage src='../images/hsiom.png' imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                                    <Text mt={4}>The screen on the right shows the live-view image of the sample from the OM in HSI. User can drag the red line to set the scanning range.</Text>
-                                    
-
+                                    <Tooltip placement={'top-end'} label='The screen on the right shows the live-view image of the sample from the OM in HSI. User can drag the red line to set the scanning range.'>
+                                        <Box>
+                                            <StaticImage src='../images/hsiom.png' imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                                        </Box>
+                                    </Tooltip>
                                 </TabPanel>
                                 <TabPanel>
                                     <Text mb={6}>
@@ -134,8 +135,11 @@ export default function HSIsection() {
                                         While there are existing file formats that are able to store hyperspectral images, their compatibilities are often limited and can not store important scanning settings.
                                         I developed a custom TIFF file format that is compatible with existing softwares but also carries information unique to HSI to address the issue. 
                                     </Text>
-                                    <StaticImage src='../images/hsifile.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
-                                    <Text mt={4}>This screeshot was taken while HSI is performing scan, during which scanning setting controls are disabled.</Text>
+                                    <Tooltip placement={'top-end'} label='This screeshot was taken while HSI is performing scan, during which scanning setting controls are disabled.'>
+                                        <Box>
+                                            <StaticImage src='../images/hsifile.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
+                                        </Box>
+                                    </Tooltip>
                                 </TabPanel>
                             </TabPanels>
                         </Tabs>
