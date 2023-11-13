@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import { SEO } from '../components/seo';
 import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box, HStack, Tab, Tabs, TabList, TabPanel, TabPanels, Button, Card, CardBody, Tooltip, Heading } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
+import HSIsection from '../portfolio/hsi';
 
 let initArm = Array(12).fill(16);
 
@@ -101,7 +102,7 @@ const PortfolioPage = () => {
                     <TabPanel>
                         <Card w={'5xl'} direction={'row'}>
                             <Box m={'2vh'} maxH={'lg'}>
-                                <StaticImage src='../images/teleshiftprototype.jpg' height={500}></StaticImage>
+                                <StaticImage src='../images/teleshiftprototype.jpg' height={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
                             
                             <CardBody>
@@ -228,7 +229,7 @@ const PortfolioPage = () => {
                         <Card w={'5xl'} maxH={'lg'} direction={'row'}>
                             <Tooltip placement='right-end' defaultIsOpen label='The unique hexahedron shape was meant to give the perception of a TeleSHift "particle" instead of a box.'>
                                 <Box m={'2vh'}>
-                                    <StaticImage src='../images/teleshiftCAD.png' height={400}></StaticImage>
+                                    <StaticImage src='../images/teleshiftCAD.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 </Box> 
                             </Tooltip>
                             <CardBody>
@@ -248,7 +249,7 @@ const PortfolioPage = () => {
                             <Tooltip placement='left-end' label='The spoon-loop shape of the arms was designed to encourage human interactions and to open other possibilities, 
                                     for instance connecting to other non-TeleSHift formed objects.'>
                                 <Box m={'2vh'}>
-                                    <StaticImage src='../images/teleshiftarm.png' height={400}></StaticImage>
+                                    <StaticImage src='../images/teleshiftarm.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 </Box> 
                             </Tooltip>
                         </Card>
@@ -257,7 +258,7 @@ const PortfolioPage = () => {
                         <Card w={'5xl'} maxH={'lg'} direction={'row'} p={'4'}>
                             <Card variant={'elevated'} m={4}>
                                 <CardBody>
-                                    <StaticImage src='../images/teleshiftanchor.png'></StaticImage>
+                                    <StaticImage src='../images/teleshiftanchor.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
                                     <Text textAlign={'start'} mt={4}>
                                         This small component that anchors the extension rod on the motorized slide potentiometer is surprisingly the most
                                         difficult one to design.
@@ -266,7 +267,7 @@ const PortfolioPage = () => {
                             </Card>
                             <Card variant={'elevated'} m={4}>
                                 <CardBody>
-                                    <StaticImage src='../images/teleshiftanchor1.png'></StaticImage>
+                                    <StaticImage src='../images/teleshiftanchor1.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
                                     <Text textAlign={'start'} mt={4}>
                                         The original design requires adhesive to assemble, is very unstable and lacks pass-through for touch sensitivity wire.
                                     </Text>
@@ -274,7 +275,7 @@ const PortfolioPage = () => {
                             </Card>
                             <Card variant={'elevated'} m={4}>
                                 <CardBody>
-                                    <StaticImage src='../images/teleshiftanchor2.png'></StaticImage>
+                                    <StaticImage src='../images/teleshiftanchor2.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
                                     <Text textAlign={'start'} mt={4}>
                                         I tried six prototypes to arrive at this improved "snap" that only takes 3 seconds to assemble and is much more stable.
                                     </Text>
@@ -282,7 +283,7 @@ const PortfolioPage = () => {
                             </Card>
                             <Card variant={'elevated'} m={4}>
                                 <CardBody>
-                                    <StaticImage src='../images/teleshiftanchorfinal.png'></StaticImage>
+                                    <StaticImage src='../images/teleshiftanchorfinal.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
                                     <Text textAlign={'start'} mt={4}>
                                         The finalized version adds pass-through for touch sensitivity wire and takes 20% less time to be 3D printed by improving the shape.
                                     </Text>
@@ -293,7 +294,7 @@ const PortfolioPage = () => {
                     <TabPanel>
                         <Card w={'5xl'}>
                             <CardBody>
-                                <StaticImage src='../images/teleshiftcircuit.png' height={400}></StaticImage>
+                                <StaticImage src='../images/teleshiftcircuit.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 <Text textAlign={'start'} mt={4}>
                                     In addition to the appearance and mechanical design, I also designed its power supply circuit and laid out the control system architecture.
                                 </Text>
@@ -305,8 +306,9 @@ const PortfolioPage = () => {
                     <Tab>CAD</Tab>
                     <Tab>Mechanical Iterations</Tab>
                     <Tab>Power and Control Circuit</Tab>
-                </TabList>            
+                </TabList>
             </Tabs>
+            <HSIsection />
         </Layout>
     )
 }
