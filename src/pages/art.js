@@ -1,32 +1,58 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
-import { Card, CardBody, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Card, CardBody, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import { SEO } from '../components/seo';
 import { Link } from 'gatsby';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const ArtPage = () => {
+
+    const [title, setTitle] = useState('dream');
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (title === 'dream') {
+                setTitle('build')
+            }
+            else if (title === 'build') {
+                setTitle('impact')
+            }
+            else {
+                setTitle('dream')
+            } 
+        }, 1500);
+        return () => {
+            clearInterval(interval);
+        }
+    })
+    
     return(
         <Layout>
-            <Card variant={'unstyled'} ml={10} mt={30}>
+            <Card variant={'unstyled'} ml={10}>
                 <CardBody>
-                    <Text fontSize={'72pt'}>Dream</Text>
-                    <Text fontSize={'72pt'}>Build</Text>
-                    <Text fontSize={'72pt'}>Impact</Text>
+                    <Box display={'flex'} position={'relative'} h={'-moz-max-content'}>
+                    <AnimatePresence>
+                        <motion.div key={title} initial={{y: -80, opacity: 0}} animate={{y: 0, opacity: 1}} exit={{y: 80, opacity: 0}}>
+                            <Text fontSize={'72pt'} textTransform={'capitalize'} >{title}</Text>
+                        </motion.div>
+                    </AnimatePresence>
+                    </Box>
                     <Text fontSize={'72pt'}>almost anything.</Text>
-                    <Text fontSize={'2xl'}>This is the place of all of my dreams, buidings and impact.</Text>
+                    <Text fontSize={'2xl'}>This is the home of all my dreams and buidings. I hope they make an impact.</Text>
                 </CardBody>
             </Card>
             
-            <UnorderedList mt={10}>
+            <UnorderedList mt={'20vh'} ml={10}>
                 <ListItem>
                     <Link to='/portfolio'>
                         <Text fontSize={'3xl'} textDecoration={'underline'}>
                             Interactive Design Engineering Portfolio
                         </Text>
                     </Link>
-                    <Text fontSize={'2xl'}>showcasing a curated selection of my projects with an interactive experience built by myself.</Text>
+                    <Text fontSize={'xl'}>Showcasing a curated selection of my projects with an interactive experience built by myself.</Text>
                     <a href='https://github.com/bencer3283/Personal-Website'>
-                        <Text fontSize={'2xl'} textDecoration={'underline'}>source code</Text>
+                        <Text fontSize={'xl'} textDecoration={'underline'}>Built with React, Gatsby, Chakra UI and Framer Motion.</Text>
                     </a>
                 </ListItem>
                 <ListItem mt={4}>
@@ -35,9 +61,9 @@ const ArtPage = () => {
                             Online Photographic Gallery
                         </Text>
                     </a>
-                    <Text fontSize={'2xl'}>an online image gallery designed & built by myself to exibit my photography.</Text>
+                    <Text fontSize={'xl'}>An online image gallery designed & built by myself to exibit my photography.</Text>
                     <a href='https://github.com/bencer3283/ImageGallery'>
-                    <Text fontSize={'2xl'} textDecoration={'underline'}>source code</Text>
+                    <Text fontSize={'xl'} textDecoration={'underline'}>Built with Flutter.</Text>
                     </a>
                 </ListItem>
                 <ListItem mt={4}>
