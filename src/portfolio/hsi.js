@@ -1,4 +1,5 @@
-import { Box, Card, CardBody, Center, HStack, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Tooltip } from '@chakra-ui/react';
+import { Box, Card, CardBody, Center, HStack, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Tooltip, Button } from '@chakra-ui/react';
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
@@ -78,6 +79,12 @@ export default function HSIsection() {
             <Text as={'b'}>I identified the following painpoints and developed features accordingly.</Text>
             <Center>
                 <HStack mt={6}>
+                    <Card variant={'outline'} w={'m'}>
+                        <CardBody textAlign={'center'}>
+                            <Text fontSize={'2xl'}>Painpoints</Text>
+                        </CardBody>
+                    </Card>
+                    
                     <Card variant={'filled'} w={'m'}>
                         <CardBody textAlign={'start'}>
                             <Heading>1</Heading>
@@ -146,7 +153,20 @@ export default function HSIsection() {
                     </CardBody>
                 </Card>
             </Center>
-
+            <Card variant={'outline'} mt={6}>
+                <CardBody>
+                    <Heading>Learn more</Heading>
+                    <Button variant={'link'} m={4}>
+                        <Link to='../experiences/intern_at_PW_2020/'>Previous internship to understand the research workflow</Link>
+                    </Button>
+                    <Button variant={'link'} m={4}>
+                        <Link to='../experiences/collegeStudentResearch/'>At the project page</Link>
+                    </Button>
+                    <Button variant={'link'} m={4}>
+                        <a href='https://github.com/HyperSpectral-Imaging' target="_blank" rel="noopener noreferrer">On the GitHub repo</a>
+                    </Button>
+                </CardBody>
+            </Card>
         </div>
         
     )

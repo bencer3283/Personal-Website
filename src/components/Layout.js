@@ -75,7 +75,7 @@ const Layout = ({ children }) => {
                     <Spacer />
                     <Button variant='link' hideBelow='md'>
                         <Link to={'/art'}>
-                            Art Creation
+                            Portfolios
                         </Link>
                         
                     </Button>

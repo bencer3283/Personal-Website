@@ -45,7 +45,7 @@ function MobileAccordionNav() {
                 <h2>
                     <AccordionButton p={6}>
                         <Box as="span" flex='1' textAlign='left'>
-                            Art Creation
+                            Portfolios
                         </Box>
                         <AccordionIcon />
                     </AccordionButton>

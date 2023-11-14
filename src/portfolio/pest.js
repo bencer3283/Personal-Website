@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, Center, HStack, Heading, ListItem, OrderedList, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Tooltip } from '@chakra-ui/react';
+import { Box, Card, CardBody, Center, HStack, Heading, ListItem, OrderedList, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Button } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
@@ -110,12 +110,14 @@ export default function PestSection() {
                                 <Text mt={4}>
                                     The extensive CAD work was shared by me and a collegue. I created a git-based collaboration workflow that allow us to work on different part of the model while complying to the specified dimension at the same time.
                                 </Text>
-                                <Link to='https://github.com/bencer3283/Pest-Machine-CAD/tree/split'>
-                                    <Text as={'u'}>
-                                        Check out the Git repo.
-                                    </Text>
+                                <Button variant={'link'}>
+                                <a href='https://github.com/bencer3283/Pest-Machine-CAD/tree/split' target="_blank" rel="noopener noreferrer">
                                     
-                                </Link>
+                                        Check out the Git repo.
+                                    
+                                    
+                                </a>
+                                </Button>
                             </CardBody>
                         </Card>
                     </TabPanel>
@@ -138,6 +140,14 @@ export default function PestSection() {
                     <Tab>BOM</Tab>
                 </TabList>
             </Tabs>
+            <Card variant={'outline'} mt={6}>
+                <CardBody>
+                    <Heading>Learn more</Heading>
+                    <Button variant={'link'} m={4}>
+                        <Link to='../experiences/Iot/'>About the IoT controller for this machine</Link>
+                    </Button>
+                </CardBody>
+            </Card>
         </div>
     )
 }

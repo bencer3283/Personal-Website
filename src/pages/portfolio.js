@@ -6,6 +6,7 @@ import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box,
 import { StaticImage } from 'gatsby-plugin-image';
 import HSIsection from '../portfolio/hsi';
 import PestSection from '../portfolio/pest';
+import { Link } from 'gatsby';
 
 let initArm = Array(12).fill(16);
 
@@ -309,10 +310,21 @@ const PortfolioPage = () => {
                     <Tab>Power and Control Circuit</Tab>
                 </TabList>
             </Tabs>
+            <Card variant={'outline'} mt={6}>
+                <CardBody>
+                    <Heading>Learn more</Heading>
+                    <Button variant={'link'} m={4}>
+                        <Link to='../research/teleshift'>At the research page</Link>
+                    </Button>
+                    <Button variant={'link'} m={4}>
+                        <a href='https://dl.acm.org/doi/10.1145/3544793.3560323' target="_blank" rel="noopener noreferrer">The paper on ACM website</a>
+                    </Button>
+                </CardBody>
+            </Card>
             <HSIsection />
             <PestSection />
             <Text fontSize={'4xl'} mt={6}>Also checkout:</Text>
-            <a href='https://photographic-gallery-of-posheng.netlify.app/'>
+            <a href='https://photographic-gallery-of-posheng.netlify.app/' target="_blank" rel="noopener noreferrer">
                         <Text fontSize={'6xl'} textDecoration={'underline'}>
                             My Online Photographic Gallery
                         </Text>
