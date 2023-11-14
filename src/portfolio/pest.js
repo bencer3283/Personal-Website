@@ -21,7 +21,8 @@ export default function PestSection() {
                 </Card>
             </Center>
             <Text fontSize={'4xl'} mt={6}>Iterating the working principle</Text>
-            <Card direction={'row'} variant={'filled'} w={'6xl'} mt={6}>
+            <Center>
+            <Card direction={'row'} variant={'filled'} w={'6xl'} mt={6} textAlign={'start'}>
                 <Box m={4}>
                     <StaticImage src='../images/pestold.png' height={300} imgStyle={{borderRadius: '10px'}}></StaticImage>
                 </Box>
@@ -55,6 +56,7 @@ export default function PestSection() {
                     </Tabs>
                 </CardBody>
             </Card>
+            </Center>
             <Text fontSize={'4xl'} mt={6}>Mechanics</Text>
             <Tabs variant={'soft-rounded'} align='center' colorScheme='blue'>
                 <TabPanels>

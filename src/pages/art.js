@@ -25,7 +25,25 @@ const ArtPage = () => {
         return () => {
             clearInterval(interval);
         }
-    })
+    });
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.4,
+            delay: 1.5,
+            when: "beforeChildren"
+          }
+        }
+      }
+      
+    const item = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1 },
+        transition: { duration: 0.5}
+    }
     
     return(
         <Layout>
@@ -35,11 +53,13 @@ const ArtPage = () => {
                         <Text fontSize={'72pt'} textTransform={'capitalize'} fontWeight={'bold'}>{title}</Text>
                     </motion.div>
                 </AnimatePresence>
-                <Text fontSize={'72pt'} pt={'90pt'}>almost anything.</Text>
+                <Text fontSize={'72pt'} pt={'90pt'} textColor={'#9EC972'}>almost anything.</Text>
                 <Text fontSize={'2xl'}>This is the home of my dreams and buidings. I hope they make an impact.</Text>
             </Box>
-            <UnorderedList mt={'20vh'} ml={10}>
-                <ListItem>
+            <Box mt={'20vh'} ml={10}>
+            
+            <motion.ul variants={container} initial="hidden" animate="show">
+                <motion.li variants={item}>
                     <Link to='/portfolio'>
                         <Text fontSize={'3xl'} textDecoration={'underline'}>
                             Interactive Design Engineering Portfolio
@@ -49,10 +69,10 @@ const ArtPage = () => {
                     <a href='https://github.com/bencer3283/Personal-Website'>
                         <Button variant={'link'} fontSize={'xl'} fontWeight={'normal'}> Built with React, Gatsby, Chakra UI and Framer Motion.</Button>
                     </a>
-                </ListItem>
-                <ListItem mt={4}>
+                </motion.li>
+                <motion.li variants={item}>
                     <a href='https://photographic-gallery-of-posheng.netlify.app/'>
-                        <Text fontSize={'3xl'} textDecoration={'underline'}>
+                        <Text fontSize={'3xl'} textDecoration={'underline'}  mt={4}>
                             Online Photographic Gallery
                         </Text>
                     </a>
@@ -60,17 +80,17 @@ const ArtPage = () => {
                     <a href='https://github.com/bencer3283/ImageGallery'>
                     <Button variant={'link'} fontSize={'xl'} fontWeight={'normal'}>Built with Flutter.</Button>
                     </a>
-                </ListItem>
-                <ListItem mt={4}>
+                </motion.li>
+                <motion.li variants={item}>
                     <a href='/docs/portfolio.pdf'>
-                        <Text fontSize={'3xl'} textDecoration={'underline'}>
+                        <Text fontSize={'3xl'} textDecoration={'underline'}  mt={4}>
                             Art Portfolio
                         </Text>
                     </a>
                     <Text fontSize={'xl'}>a selection of my artworks curated in 2018. (PDF)</Text>
-                </ListItem>
-            </UnorderedList>
-            
+                </motion.li>
+            </motion.ul>
+            </Box>
             
             
             
