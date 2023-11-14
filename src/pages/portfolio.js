@@ -311,6 +311,11 @@ const PortfolioPage = () => {
             </Tabs>
             <HSIsection />
             <PestSection />
+            <a href='https://photographic-gallery-of-posheng.netlify.app/'>
+                        <Text fontSize={'6xl'} textDecoration={'underline'} mt={6}>
+                            My Online Photographic Gallery
+                        </Text>
+                    </a>
         </Layout>
     )
 }
