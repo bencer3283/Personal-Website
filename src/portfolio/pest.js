@@ -7,7 +7,7 @@ export default function PestSection() {
     return(
         <div>
             <Text fontSize={'6xl'} mt={8}>Pest Machine</Text>
-            <Text fontSize={'4xl'}>A IoT machine designed to monitor the amount of bugs in farm fields.</Text>
+            <Text fontSize={'4xl'}>An IoT machine designed to monitor the amount of bugs in farm fields.</Text>
             <Center mt={6}>
                 <Card w={'5xl'} direction={'row'} variant={'elevated'}>
                     <Box m={4}>

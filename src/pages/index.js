@@ -21,7 +21,7 @@ const IndexPage = () => {
           <motion.span 
               initial={{color: '#000000'}}
               animate={{color: '#9EC972'}}
-              transition={{duration: 2, repeat: Infinity, repeatType: 'reverse'}}>humanity.</motion.span>
+              transition={{duration: 2, repeat: Infinity, repeatType: 'reverse'}}>humanity</motion.span>.
         </Text>
         <Text pt='10' fontSize={{base: '16pt', md: '24pt'}}>
           This is Po Sheng Cheng's personal website, where you can find all the works this interdisciplinary student have ever done.

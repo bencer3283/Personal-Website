@@ -53,7 +53,7 @@ export default function HSIsection() {
                                 <Center>
                                     <StaticImage src='../images/hsiraypath.png' height={450}></StaticImage>
                                 </Center>
-                                <Heading mt={6}>Ray path and system configuration</Heading>
+                                <Heading mt={6}>Ray trace and system configuration</Heading>
                                 <Text mt={4}>
                                     Based on my observations when working alongside researchers in the field, 
                                     I found that once they fully understand the optical components of HSI,
@@ -125,7 +125,7 @@ export default function HSIsection() {
                                 <TabPanel>
                                     <Text mb={6}>
                                         Due to the special 3D array data structure of hyperspectral imaging, another issue in spectral mapping workflow is the need to use special software to view and perform analysis on the image.
-                                        So, I developed analysis features in the HSI software that allows users to browse the three dimensional image from different "perspectives" (2D slices), which is not availiable on existing softwares like ImageJ.
+                                        So, I developed analysis features in the HSI software that allows users to browse the three dimensional image from different "perspectives" (2D slices), which is not a feature availiable on existing softwares like ImageJ.
                                         Also, analysis features for specific workflow like backgroud subtraction for reflective spectrum are also built-in, so users no longer have to switch between different softwares.
                                     </Text>
                                     <StaticImage src='../images/hsianalysis.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
