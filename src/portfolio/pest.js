@@ -140,7 +140,7 @@ export default function PestSection() {
                     <Tab>BOM</Tab>
                 </TabList>
             </Tabs>
-            <Card variant={'outline'} mt={6}>
+            <Card variant={'outline'} mt={6} mb={40}>
                 <CardBody>
                     <Heading>Learn more</Heading>
                     <Button variant={'link'} m={4}>

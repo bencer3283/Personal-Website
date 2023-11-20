@@ -310,7 +310,7 @@ const PortfolioPage = () => {
                     <Tab>Power and Control Circuit</Tab>
                 </TabList>
             </Tabs>
-            <Card variant={'outline'} mt={6}>
+            <Card variant={'outline'} mt={6} mb={40}>
                 <CardBody>
                     <Heading>Learn more</Heading>
                     <Button variant={'link'} m={4}>
@@ -321,14 +321,71 @@ const PortfolioPage = () => {
                     </Button>
                 </CardBody>
             </Card>
+
             <HSIsection />
             <PestSection />
+
             <Text fontSize={'4xl'} mt={6}>Also checkout:</Text>
             <a href='https://photographic-gallery-of-posheng.netlify.app/' target="_blank" rel="noopener noreferrer">
-                        <Text fontSize={'6xl'} textDecoration={'underline'}>
-                            My Online Photographic Gallery
-                        </Text>
+                <Text fontSize={'6xl'} textDecoration={'underline'}>
+                    My Online Photographic Gallery
+                </Text>
+            </a>
+            <Text fontSize={'4xl'} mt={6}>Interface design & development</Text>
+            <Text>
+                The whole digital experience is designed & built by myself as a modern, friendly, intuitive and visually neutral image gallery.
+                Click the above link to experience it. 
+            </Text>
+            <Tabs variant='soft-rounded' colorScheme='blue' align='center'>
+                <TabPanels>
+                    <TabPanel>
+                        <Card w={'5xl'}>
+                            <CardBody>
+                                <StaticImage src='../images/gallery.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
+
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'}>
+                            <CardBody>
+                                <StaticImage src='../images/gallery_responsive.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
+
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'}>
+                            <CardBody>
+                                <StaticImage src='../images/gallery_showcase.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
+
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'}>
+                            <CardBody>
+                                <StaticImage src='../images/gallery_design.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
+
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                </TabPanels>
+                <TabList>
+                    <Tab>Homepage</Tab>
+                    <Tab>Responsive design</Tab>
+                    <Tab>Design detail</Tab>
+                    <Tab>Design system</Tab>
+                </TabList>
+            </Tabs>
+            <Card variant={'outline'} mt={6}>
+                <CardBody>
+                    <Heading>Learn more</Heading>
+                    <a href='https://github.com/bencer3283/ImageGallery' target="_blank" rel="noopener noreferrer">
+                    <Button variant={'link'} m={4}>Source code</Button>
                     </a>
+                </CardBody>
+            </Card>
         </Layout>
     )
 }

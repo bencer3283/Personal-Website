@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
-import { Box, Button, Card, CardBody, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Button, Text } from '@chakra-ui/react';
 import { SEO } from '../components/seo';
 import { Link } from 'gatsby';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -65,7 +65,7 @@ const ArtPage = () => {
                             Interactive Design Engineering Portfolio
                         </Text>
                     </Link>
-                    <Text fontSize={'xl'}>Showcasing a curated selection of my projects with an interactive experience built by myself.</Text>
+                    <Text fontSize={'xl'}>Showcasing selected projects with an interactive experience built by myself.</Text>
                     <a href='https://github.com/bencer3283/Personal-Website' target="_blank" rel="noopener noreferrer">
                         <Button variant={'link'} fontSize={'xl'} fontWeight={'normal'}> Built with React, Gatsby, Chakra UI and Framer Motion.</Button>
                     </a>
@@ -87,7 +87,7 @@ const ArtPage = () => {
                             Art Portfolio
                         </Text>
                     </a>
-                    <Text fontSize={'xl'}>a selection of my artworks curated in 2018. (PDF)</Text>
+                    <Text fontSize={'xl'}>A selection of my artworks curated in 2018. (PDF)</Text>
                 </motion.li>
             </motion.ul>
             </Box>
