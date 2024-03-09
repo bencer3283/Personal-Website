@@ -6,6 +6,7 @@ import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box,
 import { StaticImage } from 'gatsby-plugin-image';
 import HSIsection from '../portfolio/hsi';
 import PestSection from '../portfolio/pest';
+import PagemateSection from '../portfolio/pagemate';
 import { Link } from 'gatsby';
 import GeneralTabs from '../components/generalTab';
 
@@ -84,9 +85,9 @@ const PortfolioPage = () => {
 
     return (
         <Layout>
-            <Text fontSize={'6xl'}>TeleSHift</Text>
+            <PagemateSection/>
+            <Text fontSize={'6xl'} mt={8}>TeleSHift</Text>
             <Text fontSize={'4xl'}>Telexisting shape-shifting 3D tangible user interface for physical collaboration and interaction.</Text>
-            
             <GeneralTabs defaultTab={1}>
             <TabList>
                     <Tab>Concept</Tab>

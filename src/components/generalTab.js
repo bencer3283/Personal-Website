@@ -7,7 +7,7 @@ const GeneralTabs = ({defaultTab, children}) => {
         variant='soft-rounded' 
         colorScheme='blue' 
         align='center' 
-        mt={6} 
+        mt={4} 
         border={'2px'}
         borderColor={'blackAlpha.200'}
         p={6} 
