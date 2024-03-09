@@ -2,6 +2,7 @@ import { Box, Card, CardBody, Center, HStack, Heading, Tab, TabList, TabPanel, T
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import GeneralTabs from '../components/generalTab';
 
 export default function HSIsection() {
     return(
@@ -25,10 +26,15 @@ export default function HSIsection() {
                 The complex concepts involved in this novel spectral imaging system is not easy to understand even for people in the field.
                 That is why I devoted a lot of effort into the visual communication of this product and made the following graphs.
             </Text>
-            <Tabs variant={'soft-rounded'} align='center' colorScheme='blue'>
+            <GeneralTabs>
+            <TabList>
+                    <Tab>Working Principle</Tab>
+                    <Tab>System Components</Tab>
+                </TabList>
                 <TabPanels>
+                
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/hsi_concept.jpg' height={450}></StaticImage>
@@ -49,7 +55,7 @@ export default function HSIsection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={'5xl'}>
+                    <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/hsiraypath.png' height={450}></StaticImage>
@@ -65,11 +71,8 @@ export default function HSIsection() {
                         </Card>
                     </TabPanel>
                 </TabPanels>
-                <TabList>
-                    <Tab>Working Principle</Tab>
-                    <Tab>System Components</Tab>
-                </TabList>
-            </Tabs>
+                
+            </GeneralTabs>
 
             <Text fontSize={'4xl'} mt={6}>Human-centered approach</Text>
             <Text>

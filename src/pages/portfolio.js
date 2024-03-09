@@ -7,6 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import HSIsection from '../portfolio/hsi';
 import PestSection from '../portfolio/pest';
 import { Link } from 'gatsby';
+import GeneralTabs from '../components/generalTab';
 
 let initArm = Array(12).fill(16);
 
@@ -85,10 +86,16 @@ const PortfolioPage = () => {
         <Layout>
             <Text fontSize={'6xl'}>TeleSHift</Text>
             <Text fontSize={'4xl'}>Telexisting shape-shifting 3D tangible user interface for physical collaboration and interaction.</Text>
-            <Tabs variant='soft-rounded' colorScheme='blue' align='center'>
+            
+            <GeneralTabs defaultTab={1}>
+            <TabList>
+                    <Tab>Concept</Tab>
+                    <Tab>Prototype</Tab>
+                    <Tab>Video</Tab>
+                </TabList>  
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/teleshiftconcept.png'></StaticImage>
                                 <Text textAlign={'start'}>
@@ -102,7 +109,7 @@ const PortfolioPage = () => {
                         
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} direction={'row'}>
+                        <Card w={'5xl'} direction={'row'} variant={'unstyled'}>
                             <Box m={'2vh'} maxH={'lg'}>
                                 <StaticImage src='../images/teleshiftprototype.jpg' height={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
@@ -117,19 +124,16 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody>
                                 <div style={{padding:`56.25% 0 0 0`, position:`relative`}}><iframe src="https://player.vimeo.com/video/749458064?h=e53bbfeec2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style={{position:`absolute`,top:`0`,left:`0`,width:`100%`,height:`100%`}} title="TeleSHift: Telexisting TUI for Physical Collaboration and Interaction"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
                         </Card>
                     </TabPanel>
-                </TabPanels>
-                <TabList>
-                    <Tab>Concept</Tab>
-                    <Tab>Prototype</Tab>
-                    <Tab>Video</Tab>
-                </TabList>            
-            </Tabs>
+                </TabPanels>          
+            </GeneralTabs>
+            
+            
             <Card variant={'filled'} mt={'6vh'} p={'6'}>
             <Text fontSize={'4xl'}>Three modes of Telexisting communication</Text>
             <Text>In this interactive widget, try move the sliders on both TeleSHifts in all three modes.</Text>
@@ -201,7 +205,7 @@ const PortfolioPage = () => {
             <Tabs variant='soft-rounded' colorScheme='blue' onChange={(mode) => {
                 setArmMode(mode);
             }} align='start'>
-
+                
                 <TabPanels>
                     <TabPanel>
                         <p>Each arm of slave TeleSHift is programmed to follow the position of master TeleSHift, but not vice versa.</p>
@@ -225,10 +229,15 @@ const PortfolioPage = () => {
             </Tabs>
             </Card>
             <Text fontSize={'4xl'} mt={'6vh'}>How I built TeleSHift</Text>
-            <Tabs variant='soft-rounded' colorScheme='blue' align='center'>
+            <GeneralTabs>
+            <TabList>
+                    <Tab>CAD</Tab>
+                    <Tab>Mechanical Iterations</Tab>
+                    <Tab>Power and Control Circuit</Tab>
+                </TabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'}>
+                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
                             <Tooltip placement='right-end' defaultIsOpen label='The unique hexahedron shape was meant to give the perception of a TeleSHift "particle" instead of a box.'>
                                 <Box m={'2vh'}>
                                     <StaticImage src='../images/teleshiftCAD.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -257,7 +266,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} p={'4'}>
+                        <Card w={'5xl'} maxH={'lg'} direction={'row'} p={'4'} variant={'unstyled'}>
                             <Card variant={'elevated'} m={4}>
                                 <CardBody>
                                     <StaticImage src='../images/teleshiftanchor.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
@@ -294,7 +303,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/teleshiftcircuit.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 <Text textAlign={'start'} mt={4}>
@@ -304,12 +313,8 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                 </TabPanels>
-                <TabList>
-                    <Tab>CAD</Tab>
-                    <Tab>Mechanical Iterations</Tab>
-                    <Tab>Power and Control Circuit</Tab>
-                </TabList>
-            </Tabs>
+                
+            </GeneralTabs>
             <Card variant={'outline'} mt={6} mb={40}>
                 <CardBody>
                     <Heading>Learn more</Heading>
@@ -336,10 +341,16 @@ const PortfolioPage = () => {
                 The whole digital experience is designed & built by myself as a modern, friendly, intuitive and visually neutral image gallery.
                 Click the above link to experience it. 
             </Text>
-            <Tabs variant='soft-rounded' colorScheme='blue' align='center'>
+            <GeneralTabs>
+            <TabList>
+                    <Tab>Homepage</Tab>
+                    <Tab>Responsive design</Tab>
+                    <Tab>Design detail</Tab>
+                    <Tab>Design system</Tab>
+                </TabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/gallery.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -347,7 +358,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/gallery_responsive.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -355,7 +366,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/gallery_showcase.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -363,7 +374,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/gallery_design.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -371,13 +382,8 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                 </TabPanels>
-                <TabList>
-                    <Tab>Homepage</Tab>
-                    <Tab>Responsive design</Tab>
-                    <Tab>Design detail</Tab>
-                    <Tab>Design system</Tab>
-                </TabList>
-            </Tabs>
+                
+            </GeneralTabs>
             <Card variant={'outline'} mt={6}>
                 <CardBody>
                     <Heading>Learn more</Heading>

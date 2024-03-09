@@ -2,6 +2,7 @@ import { Box, Card, CardBody, Center, HStack, Heading, ListItem, OrderedList, Ta
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import GeneralTabs from '../components/generalTab';
 
 export default function PestSection() {
     return(
@@ -58,10 +59,14 @@ export default function PestSection() {
             </Card>
             </Center>
             <Text fontSize={'4xl'} mt={6}>Mechanics</Text>
-            <Tabs variant={'soft-rounded'} align='center' colorScheme='blue'>
+            <GeneralTabs>
+            <TabList>
+                    <Tab>Roller</Tab>
+                    <Tab>Power</Tab>
+                </TabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <HStack spacing={4}>
@@ -78,7 +83,7 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={'5xl'}>
+                    <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/pestpower.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -91,16 +96,17 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                 </TabPanels>
-                <TabList>
-                    <Tab>Roller</Tab>
-                    <Tab>Power</Tab>
-                </TabList>
-            </Tabs>
+                
+            </GeneralTabs>
             <Text fontSize={'4xl'} mt={6}>Improving the workflow</Text>
-            <Tabs variant={'soft-rounded'} align='center' colorScheme='blue'>
+            <GeneralTabs>
+            <TabList>
+                    <Tab>CAD</Tab>
+                    <Tab>BOM</Tab>
+                </TabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'}>
+                        <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                         <StaticImage src='../images/pestcad.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -122,7 +128,7 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={'5xl'}>
+                    <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/pestbom.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -135,11 +141,8 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                 </TabPanels>
-                <TabList>
-                    <Tab>CAD</Tab>
-                    <Tab>BOM</Tab>
-                </TabList>
-            </Tabs>
+                
+            </GeneralTabs>
             <Card variant={'outline'} mt={6} mb={40}>
                 <CardBody>
                     <Heading>Learn more</Heading>
