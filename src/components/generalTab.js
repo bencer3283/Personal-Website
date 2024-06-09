@@ -4,8 +4,9 @@ import { Tabs } from '@chakra-ui/react'
 const GeneralTabs = ({defaultTab, children}) => {
     return(
     <Tabs 
-        variant='soft-rounded' 
-        colorScheme='blue' 
+        variant='soft-rounded'
+        size={'md'} 
+        colorScheme='green' 
         align='center' 
         mt={4} 
         border={'2px'}

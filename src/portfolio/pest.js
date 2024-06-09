@@ -1,8 +1,9 @@
-import { Box, Card, CardBody, Center, HStack, Heading, ListItem, OrderedList, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Button } from '@chakra-ui/react';
+import { Box, Card, CardBody, Center, HStack, Heading, ListItem, OrderedList, Tab, TabPanel, TabPanels, Tabs, Text, Button } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import GeneralTabs from '../components/generalTab';
+import GeneralTabList from '../components/generalTabList';
 
 export default function PestSection() {
     return(
@@ -32,10 +33,10 @@ export default function PestSection() {
                 </Box>
                 <CardBody>
                     <Tabs variant={'soft-rounded'}>
-                        <TabList>
+                        <GeneralTabList>
                             <Tab>Origin</Tab>
                             <Tab>Iterations</Tab>
-                        </TabList>
+                        </GeneralTabList>
                         <TabPanels>
                             <TabPanel>
                                 <Text>
@@ -60,10 +61,10 @@ export default function PestSection() {
             </Center>
             <Text fontSize={'4xl'} mt={6}>Mechanics</Text>
             <GeneralTabs>
-            <TabList>
+            <GeneralTabList>
                     <Tab>Roller</Tab>
                     <Tab>Power</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} variant={'unstyled'}>
@@ -100,10 +101,10 @@ export default function PestSection() {
             </GeneralTabs>
             <Text fontSize={'4xl'} mt={6}>Improving the workflow</Text>
             <GeneralTabs>
-            <TabList>
+            <GeneralTabList>
                     <Tab>CAD</Tab>
                     <Tab>BOM</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} variant={'unstyled'}>

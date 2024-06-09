@@ -1,19 +1,19 @@
 import * as React from 'react';
 import GeneralTabs from '../components/generalTab';
-import { Tab, TabList, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button } from '@chakra-ui/react';
+import GeneralTabList from '../components/generalTabList';
+import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Head } from '../pages/portfolio';
 
 export default function PagemateSection() {
     return (
         <div>
             <Text fontSize={'6xl'} mt={8}>PageMate</Text>
             <Text fontSize={'4xl'}>A smart bookmark that bridges physical and digital books.</Text>
-            <GeneralTabs>
-                <TabList>
+            <GeneralTabs defaultTab={1}>
+                <GeneralTabList>
                     <Tab>Concept</Tab>
                     <Tab>Prototype</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} variant={'unstyled'}>
@@ -41,11 +41,11 @@ export default function PagemateSection() {
             </GeneralTabs>
             <Text fontSize={'4xl'} mt={6}>User experience</Text>
             <GeneralTabs>
-                <TabList>
+                <GeneralTabList>
                     <Tab>Scenario</Tab>
                     <Tab>Journey Map</Tab>
                     <Tab>App</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
@@ -102,10 +102,10 @@ export default function PagemateSection() {
             </GeneralTabs>
             <Text fontSize={'4xl'} mt={6}>Design iterations</Text>
             <GeneralTabs>
-                <TabList>
+                <GeneralTabList>
                     <Tab>Explorations</Tab>
                     <Tab>Final Design</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
@@ -140,10 +140,10 @@ export default function PagemateSection() {
             </GeneralTabs>
             <Text fontSize={'4xl'} mt={6}>Prototype engineering</Text>
             <GeneralTabs>
-                <TabList>
+                <GeneralTabList>
                     <Tab>Architecture</Tab>
                     <Tab>Hardware</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>

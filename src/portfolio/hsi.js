@@ -1,8 +1,9 @@
-import { Box, Card, CardBody, Center, HStack, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Tooltip, Button } from '@chakra-ui/react';
+import { Box, Card, CardBody, Center, HStack, Heading, Tab, TabPanel, TabPanels, Tabs, Text, Tooltip, Button } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import GeneralTabs from '../components/generalTab';
+import GeneralTabList from '../components/generalTabList';
 
 export default function HSIsection() {
     return(
@@ -27,10 +28,10 @@ export default function HSIsection() {
                 That is why I devoted a lot of effort into the visual communication of this product and made the following graphs.
             </Text>
             <GeneralTabs>
-            <TabList>
+            <GeneralTabList>
                     <Tab>Working Principle</Tab>
                     <Tab>System Components</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                 
                     <TabPanel>
@@ -115,11 +116,11 @@ export default function HSIsection() {
                         <Heading>HSI</Heading>
                         <Text mb={6}>An one-stop, integrated solution</Text>
                         <Tabs variant={'soft-rounded'}>
-                            <TabList>
+                            <GeneralTabList>
                                 <Tab>Integrated OM</Tab>
                                 <Tab>Built-in Analysis</Tab>
                                 <Tab>Custom TIFF</Tab>
-                            </TabList>
+                            </GeneralTabList>
                             <TabPanels>
                                 <TabPanel>
                                     <Text mb={6}>

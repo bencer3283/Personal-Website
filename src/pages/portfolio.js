@@ -2,13 +2,14 @@ import * as React from 'react';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import { SEO } from '../components/seo';
-import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box, HStack, Tab, Tabs, TabList, TabPanel, TabPanels, Button, Card, CardBody, Tooltip, Heading } from '@chakra-ui/react';
+import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box, HStack, Tab, Tabs, TabPanel, TabPanels, Button, Card, CardBody, Tooltip, Heading } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import HSIsection from '../portfolio/hsi';
 import PestSection from '../portfolio/pest';
 import PagemateSection from '../portfolio/pagemate';
 import { Link } from 'gatsby';
 import GeneralTabs from '../components/generalTab';
+import GeneralTabList from '../components/generalTabList';
 
 let initArm = Array(12).fill(16);
 
@@ -89,11 +90,11 @@ const PortfolioPage = () => {
             <Text fontSize={'6xl'} mt={8}>TeleSHift</Text>
             <Text fontSize={'4xl'}>Telexisting shape-shifting 3D tangible user interface for physical collaboration and interaction.</Text>
             <GeneralTabs defaultTab={1}>
-            <TabList>
+            <GeneralTabList>
                     <Tab>Concept</Tab>
                     <Tab>Prototype</Tab>
                     <Tab>Video</Tab>
-                </TabList>  
+                </GeneralTabList>  
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} variant={'unstyled'}>
@@ -222,20 +223,20 @@ const PortfolioPage = () => {
                         <Text>Use case: As a prototyping material to reduce material waste. </Text>
                     </TabPanel>
                 </TabPanels>
-                <TabList>
+                <GeneralTabList>
                     <Tab>Master & Slave</Tab>
                     <Tab>Mutual Sync</Tab>
                     <Tab>Shape Memory</Tab>
-                </TabList>            
+                </GeneralTabList>            
             </Tabs>
             </Card>
             <Text fontSize={'4xl'} mt={'6vh'}>How I built TeleSHift</Text>
             <GeneralTabs>
-            <TabList>
+            <GeneralTabList>
                     <Tab>CAD</Tab>
                     <Tab>Mechanical Iterations</Tab>
                     <Tab>Power and Control Circuit</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
@@ -343,12 +344,12 @@ const PortfolioPage = () => {
                 Click the above link to experience it. 
             </Text>
             <GeneralTabs>
-            <TabList>
+            <GeneralTabList>
                     <Tab>Homepage</Tab>
                     <Tab>Responsive design</Tab>
                     <Tab>Design detail</Tab>
                     <Tab>Design system</Tab>
-                </TabList>
+                </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
                         <Card w={'5xl'} variant={'unstyled'}>
