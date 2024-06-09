@@ -76,6 +76,6 @@ Me sharing our results on the final contest.(📷 by SU, PIN-LUN)
 - Matlab statistics
 - Chi-square test for independence
 - Logistic regression
-- Latex 
+- LaTEX 
 
 <meta property="og image" content="https://imgur.com/DGAPMGo.jpg">

@@ -15,7 +15,7 @@ meta_description: Development of a novel line-scan hyperspectral imaging system 
 ---
 This project was awarded the **Technology Innovation Award** by CCMS, National Taiwan University and the **College Student Research Creativity Award** by National Science and Technology Coucil.
 
-In this research program, with support from my mentor Yu Ming Chang at CCMS, NTU and the Ministry of Science and Technology, I developed a microscopic hyperspectal imaging system using LabVIEW and various optics engineering skills.
+In this research program, with support from my mentor Yu-Ming Chang at CCMS, NTU and the Ministry of Science and Technology, I developed a microscopic hyperspectal imaging system using LabVIEW and various optics engineering skills.
 
 Refer to [these Github repos](https://github.com/HyperSpectral-Imaging) and [this document](https://github.com/HyperSpectral-Imaging/HSI-docs/raw/main/final.pdf) for more detail. Also, [this](https://cheng-posheng.gitbook.io/hsi-main-project-api-documentation/) thoroughly documented the development of the system integration LabVIEW software.
 

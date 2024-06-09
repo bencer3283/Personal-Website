@@ -13,7 +13,7 @@ meta_description: An eletromechanical internship in the keyboard innovation team
 `Logitech, FEB 2022 - JUN 2022`
 
 ---
-As a intern in the mechanical engineering department, I improved my mechanical engineering skill and learned a lot about new product introduction. My main contribution is to incorporate some mechatronics integration skill like curcuit design, microcontroller programming to explore the possibility of a novel keyboard technology with electromagnet.
+As an intern in the mechanical engineering department, I improved my mechanical engineering skill and learned a lot about new product introduction. My main contribution is to incorporate some mechatronics integration skill like curcuit design, microcontroller programming to explore the possibility of a novel keyboard technology with electromagnet.
 
 Another part of the intership is devoted to a UX research to find out the terget audience of this new keyboard technology. 
 
