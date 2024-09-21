@@ -10,6 +10,7 @@ import PagemateSection from '../portfolio/pagemate';
 import { Link } from 'gatsby';
 import GeneralTabs from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
+import NexusSection from '../portfolio/nexus';
 
 let initArm = Array(12).fill(16);
 
@@ -86,6 +87,7 @@ const PortfolioPage = () => {
 
     return (
         <Layout>
+            <NexusSection />
             <PagemateSection/>
             <Text fontSize={'6xl'} mt={8}>TeleSHift</Text>
             <Text fontSize={'4xl'}>Telexisting shape-shifting 3D tangible user interface for physical collaboration and interaction.</Text>
