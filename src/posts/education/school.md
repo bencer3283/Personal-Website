@@ -10,7 +10,7 @@ breadcrumb: true
 ---
 
 ## Rhode Island School of Design
-- Master of Industrial Design
+- Master of Industrial Design, expected to graduate in Jun. 2026
 
 ## National Taiwan University
 - *Bechalor of Science* in [**Bio-Mechatronics Engineering**](https://www.bime.ntu.edu.tw/)

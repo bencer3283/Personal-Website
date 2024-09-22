@@ -29,7 +29,7 @@ const IndexPage = () => {
         </Text>
         
         <Text pt='10' textDecoration={'underline'}>
-          <a href="/docs/CV.pdf">Download my CV</a>
+          <a href="https://github.com/bencer3283/resume/blob/engineering/CV.pdf" target="_blank" rel="noopener noreferrer">Download my CV</a>
         </Text>
       </Box>
     </Layout>

@@ -30,7 +30,7 @@ export default function NexusSection() {
                             </Box>
                             <CardBody>
                                 <Text ml={4} textAlign={'start'}>
-                                The main compenent of Nexus is its modular kiosk that can be easily deployed to a wide range of public facilities. The kiosk is equipped with a human interface and a camera in the item scanning chamber as well as a expandable storage system.
+                                The main compenent of Nexus is its modular kiosk that can be easily deployed to a wide range of public facilities. The kiosk is equipped with a human interface and a camera in the item scanning chamber to recognize and automatically log the item to our database as well as an expandable storage system.
                                 </Text>
                             </CardBody>
                         </Card>
@@ -38,11 +38,11 @@ export default function NexusSection() {
                     <TabPanel>
                         <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyle'}>
                             <Box m={'2vh'}>
-                               <StaticImage src='../images/nexus/user journey.jpg' height={450} imgStyle={{borderRadius: '15px'}}></StaticImage>
+                               <StaticImage src='../images/nexus/user journey.jpg' height={350} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
                             <CardBody>
                                 <Text ml={4} textAlign={'start'}>
-                                The main compenent of Nexus is its modular kiosk that can be easily deployed to a wide range of public facilities. The kiosk is equipped with a human interface and a camera in the item scanning chamber as well as a expandable storage system.
+                                This graph documented how users will interact with each component of the Nexus platform. Since Nexus is a platform consisting of several products, this was an important piece of document that laid out how every part of the platform works together to solve different user's problem. 
                                 </Text>
                             </CardBody>
                         </Card>
@@ -102,7 +102,146 @@ export default function NexusSection() {
                 </TabPanels>
             </GeneralTabs>
             <Text fontSize={'4xl'} mt={6}>Hardware Prototyping</Text>
+            <Text mt={4} textAlign={'start'}>
+                The various stages of prototyping was crucial in turning the direction of the project from a single product to a platform that integrtes several products. The prototypes I developed helped showcase the feasibility and the benefit of having the hardware, software and services all working seamlessly.                          
+            </Text>
+            <GeneralTabs>
+                <GeneralTabList>
+                    <Tab>Gen 1: iPad</Tab>
+                    <Tab>Gen 2: Raspberry Pi</Tab>
+                    <Tab>Final Stage</Tab>
+                </GeneralTabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'2xl'} direction={'row'} variant={'unstyled'}>
+                            <CardBody>
+                            <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1011681586?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="Nexus: iPad Prototype"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                            </CardBody>
+                            <CardBody ml={8}>
+                            <Text textAlign={'start'}>
+                                    This first generation prototype use an iPad app to test the feasibility and options of the two biggest technical uncertainties:
+                                </Text>
+                                <OrderedList textAlign={'start'} mt={2}>
+                                    <ListItem>Object Recognition: I tested using genAI APIs to recognize items stored in the kiosk.</ListItem>
+                                    <ListItem>Control Circuit: In order for my iPad prototype app to be able to control the circuit for the locking mechanism on the kiosk, I used an ESP32 microcontroller that is connected to iPad via BLE wirelessly to control the circuit.</ListItem>
+                                </OrderedList>
+                                <Text textAlign={'start'} mt={2}>
+                                    This video shows the app controlling a pin on the microprocessor that is connected to the multimeter.</Text>
+                            </CardBody>
+                        </Card>
+
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'2xl'} direction={'row'} variant={'unstyled'}>
+                            <CardBody>
+                            <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} src="https://www.youtube.com/embed/2ZBIWHq8Y6I?si=oxNjNHlSjtssL7IA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                            </CardBody>
+                            <CardBody ml={8}>
+                            <Text textAlign={'start'}>
+                                    As the first gen prototype proved it's very feasible to use a genAI API to perform object recognition, the next step for me is then to try migrate the application to a Raspberry Pi. The benefit of using Raspberry Pi compared to an iPad are:
+                            </Text>
+                            <OrderedList textAlign={'start'} mt={2}>
+                                    <ListItem>A Raspberry Pi combined with a touch screen is half the price of an iPad.</ListItem>
+                                    <ListItem>Raspberry Pi provides the pinout that can be used to control the circuit of the locking mechanism.</ListItem>
+                                </OrderedList>
+                                <Text textAlign={'start'} mt={2}>
+                                    This video also shows that the application on Raspberry Pi is capable of uploading the object recognition result to our Nexus database.</Text>
+                            </CardBody>
+                        </Card>
+
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'2xl'} direction={'row'} variant={'unstyled'}>
+                        <CardBody>
+                            <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} src="https://www.youtube.com/embed/w9UUa1uOnb8?si=7XxCfk2Z-KvR6WRm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                            </CardBody>
+                            <CardBody ml={8}>
+                            <Text textAlign={'start'}>
+                                This video shows the application of Gen 2 prototype integrated with the control circuit tested by a multimeter.
+                            </Text>
+                            
+                            </CardBody>
+                        </Card>
+
+                    </TabPanel>
+                </TabPanels>
+            </GeneralTabs>
+            <Text mt={4} textAlign={'start'}>
+                Besides the electronics part of the hardware, I also designed the concept design of the hardware kiosk and the mechanical design of an early candidate for our build plan.
+            </Text>
+            <GeneralTabs>
+                <GeneralTabList>
+                    <Tab>Concept Design</Tab>
+                    <Tab>Mechanical Design</Tab>
+                </GeneralTabList>
+                <TabPanels>
+                    <TabPanel>
+                    <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Box m={'2vh'}>
+                            <StaticImage src='../images/nexus/untitled.19.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                        </Box>
+                        <Box m={'2vh'}>
+                            <StaticImage src='../images/nexus/platform-render.26.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                        </Box>
+                    </Card>
+                    </TabPanel>
+                    <TabPanel >
+                    <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                    <Box m={'2vh'} >
+                            <StaticImage src='../images/nexus/mechanical.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                        </Box>
+                        <CardBody>
+                            <Text mt={4} textAlign={'start'}>
+                                This is a CAD model designed in Fusion that incorporates an iPad as the main device and use aluminum frame as the main structure.
+                            </Text>
+                        </CardBody>
+                    </Card>
+                        
+                    </TabPanel>
+                </TabPanels>
+            </GeneralTabs>
             <Text fontSize={'4xl'} mt={6}>UI Prototyping</Text>
+            <Text mt={4} textAlign={'start'}>
+                I performed extensive evaluations on the operation flow of all the user interfaces across different product in the platform. For example, I created several different flow for validating identification on the kiosk and also various ways to modify the result of object recognition. Then, user tesing was conducted to decide the final flow. 
+            </Text>
+            <GeneralTabs>
+                <GeneralTabList>
+                    <Tab>Kiosk UI</Tab>
+                    <Tab>Website UI</Tab>
+                </GeneralTabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                            <Box m={'2vh'}>
+                                <StaticImage src='../images/nexus/kiosk ui.png' height={600} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                            </Box>
+                            <Box m={'2vh'}>
+                                <StaticImage src='../images/nexus/kiosk ui 2.png' height={600} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                            </Box>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <StaticImage src='../images/nexus/website ui.png' height={600} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                    </TabPanel>
+                </TabPanels>
+            </GeneralTabs>
+            <Card variant={'outline'} mt={6} mb={40}>
+                <CardBody>
+                    <Heading>Learn more</Heading>
+                    <Text textAlign={'start'} m={4}>
+                        This project was funded by Google. I am grateful to have a wonderful team working on other aspects of the project. Heather Hsieh implemented the Nexus website, ChunKai Hsu helped fine tune the prompt for Google Gemini LLM, Alan Chen helped building the final prototype hardware and YuJie Huang helped implemented the database in Notion.  
+                    </Text>
+                    <Button variant={'link'} m={4}>
+                        <a href='https://www.figma.com/proto/j6K0yQERpqzsRSXfOPJrhV/Lost-and-Found-kiosk?node-id=87-461&t=ifHiP7bwzUYbqvXi-1' target="_blank" rel="noopener noreferrer">Figma prototypes</a>
+                    </Button>
+                    <Button variant={'link'} m={4}>
+                        <a href='https://github.com/bencer3283/Lost-and-Found-Mockup' target="_blank" rel="noopener noreferrer">Code for initial iPad app prototype</a>
+                    </Button>
+                    <Button variant={'link'} m={4}>
+                        <a href='https://github.com/bencer3283/Lost-and-Found-Kiosk' target="_blank" rel="noopener noreferrer">Production version of the kiosk software</a>
+                    </Button>
+                </CardBody>
+            </Card>
         </div>
     )
 }
