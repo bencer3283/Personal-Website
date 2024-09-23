@@ -1,7 +1,7 @@
 import * as React from 'react';
 import GeneralTabs from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
-import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button } from '@chakra-ui/react';
+import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button, HStack } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 export default function NexusSection() {
@@ -42,7 +42,7 @@ export default function NexusSection() {
                             </Box>
                             <CardBody>
                                 <Text ml={4} textAlign={'start'}>
-                                This graph documented how users will interact with each component of the Nexus platform. Since Nexus is a platform consisting of several products, this was an important piece of document that laid out how every part of the platform works together to solve different user's problem. 
+                                This graph documented how users will interact with each component of the Nexus platform. Since Nexus is a platform consisting of several products, this was an important piece of document that laid out how every part of the platform works together to solve different user's problems. 
                                 </Text>
                             </CardBody>
                         </Card>
@@ -65,7 +65,7 @@ export default function NexusSection() {
                             </Box>
                             <CardBody>
                                 <Text ml={4} textAlign={'start'}>
-                                    As the system architect of the project, I laid out system block diagram for the platform. This is the final version in which Raspberry Pi was chosen as the main hardware platform.
+                                    As the system architect of the project, I laid out the system block diagram for the platform. This is the final version in which Raspberry Pi was chosen as the main hardware platform.
                                 </Text>
                             </CardBody>
                             
@@ -79,7 +79,7 @@ export default function NexusSection() {
                             </Box>
                             <CardBody>
                                 <Text ml={4} textAlign={'start'}>
-                                    I also laid out the Engineering Validation Test plan for the kiosk hardware. I built several prototypes using different hardware architectures shown here to finalize our engineering parameters and options. The following section shows the prototypes I built.
+                                    I also laid out the Engineering Validation Test plan for the kiosk hardware. I built several prototypes using different hardware architectures shown here to finalize our engineering parameters and options. The following section shows the prototypes I built during the process.
                                 </Text>
                             </CardBody>
                             
@@ -138,7 +138,7 @@ export default function NexusSection() {
                             </CardBody>
                             <CardBody ml={8}>
                             <Text textAlign={'start'}>
-                                    As the first gen prototype proved it's very feasible to use a genAI API to perform object recognition, the next step for me is then to try migrate the application to a Raspberry Pi. The benefit of using Raspberry Pi compared to an iPad are:
+                                    As the first gen prototype proved it's very feasible to use a genAI API to perform object recognition, the next step for me is then to try migrating the application to a Raspberry Pi. The benefits of using Raspberry Pi compared to an iPad are:
                             </Text>
                             <OrderedList textAlign={'start'} mt={2}>
                                     <ListItem>A Raspberry Pi combined with a touch screen is half the price of an iPad.</ListItem>
@@ -167,7 +167,7 @@ export default function NexusSection() {
                 </TabPanels>
             </GeneralTabs>
             <Text mt={4} textAlign={'start'}>
-                Besides the electronics part of the hardware, I also designed the concept design of the hardware kiosk and the mechanical design of an early candidate for our build plan.
+                Besides the electronics part of the hardware, I also designed the concept hardware of the kiosk and the mechanical design of an early candidate for our build plan.
             </Text>
             <GeneralTabs>
                 <GeneralTabList>
@@ -211,13 +211,17 @@ export default function NexusSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+
+                        <Card w={'5xl'} maxH={'lg'} direction={'column'} variant={'unstyled'}>
+                            <Text m={4} textAlign={'start'}>These are two of the candidates for different operation flow for authenticating owner of lost items. We decided to choose the passcode flow (on the left).</Text>
+                            <HStack>
                             <Box m={'2vh'}>
-                                <StaticImage src='../images/nexus/kiosk ui.png' height={600} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                                <StaticImage src='../images/nexus/kiosk ui.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
                             <Box m={'2vh'}>
-                                <StaticImage src='../images/nexus/kiosk ui 2.png' height={600} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                                <StaticImage src='../images/nexus/kiosk ui 2.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
+                            </HStack>
                         </Card>
                     </TabPanel>
                     <TabPanel>
@@ -229,10 +233,10 @@ export default function NexusSection() {
                 <CardBody>
                     <Heading>Learn more</Heading>
                     <Text textAlign={'start'} m={4}>
-                        This project was funded by Google. I am grateful to have a wonderful team working on other aspects of the project. Heather Hsieh implemented the Nexus website, ChunKai Hsu helped fine tune the prompt for Google Gemini LLM, Alan Chen helped building the final prototype hardware and YuJie Huang helped implemented the database in Notion.  
+                        This project was funded by Google. I am grateful to have a wonderful team working on other aspects of the project. Heather Hsieh implemented the Nexus website, ChunKai Hsu helped fine tune the prompt for Google Gemini LLM, they also shot and edited the main demo video. Alan Chen helped building the final prototype hardware and YuJie Huang helped implemented the database in Notion.  
                     </Text>
                     <Button variant={'link'} m={4}>
-                        <a href='https://www.figma.com/proto/j6K0yQERpqzsRSXfOPJrhV/Lost-and-Found-kiosk?node-id=87-461&t=ifHiP7bwzUYbqvXi-1' target="_blank" rel="noopener noreferrer">Figma prototypes</a>
+                        <a href='https://www.figma.com/proto/j6K0yQERpqzsRSXfOPJrhV/Lost-and-Found-kiosk?node-id=87-462&node-type=canvas&t=cDUlCAl5i40aa5f9-1&scaling=min-zoom&content-scaling=fixed&page-id=87%3A461&starting-point-node-id=87%3A462&share=1' target="_blank" rel="noopener noreferrer">Figma prototypes</a>
                     </Button>
                     <Button variant={'link'} m={4}>
                         <a href='https://github.com/bencer3283/Lost-and-Found-Mockup' target="_blank" rel="noopener noreferrer">Code for initial iPad app prototype</a>
