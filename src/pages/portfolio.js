@@ -88,6 +88,7 @@ const PortfolioPage = () => {
     return (
         <Layout>
             <NexusSection />
+            <PestSection />
             <PagemateSection/>
             <Text fontSize={'6xl'} mt={8}>TeleSHift</Text>
             <Text fontSize={'4xl'}>Telexisting shape-shifting 3D tangible user interface for physical collaboration and interaction.</Text>
@@ -332,7 +333,6 @@ const PortfolioPage = () => {
             </Card>
 
             <HSIsection />
-            <PestSection />
 
             <Text fontSize={'4xl'} mt={6}>Also checkout:</Text>
             <a href='https://photographic-gallery-of-posheng.netlify.app/' target="_blank" rel="noopener noreferrer">

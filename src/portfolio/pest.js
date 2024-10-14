@@ -59,13 +59,30 @@ export default function PestSection() {
                 </CardBody>
             </Card>
             </Center>
-            <Text fontSize={'4xl'} mt={6}>Mechanics</Text>
+            <Text fontSize={'4xl'} mt={6}>Engineering</Text>
             <GeneralTabs>
             <GeneralTabList>
+                    <Tab>Custom PCB</Tab>
                     <Tab>Roller</Tab>
                     <Tab>Power</Tab>
                 </GeneralTabList>
                 <TabPanels>
+                    <TabPanel>
+                        <Card w={'5xl'} variant={'unstyled'}>
+                            <CardBody textAlign={'start'}>
+                                <Center>
+                                    <HStack spacing={4}>
+                                        <StaticImage src='../images/pest_layout.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
+                                        <StaticImage src='../images/pest_pcb.jpg' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
+                                    </HStack>
+                                </Center>
+                                <Heading mt={6}>Custom Controller and IoT Board</Heading>
+                                <Text mt={4}>
+                                    I designed a custom PCB that acts as the central controller of the machine. It monitors the environment with various sensors like temperature, humidity and illuminance. More importantly, it includes a XBee wireless connectivity module that allows it to connect to a IoT bridge.
+                                </Text>
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
                     <TabPanel>
                         <Card w={'5xl'} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>

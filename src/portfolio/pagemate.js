@@ -39,6 +39,61 @@ export default function PagemateSection() {
                     </TabPanel>
                 </TabPanels>
             </GeneralTabs>
+            <Text fontSize={'4xl'} mt={6}>Prototype engineering</Text>
+            <GeneralTabs>
+                <GeneralTabList>
+                    <Tab>Architecture</Tab>
+                    <Tab>Hardware</Tab>
+                    <Tab>Circuit Schematics</Tab>
+                </GeneralTabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                            <Box m={'2vh'}>
+                                <StaticImage src='../images/pagemate/architecture.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                            </Box>
+                            <CardBody textAlign={'start'}>
+                                <Heading>
+                                    Cloud service
+                                </Heading>
+                                <Text mt={4}>
+                                    The cloud service was developed as a simple node.js app using the Express framework. It has a couple of POST and GET request interface for PageMate and ebook service.
+                                    We hosted the service on Render.
+                                </Text>
+                                <Button variant={'link'}>
+                                    <a href='https://github.com/bencer3283/Bookmark-Server' target="_blank" rel="noopener noreferrer">Checkout source code.</a>
+                                </Button>
+                                <Heading mt={4}>
+                                    Hardware
+                                </Heading>
+                                <Text mt={4}>
+                                    The prototype uses an ESP32 as the main processor. The capacitive touch-sensitive scroll wheel is a small touchpad with integrated controller IC.
+                                    It communicates with the processor with I2C protocol. After reading the input value from the touchpad, the processor sends a POST request to our cloud service. 
+                                </Text>
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                            <Box m={'2vh'}>
+                                <StaticImage src='../images/pagemate/internals.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                            </Box>
+                            <Box m={'2vh'}>
+                                <StaticImage src='../images/pagemate/IMG_3088.jpeg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                            </Box>
+
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'lg'} direction={'column'} variant={'unstyled'}>
+                            <Box m={'2vh'}>
+                                <StaticImage src='../images/pagemate/pagemate_schematics.png' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                            </Box>
+                            
+                        </Card>
+                    </TabPanel>
+                </TabPanels>
+            </GeneralTabs>
             <Text fontSize={'4xl'} mt={6}>User experience</Text>
             <GeneralTabs>
                 <GeneralTabList>
@@ -138,52 +193,7 @@ export default function PagemateSection() {
                     </TabPanel>
                 </TabPanels>
             </GeneralTabs>
-            <Text fontSize={'4xl'} mt={6}>Prototype engineering</Text>
-            <GeneralTabs>
-                <GeneralTabList>
-                    <Tab>Architecture</Tab>
-                    <Tab>Hardware</Tab>
-                </GeneralTabList>
-                <TabPanels>
-                    <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
-                            <Box m={'2vh'}>
-                                <StaticImage src='../images/pagemate/architecture.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                            </Box>
-                            <CardBody textAlign={'start'}>
-                                <Heading>
-                                    Cloud service
-                                </Heading>
-                                <Text mt={4}>
-                                    The cloud service was developed as a simple node.js app using the Express framework. It has a couple of POST and GET request interface for PageMate and ebook service.
-                                    We hosted the service on Render.
-                                </Text>
-                                <Button variant={'link'}>
-                                    <a href='https://github.com/bencer3283/Bookmark-Server' target="_blank" rel="noopener noreferrer">Checkout source code.</a>
-                                </Button>
-                                <Heading mt={4}>
-                                    Hardware
-                                </Heading>
-                                <Text mt={4}>
-                                    The prototype uses an ESP32 as the main processor. The capacitive touch-sensitive scroll wheel is a small touchpad with integrated controller IC.
-                                    It communicates with the processor with I2C protocol. After reading the input value from the touchpad, the processor sends a POST request to our cloud service. 
-                                </Text>
-                            </CardBody>
-                        </Card>
-                    </TabPanel>
-                    <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
-                            <Box m={'2vh'}>
-                                <StaticImage src='../images/pagemate/internals.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                            </Box>
-                            <Box m={'2vh'}>
-                                <StaticImage src='../images/pagemate/IMG_3088.jpeg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                            </Box>
-
-                        </Card>
-                    </TabPanel>
-                </TabPanels>
-            </GeneralTabs>
+            
             <Card variant={'outline'} mt={6} mb={40}>
                 <CardBody>
                     <Heading>Credits</Heading>

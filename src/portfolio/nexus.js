@@ -1,7 +1,7 @@
 import * as React from 'react';
 import GeneralTabs from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
-import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button, HStack } from '@chakra-ui/react';
+import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button, HStack, Center } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 export default function NexusSection() {
@@ -110,6 +110,7 @@ export default function NexusSection() {
                     <Tab>Gen 1: iPad</Tab>
                     <Tab>Gen 2: Raspberry Pi</Tab>
                     <Tab>Final Stage</Tab>
+                    <Tab>Circuit Schematics</Tab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
@@ -164,6 +165,15 @@ export default function NexusSection() {
                         </Card>
 
                     </TabPanel>
+                    <TabPanel>
+                        <Card w={'5xl'} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
+                            <Center>
+                                <StaticImage src='../images/nexus/nexus_schematics.png' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
+                            </Center>
+                        
+                        </Card>
+
+                    </TabPanel>
                 </TabPanels>
             </GeneralTabs>
             <Text mt={4} textAlign={'start'}>
@@ -214,14 +224,17 @@ export default function NexusSection() {
 
                         <Card w={'5xl'} maxH={'lg'} direction={'column'} variant={'unstyled'}>
                             <Text m={4} textAlign={'start'}>These are two of the candidates for different operation flow for authenticating owner of lost items. We decided to choose the passcode flow (on the left).</Text>
-                            <HStack>
-                            <Box m={'2vh'}>
-                                <StaticImage src='../images/nexus/kiosk ui.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                            </Box>
-                            <Box m={'2vh'}>
-                                <StaticImage src='../images/nexus/kiosk ui 2.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                            </Box>
-                            </HStack>
+                                <Center>
+                                    <HStack>
+                                        <Box m={'2vh'}>
+                                            <StaticImage src='../images/nexus/kiosk ui.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                                        </Box>
+                                        <Box m={'2vh'}>
+                                            <StaticImage src='../images/nexus/kiosk ui 2.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                                        </Box>
+                                    </HStack>
+                                </Center>
+                                
                         </Card>
                     </TabPanel>
                     <TabPanel>
