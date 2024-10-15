@@ -50,18 +50,18 @@ const ArtPage = () => {
             <Box ml={10}>
                 <AnimatePresence>
                     <motion.div key={title} style={{ position: 'absolute' }} initial={{ y: -80, opacity: 0.5 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 80, opacity: 0 }}>
-                        <Text fontSize={'72pt'} textTransform={'capitalize'} fontWeight={'bold'}>{title}</Text>
+                        <Text fontSize={{base: '36pt', md: '72pt'}} textTransform={'capitalize'} fontWeight={'bold'}>{title}</Text>
                     </motion.div>
                 </AnimatePresence>
-                <Text fontSize={'72pt'} pt={'90pt'} textColor={'#9EC972'}>almost anything.</Text>
-                <Text fontSize={'2xl'}>This is the home of my dreams and buildings. I hope they make an impact.</Text>
+                <Text fontSize={{base: '36pt', md: '72pt'}} pt={{ base: '51pt' ,md: '90pt'}} textColor={'#9EC972'}>almost anything.</Text>
+                <Text fontSize={{base: 'xl', md: '2xl'}} pt={'5vh'}>This is the home of my dreams and buildings. I hope they make an impact.</Text>
             </Box>
             <Box mt={'20vh'} ml={10}>
             
             <motion.ul variants={container} initial="hidden" animate="show">
                 <motion.li variants={item}>
                     <Link to='/portfolio'>
-                        <Text fontSize={'3xl'} textDecoration={'underline'}>
+                        <Text fontSize={{ base: '2xl', md: '3xl'}} textDecoration={'underline'}>
                             Interactive Design Engineering Portfolio
                         </Text>
                     </Link>
@@ -72,7 +72,7 @@ const ArtPage = () => {
                 </motion.li>
                 <motion.li variants={item}>
                     <a href='https://photographic-gallery-of-posheng.netlify.app/' target="_blank" rel="noopener noreferrer">
-                        <Text fontSize={'3xl'} textDecoration={'underline'}  mt={4}>
+                        <Text fontSize={{ base: '2xl', md: '3xl'}} textDecoration={'underline'}  mt={4}>
                             Online Photographic Gallery
                         </Text>
                     </a>
@@ -83,7 +83,7 @@ const ArtPage = () => {
                 </motion.li>
                 <motion.li variants={item}>
                     <a href='/docs/portfolio.pdf'>
-                        <Text fontSize={'3xl'} textDecoration={'underline'}  mt={4}>
+                        <Text fontSize={{ base: '2xl', md: '3xl'}} textDecoration={'underline'}  mt={4}>
                             Art Portfolio
                         </Text>
                     </a>

@@ -1,17 +1,17 @@
 import * as React from 'react'
-import { Tabs } from '@chakra-ui/react'
+import { Tab, Tabs, Text } from '@chakra-ui/react'
 
-const GeneralTabs = ({defaultTab, children}) => {
+export const GeneralTabs = ({defaultTab, children}) => {
     return(
     <Tabs 
         variant='soft-rounded'
-        size={'md'} 
+        size={{base: 'sm', md: 'md'}} 
         colorScheme='green' 
         align='center' 
         mt={4} 
         border={'2px'}
         borderColor={'blackAlpha.200'}
-        p={6} 
+        p={{base: 3 ,md: 6}} 
         borderRadius={10} 
         defaultIndex={defaultTab}>
             {children}
@@ -19,4 +19,14 @@ const GeneralTabs = ({defaultTab, children}) => {
     )
 }
 
-export default GeneralTabs;
+export const ResponsiveTab = ({children}) => {
+    return(
+        <Tab>
+            <Text fontSize={{ base: 'xs', md: 'md' }}>
+                {children}
+            </Text>
+        </Tab>
+    )
+}
+
+export default GeneralTabs

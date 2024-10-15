@@ -1,7 +1,7 @@
 import * as React from 'react';
-import GeneralTabs from '../components/generalTab';
+import { GeneralTabs, ResponsiveTab } from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
-import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button, HStack, Center } from '@chakra-ui/react';
+import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button, Stack, Center } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 export default function NexusSection() {
@@ -11,21 +11,28 @@ export default function NexusSection() {
             <Text fontSize={'4xl'}>Intelligent Lost Item Recognition and Management Platform</Text>
             <GeneralTabs defaultTab={0}>
                 <GeneralTabList>
-                    <Tab>Demo Video</Tab>
-                    <Tab>Hardware Concept</Tab>
-                    <Tab>User Journey</Tab>
+                    <ResponsiveTab>
+                        Demo Video
+                        
+                    </ResponsiveTab>
+                    <ResponsiveTab>
+                        Hardware Concept
+                    </ResponsiveTab>
+                    <ResponsiveTab>
+                        User Journey
+                    </ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1011505769?texttrack=en&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="Nexus: Intelligent Lost Item Recognition and Management Platform"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyle'}>
-                            <Box m={'2vh'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                            <Box m={{base: '1vh' ,md: '2vh'}}>
                                <StaticImage src='../images/nexus/platform-render.24.jpg' height={450} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
                             <CardBody>
@@ -36,8 +43,8 @@ export default function NexusSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyle'}>
-                            <Box m={'2vh'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                            <Box m={{base: '1vh' ,md: '2vh'}}>
                                <StaticImage src='../images/nexus/user journey.jpg' height={350} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
                             <CardBody>
@@ -52,13 +59,13 @@ export default function NexusSection() {
             <Text fontSize={'4xl'} mt={6}>System Architecture</Text>
             <GeneralTabs>
                 <GeneralTabList>
-                    <Tab>System Block Diagram</Tab>
-                    <Tab>Hardware EVT</Tab>
-                    <Tab>Software EVT</Tab>
+                    <ResponsiveTab>System Block Diagram</ResponsiveTab>
+                    <ResponsiveTab>Hardware EVT</ResponsiveTab>
+                    <ResponsiveTab>Software EVT</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyle'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/nexus/system block diagram.png' height={450} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -72,7 +79,7 @@ export default function NexusSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyle'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/nexus/hardware architecture.png' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -86,7 +93,7 @@ export default function NexusSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyle'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/nexus/software architecture.jpg' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -107,14 +114,14 @@ export default function NexusSection() {
             </Text>
             <GeneralTabs>
                 <GeneralTabList>
-                    <Tab>Gen 1: iPad</Tab>
-                    <Tab>Gen 2: Raspberry Pi</Tab>
-                    <Tab>Final Stage</Tab>
-                    <Tab>Circuit Schematics</Tab>
+                    <ResponsiveTab>Gen 1</ResponsiveTab>
+                    <ResponsiveTab>Gen 2</ResponsiveTab>
+                    <ResponsiveTab>Final</ResponsiveTab>
+                    <ResponsiveTab>Circuit Schematics</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'2xl'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                             <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1011681586?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="Nexus: iPad Prototype"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
@@ -133,7 +140,7 @@ export default function NexusSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'2xl'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                             <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} src="https://www.youtube.com/embed/2ZBIWHq8Y6I?si=oxNjNHlSjtssL7IA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                             </CardBody>
@@ -152,7 +159,7 @@ export default function NexusSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'2xl'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                         <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} src="https://www.youtube.com/embed/w9UUa1uOnb8?si=7XxCfk2Z-KvR6WRm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                             </CardBody>
@@ -166,7 +173,7 @@ export default function NexusSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
                             <Center>
                                 <StaticImage src='../images/nexus/nexus_schematics.png' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Center>
@@ -181,12 +188,12 @@ export default function NexusSection() {
             </Text>
             <GeneralTabs>
                 <GeneralTabList>
-                    <Tab>Concept Design</Tab>
-                    <Tab>Mechanical Design</Tab>
+                    <ResponsiveTab>Concept Design</ResponsiveTab>
+                    <ResponsiveTab>Mechanical Design</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                    <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                    <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                         <Box m={'2vh'}>
                             <StaticImage src='../images/nexus/untitled.19.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                         </Box>
@@ -196,7 +203,7 @@ export default function NexusSection() {
                     </Card>
                     </TabPanel>
                     <TabPanel >
-                    <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                    <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                     <Box m={'2vh'} >
                             <StaticImage src='../images/nexus/mechanical.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                         </Box>
@@ -216,23 +223,23 @@ export default function NexusSection() {
             </Text>
             <GeneralTabs>
                 <GeneralTabList>
-                    <Tab>Kiosk UI</Tab>
-                    <Tab>Website UI</Tab>
+                    <ResponsiveTab>Kiosk UI</ResponsiveTab>
+                    <ResponsiveTab>Website UI</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
 
-                        <Card w={'5xl'} maxH={'lg'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={'column'} variant={'unstyled'}>
                             <Text m={4} textAlign={'start'}>These are two of the candidates for different operation flow for authenticating owner of lost items. We decided to choose the passcode flow (on the left).</Text>
                                 <Center>
-                                    <HStack>
+                                    <Stack direction={{base: 'column' , md: 'row'}}>
                                         <Box m={'2vh'}>
                                             <StaticImage src='../images/nexus/kiosk ui.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                         </Box>
                                         <Box m={'2vh'}>
                                             <StaticImage src='../images/nexus/kiosk ui 2.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                         </Box>
-                                    </HStack>
+                                    </Stack>
                                 </Center>
                                 
                         </Card>
