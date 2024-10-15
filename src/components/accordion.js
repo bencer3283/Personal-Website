@@ -10,6 +10,7 @@ import {
     Button
 } from '@chakra-ui/react';
 import DesktopNav from './desktopNav';
+import { Link } from 'gatsby';
 
 const directoriesArray = [
     'education',
@@ -51,6 +52,11 @@ function MobileAccordionNav() {
                     </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
+                    <Link to='/art'>
+                        <Button m={'1rem'}>
+                            Portfolio
+                        </Button>
+                    </Link>
                     <a href='https://photographic-gallery-of-posheng.netlify.app/'>
                         <Button m={'1rem'}>
                             Online Photographic Gallery
