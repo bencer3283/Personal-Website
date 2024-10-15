@@ -24,14 +24,14 @@ export default function NexusSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1011505769?texttrack=en&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="Nexus: Intelligent Lost Item Recognition and Management Platform"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
                             <Box m={{base: '1vh' ,md: '2vh'}}>
                                <StaticImage src='../images/nexus/platform-render.24.jpg' height={450} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
@@ -229,7 +229,7 @@ export default function NexusSection() {
                 <TabPanels>
                     <TabPanel>
 
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} maxH={{md: 'lg'}} direction={'column'} variant={'unstyled'}>
                             <Text m={4} textAlign={'start'}>These are two of the candidates for different operation flow for authenticating owner of lost items. We decided to choose the passcode flow (on the left).</Text>
                                 <Center>
                                     <Stack direction={{base: 'column' , md: 'row'}}>

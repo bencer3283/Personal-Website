@@ -1,8 +1,8 @@
-import { Box, Card, CardBody, Center, HStack, Heading, Tab, TabPanel, TabPanels, Tabs, Text, Tooltip, Button } from '@chakra-ui/react';
+import { Box, Card, CardBody, Center, Stack, Heading, TabPanel, TabPanels, Tabs, Text, Tooltip, Button } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
-import GeneralTabs from '../components/generalTab';
+import {GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 
 export default function HSIsection() {
@@ -11,7 +11,7 @@ export default function HSIsection() {
             <Text fontSize={'6xl'} mt={8}>HSI Imaging System</Text>
             <Text fontSize={'4xl'}>A novel line-scan HyperSpectral Imaging system for scientific uses.</Text>
             <Center mt={6}>
-                <Card w={'5xl'} direction={'row'} variant={'elevated'}>
+                <Card w={{base: '2xs', md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>
                     <Box m={4}>
                         <StaticImage src='../images/hsi.png' height={400} imgStyle={{borderRadius: '3%'}}></StaticImage>
                     </Box>
@@ -29,13 +29,13 @@ export default function HSIsection() {
             </Text>
             <GeneralTabs>
             <GeneralTabList>
-                    <Tab>Working Principle</Tab>
-                    <Tab>System Components</Tab>
+                    <ResponsiveTab>Working Principle</ResponsiveTab>
+                    <ResponsiveTab>System Components</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                 
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/hsi_concept.jpg' height={450}></StaticImage>
@@ -56,7 +56,7 @@ export default function HSIsection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={'5xl'} variant={'unstyled'}>
+                    <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/hsiraypath.png' height={450}></StaticImage>
@@ -82,7 +82,7 @@ export default function HSIsection() {
             </Text>
             <Text as={'b'}>I identified the following painpoints and developed features accordingly.</Text>
             <Center>
-                <HStack mt={6}>
+                <Stack mt={6} direction={{base: 'column', md: 'row'}}>
                     <Card variant={'outline'} w={'m'}>
                         <CardBody textAlign={'center'}>
                             <Text fontSize={'2xl'}>Painpoints</Text>
@@ -107,7 +107,7 @@ export default function HSIsection() {
                             <Text>Lack of suitable file format</Text>
                         </CardBody>
                     </Card>
-                </HStack>
+                </Stack>
                 
             </Center>
             <Center mt={3}>
@@ -117,9 +117,9 @@ export default function HSIsection() {
                         <Text mb={6}>An one-stop, integrated solution</Text>
                         <Tabs variant={'soft-rounded'}>
                             <GeneralTabList>
-                                <Tab>Integrated OM</Tab>
-                                <Tab>Built-in Analysis</Tab>
-                                <Tab>Custom TIFF</Tab>
+                                <ResponsiveTab>Integrated OM</ResponsiveTab>
+                                <ResponsiveTab>Built-in Analysis</ResponsiveTab>
+                                <ResponsiveTab>Custom TIFF</ResponsiveTab>
                             </GeneralTabList>
                             <TabPanels>
                                 <TabPanel>

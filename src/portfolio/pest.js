@@ -1,8 +1,8 @@
-import { Box, Card, CardBody, Center, HStack, Heading, ListItem, OrderedList, Tab, TabPanel, TabPanels, Tabs, Text, Button } from '@chakra-ui/react';
+import { Box, Card, CardBody, Center, HStack, Heading, ListItem, OrderedList, Tab, TabPanel, TabPanels, Tabs, Text, Button, Stack } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
-import GeneralTabs from '../components/generalTab';
+import { GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 
 export default function PestSection() {
@@ -11,7 +11,7 @@ export default function PestSection() {
             <Text fontSize={'6xl'} mt={8}>Pest Machine</Text>
             <Text fontSize={'4xl'}>An IoT machine designed to monitor the amount of bugs in farm fields.</Text>
             <Center mt={6}>
-                <Card w={'5xl'} direction={'row'} variant={'elevated'}>
+                <Card w={{base: '2xs',md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>
                     <Box m={4}>
                         <StaticImage src='../images/pest.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
                     </Box>
@@ -24,13 +24,15 @@ export default function PestSection() {
             </Center>
             <Text fontSize={'4xl'} mt={6}>Iterating the working principle</Text>
             <Center>
-            <Card direction={'row'} variant={'filled'} w={'6xl'} mt={6} textAlign={'start'}>
-                <Box m={4}>
-                    <StaticImage src='../images/pestold.png' height={300} imgStyle={{borderRadius: '10px'}}></StaticImage>
-                </Box>
-                <Box mt={4} mb={4}>
-                    <StaticImage src='../images/pestnew.png' height={300} imgStyle={{borderRadius: '10px'}}></StaticImage>
-                </Box>
+            <Card direction={{base: 'column', md: 'row'}} variant={'filled'} w={'6xl'} mt={6} textAlign={'start'}>
+                <Stack direction={{base: 'column' ,md: 'row'}} spacing={4}>
+                    <Box m={4}>
+                        <StaticImage src='../images/pestold.png' height={300} imgStyle={{borderRadius: '10px'}}></StaticImage>
+                    </Box>
+                    <Box m={4}>
+                        <StaticImage src='../images/pestnew.png' height={300} imgStyle={{borderRadius: '10px'}}></StaticImage>
+                    </Box>    
+                </Stack>
                 <CardBody>
                     <Tabs variant={'soft-rounded'}>
                         <GeneralTabList>
@@ -62,13 +64,13 @@ export default function PestSection() {
             <Text fontSize={'4xl'} mt={6}>Engineering</Text>
             <GeneralTabs>
             <GeneralTabList>
-                    <Tab>Custom PCB</Tab>
-                    <Tab>Roller</Tab>
-                    <Tab>Power</Tab>
+                    <ResponsiveTab>Custom PCB</ResponsiveTab>
+                    <ResponsiveTab>Roller</ResponsiveTab>
+                    <ResponsiveTab>Power</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <HStack spacing={4}>
@@ -84,7 +86,7 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <HStack spacing={4}>
@@ -101,7 +103,7 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={'5xl'} variant={'unstyled'}>
+                    <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/pestpower.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -119,12 +121,12 @@ export default function PestSection() {
             <Text fontSize={'4xl'} mt={6}>Improving the workflow</Text>
             <GeneralTabs>
             <GeneralTabList>
-                    <Tab>CAD</Tab>
-                    <Tab>BOM</Tab>
+                    <ResponsiveTab>CAD</ResponsiveTab>
+                    <ResponsiveTab>BOM</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                         <StaticImage src='../images/pestcad.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -146,7 +148,7 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={'5xl'} variant={'unstyled'}>
+                    <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/pestbom.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GeneralTabs from '../components/generalTab';
+import { GeneralTabs , ResponsiveTab } from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -11,12 +11,12 @@ export default function PagemateSection() {
             <Text fontSize={'4xl'}>A smart bookmark that bridges physical and digital books.</Text>
             <GeneralTabs defaultTab={1}>
                 <GeneralTabList>
-                    <Tab>Concept</Tab>
-                    <Tab>Prototype</Tab>
+                    <ResponsiveTab>Concept</ResponsiveTab>
+                    <ResponsiveTab>Prototype</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/pagemate/concept.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                 <Text textAlign={'start'} m={4}>
@@ -31,7 +31,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/921592442?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="Pagemate Smartbookmart Demo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
@@ -42,13 +42,13 @@ export default function PagemateSection() {
             <Text fontSize={'4xl'} mt={6}>Prototype engineering</Text>
             <GeneralTabs>
                 <GeneralTabList>
-                    <Tab>Architecture</Tab>
-                    <Tab>Hardware</Tab>
-                    <Tab>Circuit Schematics</Tab>
+                    <ResponsiveTab>Architecture</ResponsiveTab>
+                    <ResponsiveTab>Hardware</ResponsiveTab>
+                    <ResponsiveTab>Circuit Schematics</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/architecture.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -74,7 +74,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/internals.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -85,7 +85,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={'lg'} direction={'column'} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/pagemate_schematics.png' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -97,13 +97,13 @@ export default function PagemateSection() {
             <Text fontSize={'4xl'} mt={6}>User experience</Text>
             <GeneralTabs>
                 <GeneralTabList>
-                    <Tab>Scenario</Tab>
-                    <Tab>Journey Map</Tab>
-                    <Tab>App</Tab>
+                    <ResponsiveTab>Scenario</ResponsiveTab>
+                    <ResponsiveTab>Journey Map</ResponsiveTab>
+                    <ResponsiveTab>App</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/scenarioimage.jpg' height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -120,7 +120,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/NEPPI Team 10.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -142,7 +142,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/app.jpg' height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -158,12 +158,12 @@ export default function PagemateSection() {
             <Text fontSize={'4xl'} mt={6}>Design iterations</Text>
             <GeneralTabs>
                 <GeneralTabList>
-                    <Tab>Explorations</Tab>
-                    <Tab>Final Design</Tab>
+                    <ResponsiveTab>Explorations</ResponsiveTab>
+                    <ResponsiveTab>Final Design</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/iterations.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -174,7 +174,7 @@ export default function PagemateSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/cmf.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>

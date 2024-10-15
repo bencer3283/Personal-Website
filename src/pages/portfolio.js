@@ -2,13 +2,13 @@ import * as React from 'react';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import { SEO } from '../components/seo';
-import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box, HStack, Tab, Tabs, TabPanel, TabPanels, Button, Card, CardBody, Tooltip, Heading } from '@chakra-ui/react';
+import { Text, Slider, SliderFilledTrack, SliderTrack, SliderThumb, Center, Box, Stack, Tab, Tabs, TabPanel, TabPanels, Button, Card, CardBody, Tooltip, Heading } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import HSIsection from '../portfolio/hsi';
 import PestSection from '../portfolio/pest';
 import PagemateSection from '../portfolio/pagemate';
 import { Link } from 'gatsby';
-import GeneralTabs from '../components/generalTab';
+import { GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 import NexusSection from '../portfolio/nexus';
 
@@ -94,13 +94,13 @@ const PortfolioPage = () => {
             <Text fontSize={'4xl'}>Telexisting shape-shifting 3D tangible user interface for physical collaboration and interaction.</Text>
             <GeneralTabs defaultTab={1}>
             <GeneralTabList>
-                    <Tab>Concept</Tab>
-                    <Tab>Prototype</Tab>
-                    <Tab>Video</Tab>
+                    <ResponsiveTab>Concept</ResponsiveTab>
+                    <ResponsiveTab>Prototype</ResponsiveTab>
+                    <ResponsiveTab>Video</ResponsiveTab>
                 </GeneralTabList>  
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/teleshiftconcept.png'></StaticImage>
                                 <Text textAlign={'start'}>
@@ -114,7 +114,7 @@ const PortfolioPage = () => {
                         
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'} maxH={'lg'}>
                                 <StaticImage src='../images/teleshiftprototype.jpg' height={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
@@ -129,7 +129,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <div style={{padding:`56.25% 0 0 0`, position:`relative`}}><iframe src="https://player.vimeo.com/video/749458064?h=e53bbfeec2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style={{position:`absolute`,top:`0`,left:`0`,width:`100%`,height:`100%`}} title="TeleSHift: Telexisting TUI for Physical Collaboration and Interaction"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
@@ -142,7 +142,7 @@ const PortfolioPage = () => {
             <Card variant={'filled'} mt={'6vh'} p={'6'}>
             <Text fontSize={'4xl'}>Three modes of Telexisting communication</Text>
             <Text>In this interactive widget, try move the sliders on both TeleSHifts in all three modes.</Text>
-            <HStack m={'20vh'} mt={'5vh'}>
+            <Stack direction={{base: 'column', md: 'row'}} m={{base: '40vh' ,md: '20vh'}} mt={'5vh'}>
                 <Center p={'2vh'}>
                     <div style={{ transform: `rotate(0deg) translateX(-0.8vh)` }}>
                         <TeleshiftArm direction={'vertical'} id={0} length={armLength}/>
@@ -163,7 +163,7 @@ const PortfolioPage = () => {
                         <TeleshiftArm direction={'horizontal'} isReversed={true} id={5} length={armLength}/>
                     </div>
                     <Box borderRadius={'50%'} w={'10vh'} h={'10vh'} bg={'blue.300'} style={{
-                        transform: `translate3d(-51vh, 10vh, 0)`
+                        transform: `translate3d(-52vh, 10vh, 0)`
                     }} textAlign={'center'}> <div style={{
                         position: `absolute`,
                         top: `50%`,
@@ -194,7 +194,7 @@ const PortfolioPage = () => {
                         <TeleshiftArm direction={'horizontal'} isReversed={true} id={11} length={armLength}/>
                     </div>
                     <Box borderRadius={'50%'} w={'10vh'} h={'10vh'} bg={'blue.300'} style={{
-                        transform: `translate3d(-51vh, 10vh, 0)`
+                        transform: `translate3d(-52vh, 10vh, 0)`
                     }} >
                         <div style={{
                             position: `absolute`,
@@ -206,7 +206,7 @@ const PortfolioPage = () => {
                         </div>
                     </Box>
                 </Center>
-            </HStack>
+            </Stack>
             <Tabs variant='soft-rounded' colorScheme='blue' onChange={(mode) => {
                 setArmMode(mode);
             }} align='start'>
@@ -236,13 +236,13 @@ const PortfolioPage = () => {
             <Text fontSize={'4xl'} mt={'6vh'}>How I built TeleSHift</Text>
             <GeneralTabs>
             <GeneralTabList>
-                    <Tab>CAD</Tab>
-                    <Tab>Mechanical Iterations</Tab>
-                    <Tab>Power and Control Circuit</Tab>
+                    <ResponsiveTab>CAD</ResponsiveTab>
+                    <ResponsiveTab>Mechanical Iterations</ResponsiveTab>
+                    <ResponsiveTab>Power and Control Circuit</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Tooltip placement='right-end' defaultIsOpen label='The unique hexahedron shape was meant to give the perception of a TeleSHift "particle" instead of a box.'>
                                 <Box m={'2vh'}>
                                     <StaticImage src='../images/teleshiftCAD.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -271,7 +271,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} maxH={'lg'} direction={'row'} p={'4'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} p={'4'} variant={'unstyled'}>
                             <Card variant={'elevated'} m={4}>
                                 <CardBody>
                                     <StaticImage src='../images/teleshiftanchor.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
@@ -308,7 +308,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/teleshiftcircuit.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 <Text textAlign={'start'} mt={4}>
@@ -347,14 +347,14 @@ const PortfolioPage = () => {
             </Text>
             <GeneralTabs>
             <GeneralTabList>
-                    <Tab>Homepage</Tab>
-                    <Tab>Responsive design</Tab>
-                    <Tab>Design detail</Tab>
-                    <Tab>Design system</Tab>
+                    <ResponsiveTab>Homepage</ResponsiveTab>
+                    <ResponsiveTab>Responsive design</ResponsiveTab>
+                    <ResponsiveTab>Design detail</ResponsiveTab>
+                    <ResponsiveTab>Design system</ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/gallery.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -362,7 +362,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/gallery_responsive.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -370,7 +370,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/gallery_showcase.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -378,7 +378,7 @@ const PortfolioPage = () => {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={'5xl'} variant={'unstyled'}>
+                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/gallery_design.png' imgStyle={{borderRadius: '15px'}}></StaticImage>
 
