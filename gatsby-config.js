@@ -23,6 +23,14 @@ module.exports = {
       "path": "./src/posts/"
     },
     __key: "experiences"
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "portfolio",
+      "path": "./src/portfolio/"
+    },
+    __key: "portfolio"
   },{
     resolve: '@chakra-ui/gatsby-plugin',
     options: {

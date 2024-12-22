@@ -26,6 +26,11 @@ exports.createPages = ({ graphql, actions }) => {
         name
       }
     }
+    allFile(filter: {sourceInstanceName: {eq: "portfolio"}}) {
+      nodes {
+        name
+      }
+    }
   }`).then(result => {
     if (result.errors) {
       throw result.errors

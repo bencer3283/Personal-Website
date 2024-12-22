@@ -11,6 +11,7 @@ import { Link } from 'gatsby';
 import { GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 import NexusSection from '../portfolio/nexus';
+import HapticBeltSection from '../portfolio/hepticBelt';
 
 let initArm = Array(12).fill(16);
 
@@ -87,6 +88,7 @@ const PortfolioPage = () => {
 
     return (
         <Layout>
+            <HapticBeltSection />
             <NexusSection />
             <PestSection />
             <PagemateSection/>
