@@ -80,16 +80,16 @@ export default function HapticBeltSection() {
                 <CardBody>
                     <Heading>This is a work-in-progess project</Heading>
                     <Text textAlign={'start'} m={4}>
-                        This project was funded by Google. I am grateful to have a wonderful team working on other aspects of the project. Heather Hsieh implemented the Nexus website, ChunKai Hsu helped fine tune the prompt for Google Gemini LLM, they also shot and edited the main demo video. Alan Chen helped building the final prototype hardware and YuJie Huang helped implemented the database in Notion.  
+                        More infomration can be found in the following link.  
                     </Text>
                     <Button variant={'link'} m={4}>
-                        <a href='https://www.figma.com/proto/j6K0yQERpqzsRSXfOPJrhV/Lost-and-Found-kiosk?node-id=87-462&node-type=canvas&t=cDUlCAl5i40aa5f9-1&scaling=min-zoom&content-scaling=fixed&page-id=87%3A461&starting-point-node-id=87%3A462&share=1' target="_blank" rel="noopener noreferrer">Figma prototypes</a>
+                        <a href='https://www.figma.com/proto/j6K0yQERpqzsRSXfOPJrhV/Lost-and-Found-kiosk?node-id=87-462&node-type=canvas&t=cDUlCAl5i40aa5f9-1&scaling=min-zoom&content-scaling=fixed&page-id=87%3A461&starting-point-node-id=87%3A462&share=1' target="_blank" rel="noopener noreferrer">FPCB design files</a>
                     </Button>
                     <Button variant={'link'} m={4}>
-                        <a href='https://github.com/bencer3283/Lost-and-Found-Mockup' target="_blank" rel="noopener noreferrer">Code for initial iPad app prototype</a>
+                        <a href='https://github.com/bencer3283/Lost-and-Found-Mockup' target="_blank" rel="noopener noreferrer">RF desing files</a>
                     </Button>
                     <Button variant={'link'} m={4}>
-                        <a href='https://github.com/bencer3283/Lost-and-Found-Kiosk' target="_blank" rel="noopener noreferrer">Production version of the kiosk software</a>
+                        <a href='https://github.com/bencer3283/STM-DRV2605' target="_blank" rel="noopener noreferrer">STM32 firmware repo</a>
                     </Button>
                 </CardBody>
             </Card>

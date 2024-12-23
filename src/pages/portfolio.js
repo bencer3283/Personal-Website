@@ -12,6 +12,7 @@ import { GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 import NexusSection from '../portfolio/nexus';
 import HapticBeltSection from '../portfolio/hepticBelt';
+import MITMSection from '../portfolio/mitm';
 
 let initArm = Array(12).fill(16);
 
@@ -88,6 +89,7 @@ const PortfolioPage = () => {
 
     return (
         <Layout>
+            <MITMSection />
             <HapticBeltSection />
             <NexusSection />
             <PestSection />
