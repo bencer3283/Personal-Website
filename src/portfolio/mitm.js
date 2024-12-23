@@ -30,7 +30,7 @@ export default function MITMSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'xl'} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '2xs',md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
                             <CardBody>
                                 <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1041628137?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="mitm-live-demo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody> 
@@ -122,7 +122,7 @@ export default function MITMSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '2xs',md: '5xl'}} direction={'column'} variant={'unstyled'}>
                         <Stack direction={{base: 'column', md: 'row'}} m={4}>
                                 <StaticImage src='../images/mitm/Block diagram.jpg' width={600} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 <StaticImage src='../images/mitm/mess.jpg' width={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
