@@ -5,10 +5,14 @@ import * as React from 'react';
 import {GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 
+export const frontmatter = {
+    title: 'HSI Imaging System'
+}
+
 export default function HSIsection() {
     return(
         <div>
-            <Text fontSize={'6xl'} mt={8}>HSI Imaging System</Text>
+            <Text fontSize={'6xl'} mt={8}>{frontmatter.title}</Text>
             <Text fontSize={'4xl'}>A novel line-scan HyperSpectral Imaging system for scientific uses.</Text>
             <Center mt={6}>
                 <Card w={{base: '2xs', md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>

@@ -4,10 +4,14 @@ import GeneralTabList from '../components/generalTabList';
 import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button, Stack, Center } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 
+export const frontmatter = {
+    title: 'Nexus'
+}
+
 export default function NexusSection() {
     return(
         <div>
-            <Text fontSize={'6xl'} mt={8}>Nexus</Text>
+            <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
             <Text fontSize={'4xl'}>Intelligent Lost Item Recognition and Management Platform</Text>
             <GeneralTabs defaultTab={0}>
                 <GeneralTabList>

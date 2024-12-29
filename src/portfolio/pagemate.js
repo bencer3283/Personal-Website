@@ -4,10 +4,14 @@ import GeneralTabList from '../components/generalTabList';
 import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 
+export const frontmatter = {
+    title: 'PageMate'
+}
+
 export default function PagemateSection() {
     return (
         <div>
-            <Text fontSize={'6xl'} mt={8}>PageMate</Text>
+            <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
             <Text fontSize={'4xl'}>A smart bookmark that bridges physical and digital books.</Text>
             <GeneralTabs defaultTab={1}>
                 <GeneralTabList>

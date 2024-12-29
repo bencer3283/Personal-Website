@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
-import { Box, Button, Text } from '@chakra-ui/react';
+import { Box, Button, Text, Wrap, WrapItem, Card, CardHeader, CardBody, CardFooter, Heading } from '@chakra-ui/react';
 import { SEO } from '../components/seo';
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const ArtPage = () => {
+const path = require('path');
+
+const ArtPage = ({data}) => {
 
     const [title, setTitle] = useState('dream');
 
@@ -91,14 +93,72 @@ const ArtPage = () => {
                 </motion.li>
             </motion.ul>
             </Box>
-            
-            
-            
+            <Wrap p={{base: '0', md: '10'}} pt='10' zIndex={0}>
+                {
+                    data.allFile.nodes.map((file) => {
+                        
+                        return (
+                            <WrapItem key={file.id}>
+                                <Card w={{base: 'md'}} direction='column' m='3' flexShrink={{base: '0'}}>
+
+                                    <CardHeader>
+                                        {/* <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={1}>
+                                            { file.childrenMarkdownRemark[0].frontmatter.keywords }
+                                        </Text> */}
+                                        <Heading size='md' noOfLines={2} textTransform={'capitalize'}>
+                                            { file.childJavascriptFrontmatter.frontmatter.title }
+                                        </Heading>
+                                        {/* <Text textTransform={'capitalize'} noOfLines={4}>
+                                            { file.childrenMarkdownRemark[0].frontmatter.subtitle }
+                                        </Text> */}
+                                    </CardHeader>
+
+                                    <CardBody>
+
+                                        {/* <Text noOfLines={4}>
+                                            {file.childrenMarkdownRemark[0].frontmatter.meta_description}
+                                        </Text> */}
+                                    </CardBody>
+
+                                    <CardFooter>
+                                        <Link> {/*to={`/${file.relativeDirectory}/${file.name}`}>*/}
+                                            <Button variant='outline'>
+                                                Learn more
+                                            </Button>
+                                        </Link>
+
+                                    </CardFooter>
+
+                                </Card>
+                            </WrapItem>
+                        )
+
+
+                    })
+                }
+            </Wrap>
         </Layout>
     )
 }
 
 export default ArtPage;
+
+export const query = graphql`query {
+    allFile(
+      filter: {sourceInstanceName: {eq: "portfolio"}}
+      sort: {modifiedTime: DESC}
+    ) {
+      nodes {
+        name
+        id
+        childJavascriptFrontmatter {
+            frontmatter {
+                title
+            }
+        }
+      }
+    }
+  }`
 
 export const Head = () => (
     <SEO title={'Dream, Build, Impact | Po Sheng Cheng'} pathname={'art'} description={`Po Sheng Cheng's works in portfolio of design engineering, photgraphy and art works.`} />

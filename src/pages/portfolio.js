@@ -11,8 +11,12 @@ import { Link } from 'gatsby';
 import { GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 import NexusSection from '../portfolio/nexus';
-import HapticBeltSection from '../portfolio/hepticBelt';
+import HapticBeltSection from '../portfolio/hapticBelt';
 import MITMSection from '../portfolio/mitm';
+
+export const frontmatter = {
+    title: "TeleSHift"
+}
 
 let initArm = Array(12).fill(16);
 

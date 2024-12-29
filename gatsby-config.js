@@ -8,7 +8,7 @@ module.exports = {
     description: `Po Sheng Cheng's personal website showcasing a wide range of skills and interests.`,
     image: `/docs/icon.png`
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-transformer-javascript-frontmatter", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -28,7 +28,7 @@ module.exports = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "portfolio",
-      "path": "./src/portfolio/"
+      "path": `${__dirname}/src/portfolio`
     },
     __key: "portfolio"
   },{
@@ -75,6 +75,16 @@ module.exports = {
     options: {
       icon: `src/images/%%.png`
     }
-  }
+  },
 ]
 };
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+   resolve: {
+      fallback: {
+        path: require.resolve('path-browserify'),
+      },
+    },
+  })
+}

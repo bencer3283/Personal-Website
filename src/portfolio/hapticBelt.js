@@ -4,10 +4,14 @@ import GeneralTabList from '../components/generalTabList';
 import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button, Stack, Center } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 
+export const frontmatter = {
+    title: 'Work In Progess: Haptic Belt'
+}
+
 export default function HapticBeltSection() {
     return(
         <div>
-            <Text fontSize={'6xl'} mt={8}>Work In Progess: Haptic Belt</Text>
+            <Text fontSize={'6xl'} mt={8}>{ frontmatter.title }</Text>
             <Text fontSize={'4xl'}>Using Haptic Feedback to Provide Navigation for Visually impaired People</Text>
             <GeneralTabs>
                 <GeneralTabList>

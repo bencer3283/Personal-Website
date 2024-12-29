@@ -4,10 +4,14 @@ import GeneralTabList from '../components/generalTabList';
 import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListItem, Heading, Button, Stack, Center, List, UnorderedList } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 
+export const frontmatter = {
+    title: 'MITM Router'
+}
+
 export default function MITMSection() {
     return(
         <div>
-            <Text fontSize={'6xl'} mt={8}>MITM Router</Text>
+            <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
             <Text fontSize={'4xl'}>Raising Awareness of the Hidden Cost of Technology</Text>
             <GeneralTabs defaultTab={0}>
                 <GeneralTabList>
