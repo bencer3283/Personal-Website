@@ -24,12 +24,12 @@ export default function HapticBeltSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{ base: '2xs', md: '5xl' }} variant={'unstyled'}>
+                        <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'}>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1041562115?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="LRA_assembly"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{ base: '2xs', md: '5xl' }} variant={'unstyled'}>
+                        <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'}>
                             <StaticImage src='../images/hapticBelt/pcb.png' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                         </Card>
                     </TabPanel>
@@ -50,7 +50,7 @@ export default function HapticBeltSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{ base: '2xs', md: '5xl' }} variant={'unstyled'} direction={'column'}>
+                        <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'} direction={'column'}>
                             <Text ml={4} textAlign={'start'}>
                                 The main challenge is the mounting of the vibration motors on the flexible PCB. Becuase the vibration motor is a constantly moving component, soldering the motor on the flexible pcb by any means will likely fail very quickly. My solution to this is to use a spring loaded contact connector to connect the motor to the PCB. 
                                 However, the contact point between the motor and the spring contact will need to be held at a constant distance to maintain contact. So I designed a custom bracket to hold the motor and maintain its vertical distance to the board. I also designed the flexible PCB to be a rigid-flex PCB, meaning that there are four rigid sections within the flexible PCB that can support the stress of the motor contact point.
@@ -68,7 +68,7 @@ export default function HapticBeltSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} direction={{base: 'column', md: 'column'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column', md: 'column'}} variant={'unstyle'}>
                             <CardBody>
                                 <Box m={{ base: '1vh', md: '2vh' }}>
                                     <StaticImage src='../images/hapticBelt/felxBoard_Page_3.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
@@ -85,7 +85,7 @@ export default function HapticBeltSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} direction={{base: 'column', md: 'column'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column', md: 'column'}} variant={'unstyle'}>
                             <CardBody>
                             <Box m={{ base: '1vh', md: '2vh' }}>
                                     <StaticImage src='../images/hapticBelt/RFShield_Page_2.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>

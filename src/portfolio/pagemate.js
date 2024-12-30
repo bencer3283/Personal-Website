@@ -20,7 +20,7 @@ export default function PagemateSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <StaticImage src='../images/pagemate/concept.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                 <Text textAlign={'start'} m={4}>
@@ -35,7 +35,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                                 <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/921592442?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="Pagemate Smartbookmart Demo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
@@ -52,7 +52,7 @@ export default function PagemateSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/architecture.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -78,7 +78,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/internals.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -89,7 +89,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} maxH={'lg'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} maxH={'lg'} direction={'column'} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/pagemate_schematics.png' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -107,7 +107,7 @@ export default function PagemateSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/scenarioimage.jpg' height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -124,7 +124,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/NEPPI Team 10.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -146,7 +146,7 @@ export default function PagemateSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/app.jpg' height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -167,7 +167,7 @@ export default function PagemateSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/iterations.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
@@ -178,7 +178,7 @@ export default function PagemateSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/pagemate/cmf.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>

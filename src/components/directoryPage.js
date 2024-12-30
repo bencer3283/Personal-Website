@@ -12,7 +12,7 @@ import {
     Button,
     Breadcrumb, BreadcrumbItem, BreadcrumbLink,
 } from '@chakra-ui/react';
-import { ChevronRightIcon } from "@chakra-ui/icons"
+import { MdChevronRight } from "@react-icons/all-files/md/MdChevronRight";
 import { graphql, Link } from 'gatsby';
 import { SEO } from './seo';
 import { useSiteMetadata } from '../hooks/site-meta';
@@ -20,7 +20,7 @@ import { useSiteMetadata } from '../hooks/site-meta';
 const DirectoryPage = ({ data }) => {
     return (
         <Layout>
-            <Breadcrumb separator={<ChevronRightIcon color='gray.500' />}>
+            <Breadcrumb separator={<MdChevronRight color='gray.500' />}>
                 <BreadcrumbItem>
                     <BreadcrumbLink as={Link} to='/'>Home</BreadcrumbLink>
                 </BreadcrumbItem>

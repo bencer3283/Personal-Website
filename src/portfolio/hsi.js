@@ -15,7 +15,7 @@ export default function HSIsection() {
             <Text fontSize={'6xl'} mt={8}>{frontmatter.title}</Text>
             <Text fontSize={'4xl'}>A novel line-scan HyperSpectral Imaging system for scientific uses.</Text>
             <Center mt={6}>
-                <Card w={{base: '2xs', md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>
+                <Card w={{base: '65vw', md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>
                     <Box m={4}>
                         <StaticImage src='../images/hsi.png' height={400} imgStyle={{borderRadius: '3%'}}></StaticImage>
                     </Box>
@@ -39,7 +39,7 @@ export default function HSIsection() {
                 <TabPanels>
                 
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/hsi_concept.jpg' height={450}></StaticImage>
@@ -60,7 +60,7 @@ export default function HSIsection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
+                    <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/hsiraypath.png' height={450}></StaticImage>

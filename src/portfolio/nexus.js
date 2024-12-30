@@ -28,14 +28,14 @@ export default function NexusSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1011505769?texttrack=en&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="Nexus: Intelligent Lost Item Recognition and Management Platform"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
                             <Box m={{base: '1vh' ,md: '2vh'}}>
                                <StaticImage src='../images/nexus/platform-render.24.jpg' height={450} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
@@ -47,7 +47,7 @@ export default function NexusSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Box m={{base: '1vh' ,md: '2vh'}}>
                                <StaticImage src='../images/nexus/user journey.jpg' height={350} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
@@ -69,7 +69,7 @@ export default function NexusSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/nexus/system block diagram.png' height={450} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -83,7 +83,7 @@ export default function NexusSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/nexus/hardware architecture.png' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -97,7 +97,7 @@ export default function NexusSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/nexus/software architecture.jpg' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
@@ -125,11 +125,11 @@ export default function NexusSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                             <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1011681586?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="Nexus: iPad Prototype"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
-                            <CardBody ml={8}>
+                            <CardBody ml={{base: 0, md: 8}} mt={{base: 4, md: 0}} >
                             <Text textAlign={'start'}>
                                     This first generation prototype use an iPad app to test the feasibility and options of the two biggest technical uncertainties:
                                 </Text>
@@ -144,11 +144,11 @@ export default function NexusSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                             <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} src="https://www.youtube.com/embed/2ZBIWHq8Y6I?si=oxNjNHlSjtssL7IA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                             </CardBody>
-                            <CardBody ml={8}>
+                            <CardBody ml={{base: 0, md: 8}} mt={{base: 4, md: 0}}>
                             <Text textAlign={'start'}>
                                     As the first gen prototype proved it's very feasible to use a genAI API to perform object recognition, the next step for me is then to try migrating the application to a Raspberry Pi. The benefits of using Raspberry Pi compared to an iPad are:
                             </Text>
@@ -163,11 +163,11 @@ export default function NexusSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                         <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} src="https://www.youtube.com/embed/w9UUa1uOnb8?si=7XxCfk2Z-KvR6WRm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                             </CardBody>
-                            <CardBody ml={8}>
+                            <CardBody ml={{base: 0, md: 8}} mt={{base: 4, md: 0}}>
                             <Text textAlign={'start'}>
                                 This video shows the application of Gen 2 prototype integrated with the control circuit tested by a multimeter.
                             </Text>
@@ -177,7 +177,7 @@ export default function NexusSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
                             <Center>
                                 <StaticImage src='../images/nexus/nexus_schematics.png' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Center>
@@ -197,7 +197,7 @@ export default function NexusSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                    <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
+                    <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                         <Box m={'2vh'}>
                             <StaticImage src='../images/nexus/untitled.19.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                         </Box>
@@ -207,7 +207,7 @@ export default function NexusSection() {
                     </Card>
                     </TabPanel>
                     <TabPanel >
-                    <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
+                    <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
                     <Box m={'2vh'} >
                             <StaticImage src='../images/nexus/mechanical.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                         </Box>
@@ -233,7 +233,7 @@ export default function NexusSection() {
                 <TabPanels>
                     <TabPanel>
 
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={{md: 'lg'}} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={{md: 'lg'}} direction={'column'} variant={'unstyled'}>
                             <Text m={4} textAlign={'start'}>These are two of the candidates for different operation flow for authenticating owner of lost items. We decided to choose the passcode flow (on the left).</Text>
                                 <Center>
                                     <Stack direction={{base: 'column' , md: 'row'}}>

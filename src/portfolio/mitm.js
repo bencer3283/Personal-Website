@@ -27,14 +27,14 @@ export default function MITMSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs', md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
                             <CardBody>
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1041609425?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="mitm-video"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
                             <CardBody>
                                 <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1042066539?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="mitm-live-demo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody> 
@@ -53,7 +53,7 @@ export default function MITMSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Stack m={{base: '1vh' ,md: '2vh'}} direction={'column'}>
                                <StaticImage src='../images/mitm/sketches-1.jpg' width={600}></StaticImage>
                                <StaticImage src='../images/mitm/FLOW CHART.jpg' height={350} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -76,7 +76,7 @@ export default function MITMSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <Box m={'2vh'}>
                                 <StaticImage src='../images/mitm/chasis.png' height={350} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
@@ -89,7 +89,7 @@ export default function MITMSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'2xl'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
                             <CardBody>
                                 <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1041613274?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="mitm - shaft coupling"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             </CardBody>
@@ -102,7 +102,7 @@ export default function MITMSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} direction={'column'} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} direction={'column'} variant={'unstyle'}>
                             <Stack direction={{base: 'column', md: 'row'}} m={4}>
                                 <StaticImage src='../images/mitm/mitm-2161.jpg' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 <StaticImage src='../images/mitm/mitm-2197.jpg' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -126,7 +126,7 @@ export default function MITMSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} direction={'column'} variant={'unstyled'}>
                         <Stack direction={{base: 'column', md: 'row'}} m={4}>
                                 <StaticImage src='../images/mitm/Block diagram.jpg' width={600} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 <StaticImage src='../images/mitm/mess.jpg' width={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -145,7 +145,7 @@ export default function MITMSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
                             <CardBody ml={8}>
                             <UnorderedList textAlign={'start'}>
                                     <ListItem>The Raspberry Pi runs the wifi hotspot.</ListItem>
@@ -157,7 +157,7 @@ export default function MITMSection() {
 
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} maxH={'2xl'} direction={'column'} variant={'unstyled'}>
                             <CardBody ml={8}>
                             <Text textAlign={'start'}>
                                 The power supply schema in the device is complicated by the different voltage and current requirement of various components, for example the motorized potentiometer operates at 12v for its motor but the potetiometer has to be operated at logic voltage level of the RP2040 microcontroller. I ended up using a STUSB4500 USB-PD controller to regulate power from a USB-PD wall adapter.

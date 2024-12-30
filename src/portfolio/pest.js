@@ -15,7 +15,7 @@ export default function PestSection() {
             <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
             <Text fontSize={'4xl'}>An IoT machine designed to monitor the amount of bugs in farm fields.</Text>
             <Center mt={6}>
-                <Card w={{base: '2xs',md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>
+                <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>
                     <Box m={4}>
                         <StaticImage src='../images/pest.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
                     </Box>
@@ -74,7 +74,7 @@ export default function PestSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <HStack spacing={4}>
@@ -90,7 +90,7 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <HStack spacing={4}>
@@ -107,7 +107,7 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
+                    <Card w={{base: '65vw',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/pestpower.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -130,7 +130,7 @@ export default function PestSection() {
                 </GeneralTabList>
                 <TabPanels>
                     <TabPanel>
-                        <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
+                        <Card w={{base: '65vw',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                         <StaticImage src='../images/pestcad.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
@@ -152,7 +152,7 @@ export default function PestSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                    <Card w={{base: '2xs',md: '5xl'}} variant={'unstyled'}>
+                    <Card w={{base: '65vw',md: '5xl'}} variant={'unstyled'}>
                             <CardBody textAlign={'start'}>
                                 <Center>
                                     <StaticImage src='../images/pestbom.png' height={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
