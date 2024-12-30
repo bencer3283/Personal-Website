@@ -5,14 +5,16 @@ import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListI
 import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
-    title: 'PageMate'
+    title: 'PageMate',
+    description: 'A smart bookmark that bridges physical and digital books',
+    image: '../images/pagemate/scenarioimage.jpg'
 }
 
 export default function PagemateSection() {
     return (
         <div>
             <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
-            <Text fontSize={'4xl'}>A smart bookmark that bridges physical and digital books.</Text>
+            <Text fontSize={'4xl'}> {frontmatter.description} </Text>
             <GeneralTabs defaultTab={1}>
                 <GeneralTabList>
                     <ResponsiveTab>Concept</ResponsiveTab>

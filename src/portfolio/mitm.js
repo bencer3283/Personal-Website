@@ -5,14 +5,16 @@ import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListI
 import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
-    title: 'MITM Router'
+    title: 'MITM Router',
+    description: 'Raising Awareness of the Hidden Cost of Technology',
+    image: '../images/mitm/mitm-2161.jpg'
 }
 
 export default function MITMSection() {
     return(
         <div>
             <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
-            <Text fontSize={'4xl'}>Raising Awareness of the Hidden Cost of Technology</Text>
+            <Text fontSize={'4xl'}> {frontmatter.description} </Text>
             <GeneralTabs defaultTab={0}>
                 <GeneralTabList>
                     <ResponsiveTab>
@@ -40,13 +42,13 @@ export default function MITMSection() {
                             </CardBody> 
                             <CardBody>
                                 <OrderedList textAlign={'start'} m={4}>
-                                    <ListItem>Connect your personal device to the wifi MITM</ListItem>
-                                    <ListItem>Go to a website</ListItem>
-                                    <ListItem>Observe your internet becomes very slow</ListItem>
-                                    <ListItem>The slider is a representation of your data traveling to the server and back to you</ListItem>
-                                    <ListItem>After each travel of the slider, a small part of your webpage loads incrementally</ListItem>
+                                    <ListItem>Connect your personal device to the wifi MITM.</ListItem>
+                                    <ListItem>Go to a website.</ListItem>
+                                    <ListItem>Observe your internet becomes very slow.</ListItem>
+                                    <ListItem>The slider is a representation of your data traveling to the server and back to you.</ListItem>
+                                    <ListItem>After each travel of the slider, a small part of your webpage loads incrementally.</ListItem>
                                     <ListItem>Everytime part of your webpage loads, the labour meter goes up.</ListItem>
-                                    <ListItem>Your can expedite the data by using your own labour to move the slider to the server and back. Each time you move the slider to the server and back a part of your webpage loads</ListItem>
+                                    <ListItem>Your can expedite the data by using your own labour to move the slider to the server and back. Each time you move the slider to the server and back a part of your webpage loads.</ListItem>
                                     <ListItem>Alternatively, your can rotate the dial to permanently increase the speed of your internet at the cost of a louder fan noise.</ListItem>
                                 </OrderedList>
                             </CardBody>

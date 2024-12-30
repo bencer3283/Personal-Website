@@ -5,14 +5,16 @@ import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListI
 import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
-    title: 'Work In Progess: Haptic Belt'
+    title: 'Work In Progess: Haptic Belt',
+    description: 'Using Haptic Feedback to Provide Navigation for Visually impaired People',
+    image: '../images/hapticBelt/pcb.png'
 }
 
 export default function HapticBeltSection() {
     return(
         <div>
             <Text fontSize={'6xl'} mt={8}>{ frontmatter.title }</Text>
-            <Text fontSize={'4xl'}>Using Haptic Feedback to Provide Navigation for Visually impaired People</Text>
+            <Text fontSize={'4xl'}>{frontmatter.description}</Text>
             <GeneralTabs>
                 <GeneralTabList>
                     <ResponsiveTab>

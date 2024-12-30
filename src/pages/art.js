@@ -5,6 +5,7 @@ import { Box, Button, Text, Wrap, WrapItem, Card, CardHeader, CardBody, CardFoot
 import { SEO } from '../components/seo';
 import { graphql, Link } from 'gatsby';
 import { AnimatePresence, motion } from 'framer-motion';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const path = require('path');
 
@@ -35,7 +36,7 @@ const ArtPage = ({data}) => {
           opacity: 1,
           transition: {
             staggerChildren: 0.4,
-            delay: 1,
+            delay: 0.3,
             when: "beforeChildren"
           }
         }
@@ -56,10 +57,53 @@ const ArtPage = ({data}) => {
                     </motion.div>
                 </AnimatePresence>
                 <Text fontSize={{base: '36pt', md: '72pt'}} pt={{ base: '51pt' ,md: '90pt'}} textColor={'#9EC972'}>almost anything.</Text>
-                <Text fontSize={{base: 'xl', md: '2xl'}} pt={'5vh'}>This is the home of my dreams and buildings. I hope they make an impact.</Text>
             </Box>
-            <Box mt={'20vh'} ml={10}>
             
+            <Wrap p={{base: '0', md: '10'}} pt='10' zIndex={0}>
+                {
+                    data.allFile.nodes.map((file) => {
+                        
+                        return (
+                            <WrapItem key={file.id}>
+                                <Card w={{base: '85vw', md: '40vw'}} direction='column' m='3' flexShrink={{base: '0'}}>
+
+                                    <CardHeader>
+                                        {/* <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={1}>
+                                            { file.childrenMarkdownRemark[0].frontmatter.keywords }
+                                        </Text> */}
+                                        <Heading size='md' noOfLines={2} textTransform={'capitalize'}>
+                                            { file.childJavascriptFrontmatter.frontmatter.title }
+                                        </Heading>
+                                        <Text textTransform={'lowercase'} noOfLines={2}>
+                                            { file.childJavascriptFrontmatter.frontmatter.description }
+                                        </Text>
+                                    </CardHeader>
+
+                                    <CardBody>
+                                        {file.childJavascriptFrontmatter.frontmatter.image != null && <GatsbyImage image={file.childJavascriptFrontmatter.frontmatter.image.childImageSharp.gatsbyImageData} imgStyle={{borderRadius: '2vh'}}></GatsbyImage>}
+                                        {/* <Text noOfLines={4}>
+                                            {file.childrenMarkdownRemark[0].frontmatter.meta_description}
+                                        </Text> */}
+                                    </CardBody>
+
+                                    <CardFooter>
+                                        <Link> {/*to={`/${file.relativeDirectory}/${file.name}`}>*/}
+                                            <Button variant='solid' as={Link} to={`/portfolio/${file.name}`}> 
+                                                Learn more
+                                            </Button>
+                                        </Link>
+
+                                    </CardFooter>
+
+                                </Card>
+                            </WrapItem>
+                        )
+
+
+                    })
+                }
+            </Wrap>
+            <Box mt={'20vh'} ml={10}>
             <motion.ul variants={container} initial="hidden" animate="show">
                 <motion.li variants={item}>
                     <Link to='/portfolio'>
@@ -93,50 +137,6 @@ const ArtPage = ({data}) => {
                 </motion.li>
             </motion.ul>
             </Box>
-            <Wrap p={{base: '0', md: '10'}} pt='10' zIndex={0}>
-                {
-                    data.allFile.nodes.map((file) => {
-                        
-                        return (
-                            <WrapItem key={file.id}>
-                                <Card w={{base: '85vw', md: '40vw'}} direction='column' m='3' flexShrink={{base: '0'}}>
-
-                                    <CardHeader>
-                                        {/* <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={1}>
-                                            { file.childrenMarkdownRemark[0].frontmatter.keywords }
-                                        </Text> */}
-                                        <Heading size='md' noOfLines={2} textTransform={'capitalize'}>
-                                            { file.childJavascriptFrontmatter.frontmatter.title }
-                                        </Heading>
-                                        {/* <Text textTransform={'capitalize'} noOfLines={4}>
-                                            { file.childrenMarkdownRemark[0].frontmatter.subtitle }
-                                        </Text> */}
-                                    </CardHeader>
-
-                                    <CardBody>
-
-                                        {/* <Text noOfLines={4}>
-                                            {file.childrenMarkdownRemark[0].frontmatter.meta_description}
-                                        </Text> */}
-                                    </CardBody>
-
-                                    <CardFooter>
-                                        <Link> {/*to={`/${file.relativeDirectory}/${file.name}`}>*/}
-                                            <Button variant='outline' as={Link} to={`/portfolio/${file.name}`}> 
-                                                Learn more
-                                            </Button>
-                                        </Link>
-
-                                    </CardFooter>
-
-                                </Card>
-                            </WrapItem>
-                        )
-
-
-                    })
-                }
-            </Wrap>
         </Layout>
     )
 }
@@ -154,6 +154,16 @@ export const query = graphql`query {
         childJavascriptFrontmatter {
             frontmatter {
                 title
+                description
+                image {
+                    childImageSharp {
+                        gatsbyImageData(
+                            aspectRatio: 1.7
+                            placeholder: BLURRED
+                            transformOptions: {cropFocus: CENTER}
+                        )
+                    }
+                }
             }
         }
       }

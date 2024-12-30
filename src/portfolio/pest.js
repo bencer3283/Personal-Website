@@ -6,14 +6,16 @@ import { GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 
 export const frontmatter = {
-    title: 'Pest Machine'
+    title: 'Pest Machine',
+    description: 'An IoT machine designed to monitor the amount of bugs in farm fields',
+    image: '../images/pest.png'
 }
 
 export default function PestSection() {
     return(
         <div>
             <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
-            <Text fontSize={'4xl'}>An IoT machine designed to monitor the amount of bugs in farm fields.</Text>
+            <Text fontSize={'4xl'}> {frontmatter.description} </Text>
             <Center mt={6}>
                 <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>
                     <Box m={4}>

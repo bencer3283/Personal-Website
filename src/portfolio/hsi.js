@@ -6,14 +6,16 @@ import {GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 
 export const frontmatter = {
-    title: 'HSI Imaging System'
+    title: 'HSI Imaging System',
+    description: 'A novel line-scan HyperSpectral Imaging system for scientific uses',
+    image: '../images/hsi.png'
 }
 
 export default function HSIsection() {
     return(
         <div>
             <Text fontSize={'6xl'} mt={8}>{frontmatter.title}</Text>
-            <Text fontSize={'4xl'}>A novel line-scan HyperSpectral Imaging system for scientific uses.</Text>
+            <Text fontSize={'4xl'}>{frontmatter.description}</Text>
             <Center mt={6}>
                 <Card w={{base: '65vw', md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'outline'}>
                     <Box m={4}>
