@@ -4,6 +4,8 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const postTemplate = path.resolve(`src/components/post.js`)
   const directoryPageTemplate = path.resolve(`src/components/directoryPage.js`)
+  const portfolioWorkTemplate = path.resolve(`src/components/portfolioWork.js`) 
+
   // Query for markdown nodes to use in creating pages.
   // You can query for whatever data you want to create pages for e.g.
   // products, portfolio items, landing pages, etc.
@@ -26,9 +28,18 @@ exports.createPages = ({ graphql, actions }) => {
         name
       }
     }
-    allFile(filter: {sourceInstanceName: {eq: "portfolio"}}) {
+    allFile(
+      filter: {sourceInstanceName: {eq: "portfolio"}}
+      sort: {modifiedTime: DESC}
+    ) {
       nodes {
         name
+        id
+        childJavascriptFrontmatter {
+            frontmatter {
+                title
+            }
+        }
       }
     }
   }`).then(result => {
@@ -67,6 +78,17 @@ exports.createPages = ({ graphql, actions }) => {
         })
       }
       
+    })
+
+    result.data.allFile.nodes.forEach(file => {
+      createPage({
+        path: `/portfolio/${file.name}`,
+        component: portfolioWorkTemplate,
+        context: {
+          title: file.childJavascriptFrontmatter.frontmatter.title,
+          fileName: file.name
+        }
+      })
     })
   })
 }
