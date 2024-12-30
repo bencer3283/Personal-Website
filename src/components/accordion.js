@@ -22,6 +22,15 @@ const directoriesArray = [
 function MobileAccordionNav() {
     return <Box overflowY={'auto'} maxH={'75vh'} boxShadow={'2xl'}>
         <Accordion defaultIndex={[]} allowToggle hideFrom='md' bgColor='#9EC972'>
+            <AccordionItem border='none'>
+                <h2>
+                    <AccordionButton p={6} as={Link} to='/art'>
+                        <Box as="span" flex='1' textAlign='left'>
+                            Portfolio
+                        </Box>
+                    </AccordionButton>
+                </h2>
+            </AccordionItem>
             {
                 directoriesArray.map((item) => {
                     return (
@@ -42,33 +51,7 @@ function MobileAccordionNav() {
                     )
                 })
             }
-            <AccordionItem border='none'>
-                <h2>
-                    <AccordionButton p={6}>
-                        <Box as="span" flex='1' textAlign='left'>
-                            Portfolios
-                        </Box>
-                        <AccordionIcon />
-                    </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                    <Link to='/art'>
-                        <Button m={'1rem'}>
-                            Portfolio
-                        </Button>
-                    </Link>
-                    <a href='https://photographic-gallery-of-posheng.netlify.app/'>
-                        <Button m={'1rem'}>
-                            Online Photographic Gallery
-                        </Button>
-                    </a>
-                    <a href='/docs/portfolio.pdf'>
-                        <Button m={'1rem'}>
-                            Art Portfolio
-                        </Button>
-                    </a>
-                </AccordionPanel>
-            </AccordionItem>
+            
         </Accordion></Box>;
 }
 

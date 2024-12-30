@@ -256,7 +256,7 @@ export default function NexusSection() {
                     </TabPanel>
                 </TabPanels>
             </GeneralTabs>
-            <Card variant={'outline'} mt={6} mb={40}>
+            <Card variant={'outline'} mt={6}>
                 <CardBody>
                     <Heading>Learn more</Heading>
                     <Text textAlign={'start'} m={4}>

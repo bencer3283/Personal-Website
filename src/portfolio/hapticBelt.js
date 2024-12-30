@@ -102,14 +102,14 @@ export default function HapticBeltSection() {
                 </TabPanels>
             </GeneralTabs>
             
-            <Card variant={'outline'} mt={6} mb={40}>
+            <Card variant={'outline'} mt={6}>
                 <CardBody>
                     <Heading>This is a work-in-progess project</Heading>
                     <Text textAlign={'start'} m={4}>
                         More infomration can be found in the following link.  
                     </Text>
                     <Button variant={'link'} m={4}>
-                        <a href='https://www.figma.com/proto/j6K0yQERpqzsRSXfOPJrhV/Lost-and-Found-kiosk?node-id=87-462&node-type=canvas&t=cDUlCAl5i40aa5f9-1&scaling=min-zoom&content-scaling=fixed&page-id=87%3A461&starting-point-node-id=87%3A462&share=1' target="_blank" rel="noopener noreferrer">FPCB design files</a>
+                        <a href='https://github.com/bencer3283/HapticBelt-HapticModule' target="_blank" rel="noopener noreferrer">FPCB design files</a>
                     </Button>
                     <Button variant={'link'} m={4}>
                         <a href='https://github.com/bencer3283/Lost-and-Found-Mockup' target="_blank" rel="noopener noreferrer">RF desing files</a>

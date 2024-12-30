@@ -170,7 +170,7 @@ export default function PestSection() {
                 </TabPanels>
                 
             </GeneralTabs>
-            <Card variant={'outline'} mt={6} mb={40}>
+            <Card variant={'outline'} mt={6}>
                 <CardBody>
                     <Heading>Learn more</Heading>
                     <Button variant={'link'} m={4}>

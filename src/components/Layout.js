@@ -53,6 +53,13 @@ const Layout = ({ children }) => {
                             <StaticImage src='../images/%%.png' alt='Po Sheng Cheng' width='40' />
                         </Link>
                     </Box>
+                    <Spacer />
+                    <Button variant='link' hideBelow='md'>
+                        <Link to={'/art'}>
+                            Portfolios
+                        </Link>
+                        
+                    </Button>
                     {
                         directories.map((theDirectory, index, directoryArray) => {
                             return (
@@ -71,14 +78,6 @@ const Layout = ({ children }) => {
                             )
                         })
                     }
-                    
-                    <Spacer />
-                    <Button variant='link' hideBelow='md'>
-                        <Link to={'/art'}>
-                            Portfolios
-                        </Link>
-                        
-                    </Button>
                     <Button variant='link' rightIcon={<HamburgerIcon boxSize={6} />} hideFrom='md' onClick={setAccordion.toggle}>
                         Menu
                     </Button>
