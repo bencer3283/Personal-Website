@@ -99,7 +99,7 @@ const ArtPage = ({data}) => {
                         
                         return (
                             <WrapItem key={file.id}>
-                                <Card w={{base: 'md'}} direction='column' m='3' flexShrink={{base: '0'}}>
+                                <Card w={{base: '85vw', md: '40vw'}} direction='column' m='3' flexShrink={{base: '0'}}>
 
                                     <CardHeader>
                                         {/* <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={1}>
@@ -122,7 +122,7 @@ const ArtPage = ({data}) => {
 
                                     <CardFooter>
                                         <Link> {/*to={`/${file.relativeDirectory}/${file.name}`}>*/}
-                                            <Button variant='outline'>
+                                            <Button variant='outline' as={Link} to={`/portfolio/${file.name}`}> 
                                                 Learn more
                                             </Button>
                                         </Link>
