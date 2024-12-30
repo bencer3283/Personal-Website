@@ -7,8 +7,6 @@ import { graphql, Link } from 'gatsby';
 import { AnimatePresence, motion } from 'framer-motion';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const path = require('path');
-
 const ArtPage = ({data}) => {
 
     const [title, setTitle] = useState('dream');
