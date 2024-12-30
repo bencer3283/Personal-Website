@@ -56,7 +56,7 @@ const Layout = ({ children }) => {
                     <Spacer />
                     <Button variant='link' hideBelow='md'>
                         <Link to={'/art'}>
-                            Portfolios
+                            Portfolio
                         </Link>
                         
                     </Button>

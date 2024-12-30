@@ -59,7 +59,7 @@ const ArtPage = ({data}) => {
                 <Text fontSize={{base: '36pt', md: '72pt'}} pt={{ base: '51pt' ,md: '90pt'}} textColor={'#9EC972'}>almost anything.</Text>
             </Box>
             <motion.div variants={container} initial="hidden" animate="show">
-            <Wrap pl={{md :5}} pt='25vh' zIndex={0}>
+            <Wrap pl={{md :5}} pt={{base: '15vh', md: '25vh'}} zIndex={0}>
                 {
                     data.allFile.nodes.map((file) => {
                         

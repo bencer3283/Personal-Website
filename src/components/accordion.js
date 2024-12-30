@@ -30,6 +30,7 @@ function MobileAccordionNav() {
                         </Box>
                     </AccordionButton>
                 </h2>
+                <AccordionPanel pb={4}></AccordionPanel>
             </AccordionItem>
             {
                 directoriesArray.map((item) => {
