@@ -5,6 +5,7 @@ import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListI
 import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
+    sort: 1,
     title: 'Work In Progess: Haptic Belt',
     description: 'Using Haptic Feedback to Provide Navigation for Visually impaired People',
     image: '../images/hapticBelt/pcb.png'

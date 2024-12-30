@@ -6,6 +6,7 @@ import { GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 
 export const frontmatter = {
+    sort: 7,
     title: 'Pest Machine',
     description: 'An IoT machine designed to monitor the amount of bugs in farm fields',
     image: '../images/pest.png'

@@ -5,6 +5,7 @@ import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListI
 import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
+    sort: 2.5,
     title: 'PageMate',
     description: 'A smart bookmark that bridges physical and digital books',
     image: '../images/pagemate/scenarioimage.jpg'

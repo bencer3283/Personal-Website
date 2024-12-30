@@ -5,6 +5,7 @@ import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListI
 import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
+    sort: 0,
     title: 'MITM Router',
     description: 'Raising Awareness of the Hidden Cost of Technology',
     image: '../images/mitm/mitm-2161.jpg'

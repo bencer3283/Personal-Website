@@ -50,7 +50,7 @@ const ArtPage = ({data}) => {
     
     return(
         <Layout>
-            <Box ml={10}>
+            <Box ml={{md: 10}}>
                 <AnimatePresence>
                     <motion.div key={title} style={{ position: 'absolute' }} initial={{ y: -80, opacity: 0.5 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 80, opacity: 0 }}>
                         <Text fontSize={{base: '36pt', md: '72pt'}} textTransform={'capitalize'} fontWeight={'bold'}>{title}</Text>
@@ -58,13 +58,14 @@ const ArtPage = ({data}) => {
                 </AnimatePresence>
                 <Text fontSize={{base: '36pt', md: '72pt'}} pt={{ base: '51pt' ,md: '90pt'}} textColor={'#9EC972'}>almost anything.</Text>
             </Box>
-            
-            <Wrap p={{base: '0', md: '10'}} pt='10' zIndex={0}>
+            <motion.div variants={container} initial="hidden" animate="show">
+            <Wrap pl={{md :5}} pt='25vh' zIndex={0}>
                 {
                     data.allFile.nodes.map((file) => {
                         
                         return (
-                            <WrapItem key={file.id}>
+                            <motion.div variants={item}>
+                                <WrapItem key={file.id}>
                                 <Card w={{base: '85vw', md: '40vw'}} direction='column' m='3' flexShrink={{base: '0'}}>
 
                                     <CardHeader>
@@ -97,46 +98,15 @@ const ArtPage = ({data}) => {
 
                                 </Card>
                             </WrapItem>
+                            </motion.div>
+                            
                         )
 
 
                     })
                 }
             </Wrap>
-            <Box mt={'20vh'} ml={10}>
-            <motion.ul variants={container} initial="hidden" animate="show">
-                <motion.li variants={item}>
-                    <Link to='/portfolio'>
-                        <Text fontSize={{ base: '2xl', md: '3xl'}} textDecoration={'underline'}>
-                            Interactive Design Engineering Portfolio
-                        </Text>
-                    </Link>
-                    <Text fontSize={'xl'}>Showcasing selected projects with an interactive experience built by myself.</Text>
-                    <a href='https://github.com/bencer3283/Personal-Website' target="_blank" rel="noopener noreferrer">
-                        <Button variant={'link'} fontSize={'xl'} fontWeight={'normal'}> Built with React, Gatsby, Chakra UI and Framer Motion.</Button>
-                    </a>
-                </motion.li>
-                <motion.li variants={item}>
-                    <a href='https://photographic-gallery-of-posheng.netlify.app/' target="_blank" rel="noopener noreferrer">
-                        <Text fontSize={{ base: '2xl', md: '3xl'}} textDecoration={'underline'}  mt={4}>
-                            Online Photographic Gallery
-                        </Text>
-                    </a>
-                    <Text fontSize={'xl'}>An online image gallery designed & built by myself to exibit my photography.</Text>
-                    <a href='https://github.com/bencer3283/ImageGallery' target="_blank" rel="noopener noreferrer">
-                    <Button variant={'link'} fontSize={'xl'} fontWeight={'normal'}>Built with Flutter.</Button>
-                    </a>
-                </motion.li>
-                <motion.li variants={item}>
-                    <a href='/docs/portfolio.pdf'>
-                        <Text fontSize={{ base: '2xl', md: '3xl'}} textDecoration={'underline'}  mt={4}>
-                            Art Portfolio
-                        </Text>
-                    </a>
-                    <Text fontSize={'xl'}>A selection of my artworks curated in 2018. (PDF)</Text>
-                </motion.li>
-            </motion.ul>
-            </Box>
+            </motion.div>
         </Layout>
     )
 }
@@ -146,7 +116,7 @@ export default ArtPage;
 export const query = graphql`query {
     allFile(
       filter: {sourceInstanceName: {eq: "portfolio"}}
-      sort: {modifiedTime: DESC}
+      sort: {childrenJavascriptFrontmatter: {frontmatter: {sort: ASC}}}
     ) {
       nodes {
         name

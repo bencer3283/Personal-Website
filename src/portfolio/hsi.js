@@ -6,6 +6,7 @@ import {GeneralTabs, ResponsiveTab} from '../components/generalTab';
 import GeneralTabList from '../components/generalTabList';
 
 export const frontmatter = {
+    sort: 6,
     title: 'HSI Imaging System',
     description: 'A novel line-scan HyperSpectral Imaging system for scientific uses',
     image: '../images/hsi.png'

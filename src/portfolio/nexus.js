@@ -5,6 +5,7 @@ import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListI
 import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
+    sort: 2,
     title: 'Nexus',
     description: 'Intelligent Lost Item Recognition and Management Platform',
     image: '../images/nexus/platform-render.24.jpg'
