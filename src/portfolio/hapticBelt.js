@@ -73,14 +73,14 @@ export default function HapticBeltSection() {
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column', md: 'column'}} variant={'unstyle'}>
                             <CardBody>
-                                <Box m={{ base: '1vh', md: '2vh' }}>
+                                <Box m={{ base: '0', md: '2vh' }}>
                                     <StaticImage src='../images/hapticBelt/felxBoard_Page_3.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                 </Box>
                                 <Stack direction={{base:'column', md:'row'}}>
-                                    <Box m={{ base: '1vh', md: '2vh' }}>
+                                    <Box m={{ base: '0', md: '2vh' }}>
                                         <StaticImage src='../images/hapticBelt/felxBoard_Page_1.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                     </Box>
-                                    <Box m={{ base: '1vh', md: '2vh' }}>
+                                    <Box m={{ base: '0', md: '2vh' }}>
                                         <StaticImage src='../images/hapticBelt/felxBoard_Page_2.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                     </Box>
                                 </Stack>

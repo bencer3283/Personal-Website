@@ -23,12 +23,12 @@ const PortfolioWorkPage = ({ pageContext }) => {
                 </BreadcrumbItem>
             </Breadcrumb>
             <Content />
-            <Flex>
+            <Flex direction={{base:'column', md:'row'}}>
                 <Button variant={'solid'} as={Link} to='/art' mt={'10vh'}>
                     <IoMdArrowRoundBack /> Back to Portfolio Overview
                 </Button>
                 <Spacer></Spacer>
-                <Button variant={'solid'} as={Link} to={`/portfolio/${pageContext.nextFile}`} mt={'10vh'}>
+                <Button variant={'solid'} as={Link} to={`/portfolio/${pageContext.nextFile}`} mt={{base:'5vh', md: '10vh'}}>
                     Next: {`${pageContext.nextTitle}`}<IoMdArrowRoundForward></IoMdArrowRoundForward>
                 </Button>
             </Flex>

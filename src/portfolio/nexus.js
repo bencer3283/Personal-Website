@@ -20,7 +20,6 @@ export default function NexusSection() {
                 <GeneralTabList>
                     <ResponsiveTab>
                         Demo Video
-                        
                     </ResponsiveTab>
                     <ResponsiveTab>
                         Hardware Concept
@@ -39,7 +38,7 @@ export default function NexusSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
-                            <Box m={{base: '1vh' ,md: '2vh'}}>
+                            <Box m={{base: '0' ,md: '2vh'}}>
                                <StaticImage src='../images/nexus/platform-render.24.jpg' height={450} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
                             <CardBody>
@@ -51,7 +50,7 @@ export default function NexusSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
-                            <Box m={{base: '1vh' ,md: '2vh'}}>
+                            <Box m={{base: '0' ,md: '2vh'}}>
                                <StaticImage src='../images/nexus/user journey.jpg' height={350} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
                             <CardBody>
@@ -73,7 +72,7 @@ export default function NexusSection() {
                 <TabPanels>
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
-                            <Box m={'2vh'}>
+                            <Box m={'0'}>
                                 <StaticImage src='../images/nexus/system block diagram.png' height={450} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
                             </Box>
@@ -87,7 +86,7 @@ export default function NexusSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
-                            <Box m={'2vh'}>
+                            <Box m={'0'}>
                                 <StaticImage src='../images/nexus/hardware architecture.png' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
                             </Box>
@@ -101,7 +100,7 @@ export default function NexusSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
-                            <Box m={'2vh'}>
+                            <Box m={'0'}>
                                 <StaticImage src='../images/nexus/software architecture.jpg' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
 
                             </Box>
@@ -201,17 +200,17 @@ export default function NexusSection() {
                 <TabPanels>
                     <TabPanel>
                     <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
-                        <Box m={'2vh'}>
+                        <Box m={'0.5vh'}>
                             <StaticImage src='../images/nexus/untitled.19.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                         </Box>
-                        <Box m={'2vh'}>
+                        <Box m={'0.5vh'}>
                             <StaticImage src='../images/nexus/platform-render.26.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                         </Box>
                     </Card>
                     </TabPanel>
                     <TabPanel >
                     <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyled'}>
-                    <Box m={'2vh'} >
+                    <Box m={'0'} >
                             <StaticImage src='../images/nexus/mechanical.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                         </Box>
                         <CardBody>
@@ -240,10 +239,10 @@ export default function NexusSection() {
                             <Text m={4} textAlign={'start'}>These are two of the candidates for different operation flow for authenticating owner of lost items. We decided to choose the passcode flow (on the left).</Text>
                                 <Center>
                                     <Stack direction={{base: 'column' , md: 'row'}}>
-                                        <Box m={'2vh'}>
+                                        <Box m={'0.5vh'}>
                                             <StaticImage src='../images/nexus/kiosk ui.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                         </Box>
-                                        <Box m={'2vh'}>
+                                        <Box m={'0.5vh'}>
                                             <StaticImage src='../images/nexus/kiosk ui 2.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                         </Box>
                                     </Stack>

@@ -111,7 +111,7 @@ export default function PagemateSection() {
                 <TabPanels>
                     <TabPanel>
                         <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
-                            <Box m={'2vh'}>
+                            <Box m={{base: '0', md:'2vh'}}>
                                 <StaticImage src='../images/pagemate/scenarioimage.jpg' height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
                             <CardBody>
@@ -128,7 +128,7 @@ export default function PagemateSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
-                            <Box m={'2vh'}>
+                            <Box m={{base: '0', md:'2vh'}}>
                                 <StaticImage src='../images/pagemate/NEPPI Team 10.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
                             <CardBody>
@@ -150,7 +150,7 @@ export default function PagemateSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw', md: '5xl'}} maxH={'lg'} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
-                            <Box m={'2vh'}>
+                            <Box m={{base: '0', md:'2vh'}}>
                                 <StaticImage src='../images/pagemate/app.jpg' height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
                             <CardBody>
@@ -171,10 +171,10 @@ export default function PagemateSection() {
                 <TabPanels>
                     <TabPanel>
                         <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
-                            <Box m={'2vh'}>
+                            <Box m={{base: '0.5vh', md:'2vh'}}>
                                 <StaticImage src='../images/pagemate/iterations.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
-                            <Box m={'2vh'}>
+                            <Box m={{base: '0.5vh', md:'2vh'}}>
                                 <StaticImage src='../images/pagemate/iterations2.jpg' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
                         </Card>
@@ -182,7 +182,7 @@ export default function PagemateSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} variant={'unstyled'}>
-                            <Box m={'2vh'}>
+                            <Box m={{base: '0.5vh', md:'2vh'}}>
                                 <StaticImage src='../images/pagemate/cmf.jpg' height={500} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                             </Box>
                             <CardBody>

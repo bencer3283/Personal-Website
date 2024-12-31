@@ -270,7 +270,7 @@ const TeleshiftPage = () => {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '2xs', md: '5xl'}} maxH={{md: 'lg'}} direction={{base: 'column', md: 'row'}} p={'4'} variant={'unstyled'}>
-                            <Card variant={'elevated'} m={4}>
+                            <Card variant={'elevated'} m={{ base: '0.5vh',md: 4}}>
                                 <CardBody>
                                     <StaticImage src='../images/teleshiftanchor.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
                                     <Text textAlign={'start'} mt={4}>
@@ -279,7 +279,7 @@ const TeleshiftPage = () => {
                                     </Text>
                                 </CardBody>
                             </Card>
-                            <Card variant={'elevated'} m={4}>
+                            <Card variant={'elevated'} m={{ base: '0.5vh',md: 4}}>
                                 <CardBody>
                                     <StaticImage src='../images/teleshiftanchor1.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
                                     <Text textAlign={'start'} mt={4}>
@@ -287,7 +287,7 @@ const TeleshiftPage = () => {
                                     </Text>
                                 </CardBody>
                             </Card>
-                            <Card variant={'elevated'} m={4}>
+                            <Card variant={'elevated'} m={{ base: '0.5vh',md: 4}}>
                                 <CardBody>
                                     <StaticImage src='../images/teleshiftanchor2.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
                                     <Text textAlign={'start'} mt={4}>
@@ -295,7 +295,7 @@ const TeleshiftPage = () => {
                                     </Text>
                                 </CardBody>
                             </Card>
-                            <Card variant={'elevated'} m={4}>
+                            <Card variant={'elevated'} m={{ base: '0.5vh',md: 4}}>
                                 <CardBody>
                                     <StaticImage src='../images/teleshiftanchorfinal.png' imgStyle={{borderRadius: '10px'}}></StaticImage>
                                     <Text textAlign={'start'} mt={4}>

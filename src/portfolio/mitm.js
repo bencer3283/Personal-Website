@@ -80,7 +80,7 @@ export default function MITMSection() {
                 <TabPanels>
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} maxH={'lg'} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
-                            <Box m={'2vh'}>
+                            <Box m={0}>
                                 <StaticImage src='../images/mitm/chasis.png' height={350} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Box>
                             <CardBody>
@@ -106,7 +106,7 @@ export default function MITMSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} direction={'column'} variant={'unstyle'}>
-                            <Stack direction={{base: 'column', md: 'row'}} m={4}>
+                            <Stack direction={{base: 'column', md: 'row'}} m={0}>
                                 <StaticImage src='../images/mitm/mitm-2161.jpg' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 <StaticImage src='../images/mitm/mitm-2197.jpg' width={500} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Stack>
@@ -130,7 +130,7 @@ export default function MITMSection() {
                 <TabPanels>
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} direction={'column'} variant={'unstyled'}>
-                        <Stack direction={{base: 'column', md: 'row'}} m={4}>
+                        <Stack direction={{base: 'column', md: 'row'}} m={0}>
                                 <StaticImage src='../images/mitm/Block diagram.jpg' width={600} imgStyle={{borderRadius: '15px'}}></StaticImage>
                                 <StaticImage src='../images/mitm/mess.jpg' width={400} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </Stack>

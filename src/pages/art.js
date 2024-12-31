@@ -22,7 +22,7 @@ const ArtPage = ({data}) => {
             else {
                 setTitle('dream')
             } 
-        }, 1500);
+        }, 1000);
         return () => {
             clearInterval(interval);
         }
