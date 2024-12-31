@@ -3,8 +3,9 @@ import Layout from './Layout';
 import { Link } from 'gatsby';
 import { SEO } from './seo';
 import { useSiteMetadata } from '../hooks/site-meta';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Text } from '@chakra-ui/react';
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Flex, Spacer, Text } from '@chakra-ui/react';
 import { IoMdArrowRoundBack } from "@react-icons/all-files/io/IoMdArrowRoundBack";
+import { IoMdArrowRoundForward } from "@react-icons/all-files/io/IoMdArrowRoundForward";
 import { MdChevronRight } from "@react-icons/all-files/md/MdChevronRight";
 
 const PortfolioWorkPage = ({ pageContext }) => {
@@ -22,9 +23,15 @@ const PortfolioWorkPage = ({ pageContext }) => {
                 </BreadcrumbItem>
             </Breadcrumb>
             <Content />
-            <Button variant={'solid'} as={Link} to='/art' mt={'10vh'}>
-                <IoMdArrowRoundBack /> Back to Portfolio
-            </Button>
+            <Flex>
+                <Button variant={'solid'} as={Link} to='/art' mt={'10vh'}>
+                    <IoMdArrowRoundBack /> Back to Portfolio Overview
+                </Button>
+                <Spacer></Spacer>
+                <Button variant={'solid'} as={Link} to={`/portfolio/${pageContext.nextFile}`} mt={'10vh'}>
+                    Next: {`${pageContext.nextTitle}`}<IoMdArrowRoundForward></IoMdArrowRoundForward>
+                </Button>
+            </Flex>
         </Layout>
     )
 }

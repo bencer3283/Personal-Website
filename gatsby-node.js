@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
     allFile(
       filter: {sourceInstanceName: {eq: "portfolio"}}
-      sort: {modifiedTime: DESC}
+      sort: {childrenJavascriptFrontmatter: {frontmatter: {sort: ASC}}}
     ) {
       nodes {
         name
@@ -80,13 +80,19 @@ exports.createPages = ({ graphql, actions }) => {
       
     })
 
-    result.data.allFile.nodes.forEach(file => {
+    result.data.allFile.nodes.forEach((file, index, array) => {
+      let nextidx = index + 1
+      if(index == array.length - 1) {
+        nextidx = 0
+      }
       createPage({
         path: `/portfolio/${file.name}`,
         component: portfolioWorkTemplate,
         context: {
           title: file.childJavascriptFrontmatter.frontmatter.title,
-          fileName: file.name
+          fileName: file.name,
+          nextTitle: array[nextidx].childJavascriptFrontmatter.frontmatter.title,
+          nextFile: array[nextidx].name
         }
       })
     })

@@ -45,7 +45,7 @@ const ArtPage = ({data}) => {
         show: { opacity: 1 },
         transition: { duration: 0.5}
     }
-    
+    console.log(data.allFile.nodes)
     return(
         <Layout>
             <Box ml={{md: 10}}>
@@ -114,7 +114,7 @@ export default ArtPage;
 export const query = graphql`query {
     allFile(
       filter: {sourceInstanceName: {eq: "portfolio"}}
-      sort: {childrenJavascriptFrontmatter: {frontmatter: {sort: ASC}}}
+      sort: {childJavascriptFrontmatter: {frontmatter: {sort: ASC}}}
     ) {
       nodes {
         name
