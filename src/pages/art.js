@@ -9,7 +9,12 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 
 const ArtPage = ({data}) => {
 
+    let initialShadow = data.allFile.nodes.map((file) => 'base')
+
     const [title, setTitle] = useState('dream');
+    const [shadow, setShadow] = useState(initialShadow);
+
+    console.log(shadow)
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -59,12 +64,32 @@ const ArtPage = ({data}) => {
             <motion.div variants={container} initial="hidden" animate="show">
             <Wrap pl={{md :5}} pt={{base: '15vh', md: '25vh'}} zIndex={0}>
                 {
-                    data.allFile.nodes.sort((a, b) => a.childJavascriptFrontmatter.frontmatter.sort - b.childJavascriptFrontmatter.frontmatter.sort).map((file) => {
+                    data.allFile.nodes.sort((a, b) => a.childJavascriptFrontmatter.frontmatter.sort - b.childJavascriptFrontmatter.frontmatter.sort).map((file, idx) => {
                         
                         return (
                             <motion.div variants={item}>
                                 <WrapItem key={file.id}>
-                                <Card w={{base: '85vw', md: '40vw'}} direction='column' m='3' flexShrink={{base: '0'}}>
+                                <Card 
+                                    as={Link} 
+                                    to={`/portfolio/${file.name}`} 
+                                    w={{base: '85vw', md: '40vw'}} 
+                                    direction='column' m='3' 
+                                    flexShrink={{base: '0'}} 
+                                    boxShadow={shadow[idx]} 
+                                    onMouseEnter={() => {
+                                        setShadow(
+                                            shadow.map((shadow, index) => {
+                                                return index == idx ? '2xl' : shadow
+                                            })
+                                        )
+                                    }} 
+                                    onMouseLeave={() => {
+                                        setShadow(
+                                            shadow.map((shadow, index) => {
+                                                return index == idx ? 'base' : shadow
+                                            })
+                                        )
+                                    }}>
 
                                     <CardHeader>
                                         {/* <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={1}>
@@ -86,11 +111,11 @@ const ArtPage = ({data}) => {
                                     </CardBody>
 
                                     <CardFooter>
-                                        <Link> {/*to={`/${file.relativeDirectory}/${file.name}`}>*/}
+                                        {/* <Link> to={`/${file.relativeDirectory}/${file.name}`}> */}
                                             <Button variant='solid' as={Link} to={`/portfolio/${file.name}`}> 
                                                 Learn more
                                             </Button>
-                                        </Link>
+                                        {/* </Link> */}
 
                                     </CardFooter>
 

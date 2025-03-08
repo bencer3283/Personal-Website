@@ -137,7 +137,7 @@ const Layout = ({ children }) => {
                             </Stack>
                             <Spacer />
                             <Text fontSize={'8pt'}>
-                                © Po Sheng Cheng {year}
+                                © Po-Sheng Cheng {year}
                             </Text>
 
                         </Flex>

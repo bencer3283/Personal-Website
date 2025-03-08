@@ -7,7 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 export const frontmatter = {
     sort: 1,
     title: 'Work In Progess: Haptic Belt',
-    description: 'Using Haptic Feedback to Provide Navigation for Visually impaired People',
+    description: 'Using Haptic Feedback to Provide Navigation for Visually Impaired People',
     image: '../images/hapticBelt/haptic_belt_flex_board_2.jpg'
 }
 
