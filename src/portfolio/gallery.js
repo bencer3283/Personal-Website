@@ -14,11 +14,13 @@ export const frontmatter = {
 const GallerySection = () => {
     return(
         <div>
-        <a href='https://photographic-gallery-of-posheng.netlify.app/' target="_blank" rel="noopener noreferrer">
+            <Button variant={'link'}>
+            <a href='https://photographic-gallery-of-posheng.netlify.app/' target="_blank" rel="noopener noreferrer">
                 <Text fontSize={'6xl'} textDecoration={'underline'}>
                     My Online Photographic Gallery
                 </Text>
             </a>
+            </Button>
             <Text fontSize={'4xl'} mt={6}>Interface design & development</Text>
             <Text>
                 The whole digital experience is designed & built by myself as a modern, friendly, intuitive and visually neutral image gallery.

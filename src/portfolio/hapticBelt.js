@@ -8,7 +8,7 @@ export const frontmatter = {
     sort: 1,
     title: 'Work In Progess: Haptic Belt',
     description: 'Using Haptic Feedback to Provide Navigation for Visually impaired People',
-    image: '../images/hapticBelt/pcb.png'
+    image: '../images/hapticBelt/haptic_belt_flex_board_2.jpg'
 }
 
 export default function HapticBeltSection() {
@@ -19,10 +19,35 @@ export default function HapticBeltSection() {
             <GeneralTabs>
                 <GeneralTabList>
                     <ResponsiveTab>
+                        Rigid-Flex PCB
+                    </ResponsiveTab>
+                    <ResponsiveTab>
+                        Close-up
+                    </ResponsiveTab>
+                </GeneralTabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'}>
+                            <StaticImage src='../images/hapticBelt/haptic_belt_flex_board_2.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'}>
+                            <Center>
+                            <StaticImage src='../images/hapticBelt/haptic_belt_flex_board.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                            </Center>
+                        </Card>
+                    </TabPanel>
+                </TabPanels>
+            </GeneralTabs>
+            <Text fontSize={'4xl'} mt={6}>Mechanical Assembly</Text>
+            <GeneralTabs>
+                <GeneralTabList>
+                    <ResponsiveTab>
                         Video
                     </ResponsiveTab>
                     <ResponsiveTab>
-                        Photo
+                        Desgin Challenge
                     </ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
@@ -31,27 +56,6 @@ export default function HapticBeltSection() {
                             <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1041562115?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="LRA_assembly"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                         </Card>
                     </TabPanel>
-                    <TabPanel>
-                        <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'}>
-                            <StaticImage src='../images/hapticBelt/pcb.png' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                        </Card>
-                    </TabPanel>
-                </TabPanels>
-            </GeneralTabs>
-            
-            <GeneralTabs defaultTab={0}>
-                <GeneralTabList>
-                    <ResponsiveTab>
-                        Mechanical 
-                    </ResponsiveTab>
-                    <ResponsiveTab>
-                        Electrical - FPCB
-                    </ResponsiveTab>
-                    <ResponsiveTab>
-                        Electrical - RF
-                    </ResponsiveTab>
-                </GeneralTabList>
-                <TabPanels>
                     <TabPanel>
                         <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'} direction={'column'}>
                             <Text ml={4} textAlign={'start'}>
@@ -70,6 +74,20 @@ export default function HapticBeltSection() {
                             </CardBody>
                         </Card>
                     </TabPanel>
+                </TabPanels>
+            </GeneralTabs>
+            <Text fontSize={'4xl'} mt={6}>PCB Design</Text>
+            <GeneralTabs defaultTab={0}>
+                <GeneralTabList>
+                    <ResponsiveTab>
+                        Haptic FPCB
+                    </ResponsiveTab>
+                    <ResponsiveTab>
+                        RF PCB
+                    </ResponsiveTab>
+                </GeneralTabList>
+                <TabPanels>
+                    
                     <TabPanel>
                         <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column', md: 'column'}} variant={'unstyle'}>
                             <CardBody>
