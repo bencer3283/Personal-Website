@@ -59,7 +59,7 @@ const ArtPage = ({data}) => {
             <motion.div variants={container} initial="hidden" animate="show">
             <Wrap pl={{md :5}} pt={{base: '15vh', md: '25vh'}} zIndex={0}>
                 {
-                    data.allFile.nodes.map((file) => {
+                    data.allFile.nodes.sort((a, b) => a.childJavascriptFrontmatter.frontmatter.sort - b.childJavascriptFrontmatter.frontmatter.sort).map((file) => {
                         
                         return (
                             <motion.div variants={item}>
@@ -122,6 +122,7 @@ export const query = graphql`query {
         childJavascriptFrontmatter {
             frontmatter {
                 title
+                sort
                 description
                 image {
                     childImageSharp {
