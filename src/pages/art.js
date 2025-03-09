@@ -135,14 +135,11 @@ const ArtPage = ({data}) => {
                                         </Text> */}
                                     </CardBody>
 
-                                    <CardFooter>
-                                        {/* <Link> to={`/${file.relativeDirectory}/${file.name}`}> */}
-                                            <Button variant='solid' as={Link} to={`/portfolio/${file.name}`}> 
-                                                Learn more
-                                            </Button>
-                                        {/* </Link> */}
-
-                                    </CardFooter>
+                                    {/* <CardFooter>
+                                        <Button variant='solid' as={Link} to={`/portfolio/${file.name}`}> 
+                                            Learn more
+                                        </Button>
+                                    </CardFooter> */}
 
                                 </MotionCard>
                             </WrapItem>
