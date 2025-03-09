@@ -130,7 +130,7 @@ export default function HapticBeltSection() {
                         <a href='https://github.com/bencer3283/HapticBelt-HapticModule' target="_blank" rel="noopener noreferrer">FPCB design files</a>
                     </Button>
                     <Button variant={'link'} m={4}>
-                        <a href='https://github.com/bencer3283/Lost-and-Found-Mockup' target="_blank" rel="noopener noreferrer">RF desing files</a>
+                        <a href='https://github.com/bencer3283/STM32WBA52-RF' target="_blank" rel="noopener noreferrer">RF desing files</a>
                     </Button>
                     <Button variant={'link'} m={4}>
                         <a href='https://github.com/bencer3283/STM-DRV2605' target="_blank" rel="noopener noreferrer">STM32 firmware repo</a>

@@ -42,7 +42,7 @@ const ArtPage = ({data}) => {
           opacity: 1,
           transition: {
             staggerChildren: 0.4,
-            delay: 0.3,
+            delay: 0.15,
             when: "beforeChildren"
           }
         }
@@ -51,7 +51,7 @@ const ArtPage = ({data}) => {
     const item = {
         hidden: { opacity: 0 },
         show: { opacity: 1 },
-        transition: { duration: 0.5}
+        transition: { duration: 0.25}
     }
     console.log(data.allFile.nodes)
 
@@ -97,21 +97,21 @@ const ArtPage = ({data}) => {
                                         // )
                                     }}
                                     whileHover={{
-                                        boxShadow: "0px 24px 40px rgb(165 199 126 / 40%)",
-                                        scale: 1.01,
+                                        boxShadow: "0px 24px 40px rgb(165 199 126 / 60%)",
+                                        scale: 1.02,
                                         transition: {
                                             duration: 0.3
                                         }
                                     }}
                                     whileInView={isMobile? {
-                                        boxShadow: "0px 24px 40px rgb(165 199 126 / 40%)",
-                                        scale: 1.01,
+                                        boxShadow: "0px 24px 40px rgb(165 199 126 / 60%)",
+                                        scale: 1.02,
                                         transition: {
                                             duration: 0.3
                                         }
                                     } : {}}
                                     viewport={{
-                                        margin: '10px 0px -80px 0px',
+                                        margin: '-30px 0px -80px 0px',
                                         amount: 0.8
                                     }}
                                     >
