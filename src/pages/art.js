@@ -4,17 +4,20 @@ import Layout from '../components/Layout';
 import { Box, Button, Text, Wrap, WrapItem, Card, CardHeader, CardBody, CardFooter, Heading } from '@chakra-ui/react';
 import { SEO } from '../components/seo';
 import { graphql, Link } from 'gatsby';
-import { AnimatePresence, motion } from 'framer-motion';
+// import { AnimatePresence, motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { GatsbyImage } from 'gatsby-plugin-image';
+
+const MotionCard = motion.create(React.forwardRef((props, ref) => (
+    <Card {...props} ref={ref}/>
+)))
 
 const ArtPage = ({data}) => {
 
     let initialShadow = data.allFile.nodes.map((file) => 'base')
 
     const [title, setTitle] = useState('dream');
-    const [shadow, setShadow] = useState(initialShadow);
-
-    console.log(shadow)
+    // const [shadow, setShadow] = useState(initialShadow);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -51,6 +54,8 @@ const ArtPage = ({data}) => {
         transition: { duration: 0.5}
     }
     console.log(data.allFile.nodes)
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     return(
         <Layout>
             <Box ml={{md: 10}}>
@@ -69,27 +74,47 @@ const ArtPage = ({data}) => {
                         return (
                             <motion.div variants={item}>
                                 <WrapItem key={file.id}>
-                                <Card 
+                                <MotionCard 
                                     as={Link} 
                                     to={`/portfolio/${file.name}`} 
                                     w={{base: '85vw', md: '40vw'}} 
                                     direction='column' m='3' 
                                     flexShrink={{base: '0'}} 
-                                    boxShadow={shadow[idx]} 
+                                    key={idx}
+                                    // boxShadow={shadow[idx]} 
                                     onMouseEnter={() => {
-                                        setShadow(
-                                            shadow.map((shadow, index) => {
-                                                return index == idx ? '2xl' : shadow
-                                            })
-                                        )
+                                        // setShadow(
+                                        //     shadow.map((shadow, index) => {
+                                        //         return index == idx ? '2xl' : shadow
+                                        //     })
+                                        // )
                                     }} 
                                     onMouseLeave={() => {
-                                        setShadow(
-                                            shadow.map((shadow, index) => {
-                                                return index == idx ? 'base' : shadow
-                                            })
-                                        )
-                                    }}>
+                                        // setShadow(
+                                        //     shadow.map((shadow, index) => {
+                                        //         return index == idx ? 'base' : shadow
+                                        //     })
+                                        // )
+                                    }}
+                                    whileHover={{
+                                        boxShadow: "0px 24px 40px rgb(165 199 126 / 40%)",
+                                        scale: 1.01,
+                                        transition: {
+                                            duration: 0.3
+                                        }
+                                    }}
+                                    whileInView={isMobile? {
+                                        boxShadow: "0px 24px 40px rgb(165 199 126 / 40%)",
+                                        scale: 1.01,
+                                        transition: {
+                                            duration: 0.3
+                                        }
+                                    } : {}}
+                                    viewport={{
+                                        margin: '10px 0px -80px 0px',
+                                        amount: 0.8
+                                    }}
+                                    >
 
                                     <CardHeader>
                                         {/* <Text textTransform={'uppercase'} fontSize={'8pt'} noOfLines={1}>
@@ -119,7 +144,7 @@ const ArtPage = ({data}) => {
 
                                     </CardFooter>
 
-                                </Card>
+                                </MotionCard>
                             </WrapItem>
                             </motion.div>
                             

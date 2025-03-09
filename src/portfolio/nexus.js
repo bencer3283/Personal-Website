@@ -238,23 +238,15 @@ export default function NexusSection() {
                         <Card w={{base: '65vw',md: '5xl'}} maxH={{md: 'lg'}} direction={'column'} variant={'unstyled'}>
                             <Text m={4} textAlign={'start'}>These were several candidates for different operation flow for authenticating owner of lost items. I built the Figma prototypes to perform user testing and eventually decided to use the passcode flow.</Text>
                                 <Center>
-                                    {/* <Stack direction={{base: 'column' , md: 'row'}}>
-                                        <Box m={'0.5vh'}>
-                                            <StaticImage src='../images/nexus/kiosk ui.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                                        </Box>
-                                        <Box m={'0.5vh'}>
-                                            <StaticImage src='../images/nexus/kiosk ui 2.png' height={400} imgStyle={{ borderRadius: '15px' }}></StaticImage>
-                                        </Box>
-                                    </Stack> */}
-                                        <iframe width={'90%'} height={'400vh'} src="https://embed.figma.com/design/ii971TznOZE2idlPgfoHMF/Lost-and-Found-kiosk-(Copy)?node-id=0-1&embed-host=share&theme=system" allowfullscreen></iframe>
+                                    
+                                        <iframe title='figma embed kiosk ui' width={'90%'} height={'400vh'} src="https://embed.figma.com/design/ii971TznOZE2idlPgfoHMF/Lost-and-Found-kiosk-(Copy)?node-id=0-1&embed-host=share&theme=system" allowfullscreen></iframe>
                                     
                                 </Center>
                                 
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        {/* <StaticImage src='../images/nexus/website ui.png' height={600} imgStyle={{ borderRadius: '15px' }}></StaticImage> */}
-                        <iframe width={'90%'} height={'400vh'} src="https://embed.figma.com/proto/AI1FWGfoUtxq8UtBW6DuEu/lost-and-found-website?scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=4-6&starting-point-node-id=4%3A6&embed-host=share&scaling=contain&theme=system" allowfullscreen></iframe>
+                        <iframe title='figma embed website ui' width={'90%'} height={'400vh'} src="https://embed.figma.com/proto/AI1FWGfoUtxq8UtBW6DuEu/lost-and-found-website?scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=4-6&starting-point-node-id=4%3A6&embed-host=share&scaling=contain&theme=system" allowfullscreen></iframe>
                     </TabPanel>
                 </TabPanels>
             </GeneralTabs>
