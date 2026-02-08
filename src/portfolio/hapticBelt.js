@@ -6,7 +6,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
     sort: 1,
-    title: 'Work In Progess: Haptic Belt',
+    title: 'Haptic Belt',
     description: 'Using Haptic Feedback to Provide Navigation for Visually Impaired People',
     image: '../images/hapticBelt/haptic_belt_flex_board_2.jpg'
 }
@@ -19,6 +19,9 @@ export default function HapticBeltSection() {
             <GeneralTabs>
                 <GeneralTabList>
                     <ResponsiveTab>
+                        Full Prototype
+                    </ResponsiveTab>
+                    <ResponsiveTab>
                         Rigid-Flex PCB
                     </ResponsiveTab>
                     <ResponsiveTab>
@@ -26,6 +29,11 @@ export default function HapticBeltSection() {
                     </ResponsiveTab>
                 </GeneralTabList>
                 <TabPanels>
+                    <TabPanel>
+                        <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'}>
+                            <div style={{ padding: `56.25% 0 0 0`, position: `relative` }}><iframe src="https://player.vimeo.com/video/1163069563?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style={{ position: `absolute`, top: `0`, left: `0`, width: `100%`, height: `100%` }} title="hapticBeltVideo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                        </Card>
+                    </TabPanel>
                     <TabPanel>
                         <Card w={{ base: '65vw', md: '5xl' }} variant={'unstyled'}>
                             <StaticImage src='../images/hapticBelt/haptic_belt_flex_board_2.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
@@ -44,7 +52,7 @@ export default function HapticBeltSection() {
             <GeneralTabs>
                 <GeneralTabList>
                     <ResponsiveTab>
-                        Video
+                        Animation
                     </ResponsiveTab>
                     <ResponsiveTab>
                         Desgin Challenge
@@ -68,7 +76,7 @@ export default function HapticBeltSection() {
                                         <StaticImage src='../images/hapticBelt/pcb_closeup_no_bracket.png' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                     </Box>
                                     <Box m={{ base: '1vh', md: '2vh' }}>
-                                        <StaticImage src='../images/hapticBelt/pcb_closeup.png' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
+                                        <StaticImage src='../images/hapticBelt/meche_closeup.jpg' mb={4} height={450} imgStyle={{ borderRadius: '15px' }}></StaticImage>
                                     </Box>
                                 </Stack>
                             </CardBody>
