@@ -68,7 +68,7 @@ export default function ObjectifiedAISection() {
                             />
                             <Box
                                 as="video"
-                                src="/IMG_8406.mov"
+                                src="/abacusbreadboard.mov"
                                 autoPlay
                                 loop
                                 muted
