@@ -5,7 +5,7 @@ import { Tab, TabPanel, TabPanels, Text, Card, CardBody, Box, OrderedList, ListI
 import { StaticImage } from 'gatsby-plugin-image';
 
 export const frontmatter = {
-    sort: 0,
+    sort: 0.5,
     title: 'Toilet Vision',
     description: 'A tissue paper dispenser that challenges the socially-constructed perception',
     image: '../images/toilet-vision-yolo.jpg'
