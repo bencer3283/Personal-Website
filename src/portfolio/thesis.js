@@ -11,7 +11,7 @@ export const frontmatter = {
     image: '../images/thesis/IMG_6283.jpg'
 }
 
-export default function toiletSection() {
+export default function ObjectifiedAISection() {
     return(
         <div>
             <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
@@ -55,36 +55,103 @@ export default function toiletSection() {
                     </TabPanel>
                     <TabPanel>
                         <Card w={{base: '65vw', md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
-                            
-                                <Box
-                                    as="video"
-                                    src="/webvideo.mov"
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    w={{ base: '100%', md: '60%' }}
-                                    style={{ height: '100%', objectFit: 'cover', borderRadius: '15px' }}
-                                    m={'6px'}
-                                />
-                            
-                                <Box
-                                    as="video"
-                                    src="/IMG_8406.mov"
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    w={{ base: '100%', md: '25%' }}
-                                    m={'6px'}
-                                    style={{ height: '100%', objectFit: 'cover', borderRadius: '15px' }}
-                                />
-                            
+                            <Box
+                                as="video"
+                                src="/webvideo.mov"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                w={{ base: '100%', md: '60%' }}
+                                style={{ height: '100%', objectFit: 'cover', borderRadius: '15px' }}
+                                m={'6px'}
+                            />
+                            <Box
+                                as="video"
+                                src="/IMG_8406.mov"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                w={{ base: '100%', md: '25%' }}
+                                m={'6px'}
+                                style={{ height: '100%', objectFit: 'cover', borderRadius: '15px' }}
+                            />
                         </Card>
                     </TabPanel>
                     
                 </TabPanels>
             </GeneralTabs>
+            <GeneralTabs defaultTab={0}>
+                <GeneralTabList>
+                    <ResponsiveTab>
+                        Schematics - Main
+                    </ResponsiveTab>
+                    <ResponsiveTab>
+                        Schematics - uC
+                    </ResponsiveTab>
+                    <ResponsiveTab>
+                        Schematics - Hall
+                    </ResponsiveTab>
+                    <ResponsiveTab>
+                        Schematics - Power
+                    </ResponsiveTab>
+                    <ResponsiveTab>
+                        Layout
+                    </ResponsiveTab>
+                </GeneralTabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
+                            <CardBody>
+                                <StaticImage src='../images/thesis/Job1_Page_1.jpg' height={600} imgStyle={{borderRadius: '15px'}} /> 
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
+                            <CardBody>
+                                <StaticImage src='../images/thesis/Job1_Page_2.jpg' height={600} imgStyle={{borderRadius: '15px'}} /> 
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
+                            <CardBody>
+                                <StaticImage src='../images/thesis/Job1_Page_3.jpg' height={600} imgStyle={{borderRadius: '15px'}} /> 
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
+                            <CardBody>
+                                <StaticImage src='../images/thesis/Job1_Page_4.jpg' height={600} imgStyle={{borderRadius: '15px'}} /> 
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                    <TabPanel>
+                        <Card w={{base: '65vw', md: '5xl'}} variant={'unstyled'}>
+                            <CardBody>
+                                <StaticImage src='../images/thesis/Job1_Page_5.jpg' height={600} imgStyle={{borderRadius: '15px'}} /> 
+                            </CardBody>
+                        </Card>
+                    </TabPanel>
+                </TabPanels>
+            </GeneralTabs>
+            <Card variant={'outline'} mt={6}>
+                <CardBody>
+                    <Heading>This is a work-in-progess project</Heading>
+                    <Text textAlign={'start'} m={4}>
+                        More infomration can be found in the following link.  
+                    </Text>
+                    <Button variant={'link'} m={4}>
+                        <a href='https://objectified-ai.netlify.app' target="_blank" rel="noopener noreferrer">Project Website</a>
+                    </Button>
+                    <Button variant={'link'} m={4}>
+                        <a href='https://github.com/bencer3283/abacus-pcb.git' target="_blank" rel="noopener noreferrer">PCB design files</a>
+                    </Button>
+                </CardBody>
+            </Card>
         </div>
     )
 }
