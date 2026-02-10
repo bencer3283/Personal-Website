@@ -22,7 +22,7 @@ export const GeneralTabs = ({defaultTab, children}) => {
 export const ResponsiveTab = ({children}) => {
     return(
         <Tab>
-            <Text fontSize={{ base: 'xs', md: 'md' }}>
+            <Text fontSize={{ base: '2xs', md: 'md' }}>
                 {children}
             </Text>
         </Tab>

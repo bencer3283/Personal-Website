@@ -16,6 +16,8 @@ export default function ObjectifiedAISection() {
         <div>
             <Text fontSize={'6xl'} mt={8}> {frontmatter.title} </Text>
             <Text fontSize={'4xl'}> {frontmatter.description} </Text>
+            <Text fontSize={'2xl'} mt={6}>Visit the <Button variant={'link'} fontSize={'2xl'}>
+                <a href='https://objectified-ai.netlify.app' target="_blank" rel="noopener noreferrer">project website</a></Button> to learn about the ideas and outcome of this project. This page focuses on process documentation.</Text>
             <Text fontSize={'4xl'} mt={6}>Multi-Axis Embedding Console</Text>
             <GeneralTabs defaultTab={0}>
                 <GeneralTabList>
