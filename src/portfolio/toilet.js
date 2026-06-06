@@ -37,7 +37,7 @@ export default function toiletSection() {
                         </Card>
                     </TabPanel>
                     <TabPanel>
-                        <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column' ,md: 'row'}} variant={'unstyle'}>
+                        <Card w={{base: '65vw',md: '5xl'}} direction={{base: 'column', md: 'row'}} variant={'unstyle'}>
                             <CardBody>
                                 <StaticImage src='../images/toilet-vision-dispenser.jpg' height={350} imgStyle={{borderRadius: '15px'}}></StaticImage>
                             </CardBody>
