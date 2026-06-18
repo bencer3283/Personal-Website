@@ -10,7 +10,8 @@ breadcrumb: true
 ---
 
 ## Rhode Island School of Design
-- Master of Industrial Design, expected to graduate in Jun. 2026
+- [**Master of Industrial Design**](https://www.risd.edu/academics/industrial-design/masters-programs), Jun. 2026
+- GPA `3.866`, [Transcript](/docs/TR0HQTZO.pdf)
 
 ## National Taiwan University
 - *Bechalor of Science* in [**Bio-Mechatronics Engineering**](https://www.bime.ntu.edu.tw/)
@@ -18,7 +19,7 @@ breadcrumb: true
 
 ### Grades
 GPA, grades point average, full score `4.3`.
-[Complete transcrip of record.](/docs/complete_transcript005.pdf)
+[Complete transcript of record.](/docs/complete_transcript005.pdf)
 - 2022/2023
     - 1st Semester: `3.94`
 - 2021/2022
