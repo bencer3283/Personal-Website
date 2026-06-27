@@ -66,6 +66,7 @@ const ArtPage = ({data}) => {
                 </AnimatePresence>
                 <Text fontSize={{base: '36pt', md: '72pt'}} pt={{ base: '51pt' ,md: '90pt'}} textColor={'#9EC972'}>almost anything.</Text>
             </Box>
+            <Text ml={{md: 10}}>for engineering roles: see <Button variant={'link'}><a href='/docs/embeddedPortfoliocompressed.pdf'>portfolio of embedded system design</a></Button></Text>
             <motion.div variants={container} initial="hidden" animate="show">
             <Wrap pl={{md :5}} pt={{base: '15vh', md: '25vh'}} zIndex={0}>
                 {
