@@ -42,5 +42,6 @@ export const Head = ({ location, params, pageContext }) => (
     <SEO 
       title={pageContext.title + ' | ' + 'Portfolio' + ' | ' + useSiteMetadata().title}
       description={pageContext.description}
+      img={pageContext.image}
       ></SEO>
   )

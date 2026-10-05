@@ -38,6 +38,10 @@ exports.createPages = ({ graphql, actions }) => {
         childJavascriptFrontmatter {
             frontmatter {
                 title
+                description
+                image {
+                  publicURL
+                }
             }
         }
       }
@@ -91,8 +95,10 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           title: file.childJavascriptFrontmatter.frontmatter.title,
           fileName: file.name,
+          description: file.childJavascriptFrontmatter.frontmatter.description,
+          image: file.childJavascriptFrontmatter.frontmatter.image.publicURL,
           nextTitle: array[nextidx].childJavascriptFrontmatter.frontmatter.title,
-          nextFile: array[nextidx].name
+          nextFile: array[nextidx].name,
         }
       })
     })

@@ -9,6 +9,7 @@ export const SEO = ({ title, description, pathname, children, img }) => {
     description: description || defaultDescription,
     image: img || `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,
+    icon: image
   }
 
   return (
@@ -22,7 +23,7 @@ export const SEO = ({ title, description, pathname, children, img }) => {
       <meta property="twitter:description" content={seo.description}></meta>
       <meta property="twitter:title" content={seo.title}></meta>
       <meta property="twitter:card" content={'summary'}></meta>
-      <link id='icon' rel="icon" href={seo.image} />
+      <link id='icon' rel="icon" href={seo.icon} />
       {children}
     </>
   )
