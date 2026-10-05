@@ -188,5 +188,5 @@ export const query = graphql`query {
   }`
 
 export const Head = () => (
-    <SEO title={'Dream, Build, Impact | Po Sheng Cheng'} pathname={'art'} description={`Po Sheng Cheng's works in portfolio of design engineering, photgraphy and art works.`} />
+    <SEO title={'Dream, Build, Impact | Posheng Cheng'} pathname={'art'} description={`Posheng Cheng (Ben Cheng)'s works in design, art and technology.`}  img={"/images/banner.jpg"}/>
 )

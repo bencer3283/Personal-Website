@@ -24,8 +24,8 @@ const IndexPage = () => {
               transition={{duration: 2, repeat: Infinity, repeatType: 'reverse'}}>humanity</motion.span>.
         </Text>
         <Text pt='10' fontSize={{base: '16pt', md: '24pt'}}>
-          This is Po Sheng Cheng's personal website, where you can find all the works this interdisciplinary student have ever done.
-          Proudly made in Taiwan.
+          Posheng Cheng is an interaction designer whose works question our relationships with emerging technologies. He uses electronics and computing as the primary creative media to craft unexpected experiences with technology, sparking conversations about the critical issues of our age like the cost of technological advancement, surveillance, perception and embodied AI. <br />
+          Made in Taiwan.
         </Text>
         
         <Text pt='10' textDecoration={'underline'}>

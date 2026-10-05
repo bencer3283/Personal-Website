@@ -3,9 +3,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Po Sheng Cheng`,
+    title: `Posheng Cheng`,
     siteUrl: `https://bencer3283.github.io`,
-    description: `Po Sheng Cheng's personal website showcasing a wide range of skills and interests.`,
+    description: `personal website of the interaction designer Posheng Cheng (aka Ben Cheng).`,
     image: `/docs/icon.png`
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-transformer-javascript-frontmatter", {
