@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Posheng Cheng`,
     siteUrl: `https://bencer3283.github.io`,
-    description: `personal website of the interaction designer Posheng Cheng (aka Ben Cheng).`,
+    description: `Posheng Cheng (Ben Ceheng) is an interaction designer whose works question our relationships with emerging technologies. He uses electronics and computing as the primary creative media to craft unexpected experiences with technology, sparking conversations about the critical issues of our age like the cost of technological advancement, surveillance, perception and embodied AI.`,
     image: `/docs/icon.png`
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-transformer-javascript-frontmatter", {
