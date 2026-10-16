@@ -1,10 +1,13 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+const siteUrl = process.env.URL || `https://bencer3283.github.io`
+
 module.exports = {
   siteMetadata: {
     title: `Posheng Cheng`,
-    siteUrl: `https://bencer3283.github.io`,
+    siteUrl: siteUrl,
     description: `Posheng Cheng (Ben Ceheng) is an interaction designer whose works question our relationships with emerging technologies. He uses electronics and computing as the primary creative media to craft unexpected experiences with technology, sparking conversations about the critical issues of our age like the cost of technological advancement, surveillance, perception and embodied AI.`,
     image: `/docs/icon.png`
   },
@@ -76,6 +79,14 @@ module.exports = {
       icon: `src/images/%%.png`
     }
   },
+  {
+    resolve: `gatsby-plugin-robots-txt`,
+    options: {
+      host: siteUrl,
+      sitemap: `${siteUrl}/sitemap-index.xml`,
+      policy: [{userAgent: '*', allow: '/'}]
+    }
+  }
 ]
 };
 
